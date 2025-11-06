@@ -34,3 +34,16 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# OS junk
+.DS_Store
+Thumbs.db
+# Python/node/build (удали лишнее под свой стек)
+__pycache__/
+*.pyc
+env/
+node_modules/
+dist/
+build/
+# IDE
+.vscode/
+.idea/
