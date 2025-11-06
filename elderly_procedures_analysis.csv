@@ -1,0 +1,9 @@
+Процедура,NHS Wait (weeks),Private Cost (£),Annual UK Procedures (NHS+Private),Age Group (Peak),Pain Impact,Population Affected (65+),Priority for MVP
+Cataract Surgery (оба глаза),18-24,"£2,500-£3,500","~3.7M globally, 400k+ UK",65-85 (most common),"Vision loss, safety risk",~30% have cataract (1 or both eyes),🥇 TIER 1 (highest)
+Hip Replacement (Total Hip Arthroplasty),20-33,"£13,000-£15,500",~66k NHS (2013) + growing,65-79 (peak at 70-75),Severe mobility limitation,Millions with arthritis need,🥇 TIER 1 (highest)
+Knee Replacement (Total Knee Replacement),19-35,"£13,000-£15,500",~70k NHS + 5k+ private,65-79 (peak at 70-75),Severe mobility limitation,Millions with arthritis need,🥇 TIER 1 (highest)
+Knee Arthroscopy (keyhole),16-24,"£4,500-£7,000",Thousands/year,65-80,"Joint pain, mobility",Hundreds of thousands,🥈 TIER 2
+Hernia Repair,15-20,"£4,000-£6,000",~60k NHS/year,60-80,Chronic pain,Common in elderly,🥈 TIER 2
+Gallbladder Removal,14-20,"£3,500-£5,500",~60k NHS/year,60-80,"Chronic pain, infection risk",Common in elderly,🥈 TIER 2
+Prostate Surgery,15-22,"£5,000-£8,000",~Tens of thousands,70+,Urinary issues,Common in 70+,🥉 TIER 3
+Joint Repair (other),18-26,"£6,000-£12,000",Variable,65+,Chronic pain,Varies,🥉 TIER 3

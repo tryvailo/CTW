@@ -1,0 +1,214 @@
+import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { Breadcrumbs } from '@/components/common/Breadcrumbs'
+import { LastUpdated } from '@/components/common/LastUpdated'
+import { ComparisonTable } from '@/components/sections/ComparisonTable'
+import { SavingsCalculator } from '@/components/sections/SavingsCalculator'
+import { ClinicList } from '@/components/sections/ClinicList'
+import { FAQ } from '@/components/sections/FAQ'
+import { MedicalDisclaimer } from '@/components/common/MedicalDisclaimer'
+import { JsonLd } from '@/components/common/JsonLd'
+import { generateComparisonMetadata } from '@/lib/metadata'
+import {
+  getComparisonData,
+  getProcedure,
+  getCityBySlug,
+  getAllComparisonCombinations,
+  getFAQItems,
+} from '@/lib/data'
+import type { ProcedureId, City } from '@/lib/types'
+import type { Metadata } from 'next'
+
+interface PageProps {
+  params: {
+    procedure: string
+    city: string
+  }
+}
+
+export async function generateStaticParams() {
+  const { getAllComparisonCombinations, loadCities } = await import('@/lib/data')
+  const combinations = getAllComparisonCombinations()
+  const cities = loadCities()
+  
+  return combinations.map((combo) => {
+    // Find city data to get correct slug from CSV
+    const cityData = cities.find(c => c.city === combo.city)
+    const citySlug = cityData?.slug || combo.city.toLowerCase().replace(/\s+/g, '-')
+    return {
+      procedure: combo.procedureId,
+      city: citySlug,
+    }
+  })
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { procedure, city } = await params
+  const procedureId = procedure as ProcedureId
+  return generateComparisonMetadata(procedureId, city)
+}
+
+export default async function ComparisonPage({ params }: PageProps) {
+  const { procedure, city } = await params
+  const procedureId = procedure as ProcedureId
+  
+  const cityData = getCityBySlug(city)
+  if (!cityData) {
+    notFound()
+  }
+
+  const comparisonData = getComparisonData(procedureId, cityData.city)
+  
+  if (!comparisonData.procedure.name || !comparisonData.nhsWait) {
+    notFound()
+  }
+
+  const { procedure: procedureData, city: cityName, nhsWait, privateCost, clinics } = comparisonData
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://comparethewait.co.uk'
+  const url = `${baseUrl}/comparison/${procedure}/${city}`
+
+  // JSON-LD structured data
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `${procedureData.name} in ${cityName}: NHS vs Private`,
+    description: `Compare NHS waiting times vs private surgery costs for ${procedureData.name.toLowerCase()} in ${cityName}`,
+    url,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Compare The Wait',
+      url: baseUrl,
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: baseUrl,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Procedures',
+          item: `${baseUrl}/procedures/${procedureId}`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: procedureData.name,
+          item: `${baseUrl}/procedures/${procedureId}`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: cityName,
+          item: url,
+        },
+      ],
+    },
+    mainEntity: {
+      '@type': 'MedicalCondition',
+      name: procedureData.name,
+      treatment: {
+        '@type': 'MedicalProcedure',
+        name: procedureData.name,
+      },
+    },
+  }
+
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Procedures', href: '/procedures' },
+    { label: procedureData.name, href: `/procedures/${procedureId}` },
+    { label: cityName },
+  ]
+
+  return (
+    <>
+      <JsonLd data={jsonLd} />
+      <div className="bg-elderly-bg">
+        <div className="container mx-auto px-4 py-8 max-w-6xl">
+          {/* Breadcrumbs */}
+          <Breadcrumbs items={breadcrumbItems} />
+
+          {/* Page Header */}
+          <header className="mb-8">
+            <h1 className="text-elderly-2xl font-bold text-elderly-primary mb-4">
+              {procedureData.name} in {cityName}: NHS vs Private in 2025
+            </h1>
+            <p className="text-elderly-base text-elderly-text mb-4">
+              Compare NHS waiting times with private surgery options in {cityName}. 
+              Updated {new Date().toLocaleDateString('en-GB', { month: 'long', day: 'numeric', year: 'numeric' })}.
+            </p>
+            <LastUpdated 
+              date={nhsWait.date || new Date().toISOString().split('T')[0]} 
+              source="weekly"
+            />
+          </header>
+
+          {/* Main Comparison Table */}
+          <ComparisonTable data={comparisonData} />
+
+          {/* Savings Calculator */}
+          <SavingsCalculator data={comparisonData} />
+
+          {/* Clinic List */}
+          <ClinicList 
+            clinics={clinics}
+            procedureName={procedureData.name}
+            city={cityName}
+          />
+
+          {/* FAQ Section */}
+          <FAQ items={getFAQItems(procedureId)} />
+
+          {/* Related Comparisons */}
+          <section className="mb-12 bg-elderly-primary-light p-6 rounded-lg border-elderly border-elderly-gray-medium">
+            <h2 className="text-elderly-xl font-bold text-elderly-primary mb-4">
+              More comparisons for you:
+            </h2>
+            <div className="flex flex-wrap gap-4 text-elderly-base">
+              {procedureId !== 'cataract' && (
+                <Link
+                  href={`/comparison/cataract/${city}`}
+                  className="text-elderly-primary underline-offset-4 hover:underline"
+                >
+                  Cataract Surgery in {cityName}
+                </Link>
+              )}
+              {procedureId !== 'hip' && (
+                <Link
+                  href={`/comparison/hip/${city}`}
+                  className="text-elderly-primary underline-offset-4 hover:underline"
+                >
+                  Hip Replacement in {cityName}
+                </Link>
+              )}
+              {procedureId !== 'knee' && (
+                <Link
+                  href={`/comparison/knee/${city}`}
+                  className="text-elderly-primary underline-offset-4 hover:underline"
+                >
+                  Knee Replacement in {cityName}
+                </Link>
+              )}
+              <Link
+                href={`/procedures/${procedureId}`}
+                className="text-elderly-primary underline-offset-4 hover:underline"
+              >
+                {procedureData.name} in other cities
+              </Link>
+            </div>
+          </section>
+
+          {/* Medical Disclaimer */}
+          <MedicalDisclaimer />
+        </div>
+      </div>
+    </>
+  )
+}
+

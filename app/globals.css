@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-elderly-base text-elderly-text bg-elderly-bg;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Улучшение читаемости для пожилых пользователей */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Большие кнопки по умолчанию (WCAG AAA touch target минимум 44px) */
+  button, a.button {
+    @apply min-h-touch;
+  }
+  
+  /* Улучшение контраста для ссылок */
+  a {
+    @apply text-elderly-primary underline;
+  }
+  
+  a:hover {
+    @apply text-elderly-primary-dark;
+  }
+}
+
+@layer components {
+  /* Компонент для больших кнопок CTA */
+  .btn-primary {
+    @apply px-8 py-4 min-h-touch bg-elderly-primary text-white text-elderly-base font-semibold rounded-lg;
+    @apply hover:bg-elderly-primary-dark transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-elderly-primary focus:ring-offset-2;
+  }
+  
+  /* Компонент для вторичных кнопок */
+  .btn-secondary {
+    @apply px-8 py-4 min-h-touch bg-white text-elderly-primary border-elderly border-elderly-primary text-elderly-base font-semibold rounded-lg;
+    @apply hover:bg-elderly-gray-light transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-elderly-primary focus:ring-offset-2;
+  }
+  
+  /* Компонент для карточек процедур */
+  .procedure-card {
+    @apply p-6 bg-white border-elderly border-elderly-gray-medium rounded-lg shadow-sm;
+    @apply hover:shadow-md transition-shadow duration-200;
+  }
+  
+  /* Компонент для таблиц сравнения */
+  .comparison-table {
+    @apply w-full text-elderly-base border-collapse;
+  }
+  
+  .comparison-table th {
+    @apply p-4 text-left font-bold bg-elderly-primary-light border-elderly border-elderly-gray-medium text-elderly-primary;
+  }
+  
+  .comparison-table td {
+    @apply p-4 border-elderly border-elderly-gray-medium bg-white;
+  }
+}
+

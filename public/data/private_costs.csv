@@ -1,0 +1,16 @@
+procedure_id,city,cost_min,cost_max,clinic_count,date,source
+cataract,London,2075,5000,23,2025-11-05,PHIN + clinic websites
+cataract,Manchester,1995,3295,19,2025-11-05,PHIN + clinic websites
+cataract,Birmingham,2259,3380,19,2025-11-05,PHIN + clinic websites
+cataract,Leeds,2295,3780,17,2025-11-05,PHIN + clinic websites
+cataract,Bristol,1995,3770,11,2025-11-05,PHIN + clinic websites
+hip,London,11950,18405,35,2025-11-05,PHIN + clinic websites
+hip,Manchester,12357,15500,19,2025-11-05,PHIN + clinic websites
+hip,Birmingham,11950,15500,16,2025-11-05,PHIN + clinic websites
+hip,Leeds,12549,15800,16,2025-11-05,PHIN + clinic websites
+hip,Bristol,12825,17600,10,2025-11-05,PHIN + clinic websites
+knee,London,10000,15000,35,2025-11-05,PHIN + clinic websites
+knee,Manchester,12357,14800,21,2025-11-05,PHIN + clinic websites
+knee,Birmingham,11814,15945,14,2025-11-05,PHIN + clinic websites
+knee,Leeds,13315,15720,15,2025-11-05,PHIN + clinic websites
+knee,Bristol,10195,15810,9,2025-11-05,PHIN + clinic websites

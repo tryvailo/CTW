@@ -1,0 +1,9 @@
+Фаза,Город,Причина выбора,Elderly Pop (65+),Private Clinic Density,Priority
+PHASE 1 (MVP),London,"✅ Largest elderly pop (1.5M+65), highest NHS waits, max private clinic density",~1.5M,High (50+ major clinics),START HERE 🎯
+PHASE 1 (MVP),Manchester,"✅ Major population center (200k+65), significant NHS waits, multiple clinics",~200k,Medium-High (15+ clinics),START HERE 🎯
+PHASE 1 (MVP),Birmingham,"✅ Major population center (250k+65), NHS pressure, regional hub",~250k,Medium-High (15+ clinics),START HERE 🎯
+PHASE 1 (MVP),Leeds,"✅ Northern hub (180k+65), long NHS waits, growing private market",~180k,Medium (10+ clinics),START HERE 🎯
+PHASE 1 (MVP),Bristol,"✅ South West hub (150k+65), regional demand",~150k,Medium (8+ clinics),START HERE 🎯
+PHASE 2 (Expand),Edinburgh,"🔄 Scotland (high demand for private), different NHS system",~180k,Medium (12+ clinics),Phase 2+
+PHASE 2 (Expand),Glasgow,"🔄 Scotland (high demand), major city",~150k,Low-Medium (8+ clinics),Phase 2+
+PHASE 2 (Expand),Cardiff,"🔄 Wales (separate NHS system), significant market",~120k,Low-Medium (5+ clinics),Phase 2+

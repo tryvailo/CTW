@@ -1,0 +1,65 @@
+content_id,section,key,value,language
+value_prop_1,value_props,title_1,FREE,en
+value_prop_1,value_props,description_1,Compare anytime,en
+value_prop_2,value_props,title_2,REAL,en
+value_prop_2,value_props,description_2,NHS & Private data,en
+value_prop_3,value_props,title_3,CLEAR,en
+value_prop_3,value_props,description_3,Pricing shown upfront,en
+value_prop_4,value_props,title_4,NO DATA,en
+value_prop_4,value_props,description_4,No personal info needed,en
+value_props_footer,value_props,footer_text,"We show you real waiting times from the NHS and real costs from private clinics. Everything is free to compare. We don't collect your personal information on this page.",en
+quick_find_title,quick_find,title,Most searched by people like you:,en
+about_title,about,title,About Compare The Wait,en
+about_mission_title,about,mission_title,Our Mission,en
+about_mission_text,about,mission_text,"Compare The Wait helps people aged 65+ understand their options for NHS vs private surgery. We provide honest, free comparisons of waiting times and costs so you can make an informed decision. Over 7.6 million people are waiting for NHS surgery right now. For common procedures like hip and knee replacements, waits can be 20+ weeks. We believe everyone should have access to clear information about their options.",en
+about_what_title,about,what_title,What We Do,en
+about_what_1,about,what_item_1,Compare NHS waiting times with private surgery options,en
+about_what_2,about,what_item_2,Show real costs from private clinics (no hidden fees),en
+about_what_3,about,what_item_3,Provide free information—no personal data required,en
+about_what_4,about,what_item_4,Update data monthly from NHS records and clinic websites,en
+about_what_5,about,what_item_5,"Focus on procedures most common for people 65+: cataract surgery, hip replacement, and knee replacement",en
+about_data_title,about,data_title,Our Data Sources,en
+about_data_nhs_title,about,data_nhs_title,NHS Waiting Times,en
+about_data_nhs_text,about,data_nhs_text,"We use data from My Planned Care (https://www.myplannedcare.nhs.uk/), the official NHS website that shows waiting times by procedure and location. This data is updated regularly by NHS trusts.",en
+about_data_private_title,about,data_private_title,Private Surgery Costs,en
+about_data_private_text,about,data_private_text,"We gather prices from multiple sources: PHIN (Private Healthcare Information Network) - the UK's official registry for private healthcare information, clinic websites with publicly available pricing pages, and major private hospital groups (Spire, Nuffield Health, Circle Health Group, Practice Plus Group, and others).",en
+about_updates_title,about,updates_title,How Often We Update,en
+about_updates_text,about,updates_text,"We update our data monthly to ensure you have current information. NHS waiting times and private clinic prices can change, so we make sure our comparisons reflect the latest available data. Last updated: November 2025.",en
+about_disclaimer_title,about,disclaimer_title,Important Disclaimer,en
+about_disclaimer_text,about,disclaimer_text,"This website provides informational comparisons only. The data shown is based on publicly available information and may not reflect your personal situation. This is not medical advice—always consult your doctor or healthcare professional before making decisions about surgery. Every patient's situation is unique, and only a qualified medical professional can advise you on the best course of action.",en
+privacy_title,privacy,title,Privacy Policy,en
+privacy_intro_title,privacy,intro_title,Introduction,en
+privacy_intro_text,privacy,intro_text,"Compare The Wait is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.",en
+privacy_info_title,privacy,info_title,Information We Collect,en
+privacy_info_text,privacy,info_text,"We do not collect personal information on this website. You can browse and compare NHS vs private surgery options without providing any personal data. We may collect anonymous usage data through analytics tools (such as Google Analytics) to understand how visitors use our website. This data is aggregated and does not identify individual users.",en
+privacy_cookies_title,privacy,cookies_title,Cookies,en
+privacy_cookies_text,privacy,cookies_text,"We may use cookies to improve your experience on our website. Cookies are small text files stored on your device. You can control cookies through your browser settings.",en
+privacy_third_title,privacy,third_title,Third-Party Services,en
+privacy_third_text,privacy,third_text,"We may use third-party services (such as analytics providers) that have their own privacy policies. We encourage you to review these policies.",en
+privacy_security_title,privacy,security_title,Data Security,en
+privacy_security_text,privacy,security_text,"We take reasonable steps to protect any information we collect. However, no method of transmission over the internet is 100% secure.",en
+privacy_rights_title,privacy,rights_title,Your Rights,en
+privacy_rights_text,privacy,rights_text,"Since we do not collect personal information, there is no personal data to access, modify, or delete. If you have questions about this policy, please contact us.",en
+privacy_changes_title,privacy,changes_title,Changes to This Policy,en
+privacy_changes_text,privacy,changes_text,"We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.",en
+privacy_contact_title,privacy,contact_title,Contact Us,en
+privacy_contact_text,privacy,contact_text,"If you have questions about this Privacy Policy, please contact us through our website.",en
+terms_title,terms,title,Terms of Service,en
+terms_agreement_title,terms,agreement_title,Agreement to Terms,en
+terms_agreement_text,terms,agreement_text,"By accessing and using Compare The Wait, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website.",en
+terms_use_title,terms,use_title,Use of Website,en
+terms_use_text,terms,use_text,"Compare The Wait provides informational comparisons of NHS vs private surgery options. You may use this website for personal, non-commercial purposes only.",en
+terms_medical_title,terms,medical_title,Medical Disclaimer,en
+terms_medical_text,terms,medical_text,"This website provides informational comparisons only. This is not medical advice. The information on this website is based on publicly available data and is for informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult your doctor or healthcare professional before making decisions about surgery.",en
+terms_accuracy_title,terms,accuracy_title,Accuracy of Information,en
+terms_accuracy_text,terms,accuracy_text,"We strive to provide accurate and up-to-date information, but we cannot guarantee the accuracy, completeness, or timeliness of all data. NHS waiting times and private surgery costs may change. We update our data monthly, but you should verify current information with relevant sources.",en
+terms_liability_title,terms,liability_title,Limitation of Liability,en
+terms_liability_text,terms,liability_text,"Compare The Wait shall not be liable for any damages arising from your use of this website or reliance on the information provided. We are not responsible for any decisions you make based on information from this website.",en
+terms_third_title,terms,third_title,Third-Party Links,en
+terms_third_text,terms,third_text,"Our website may contain links to third-party websites (such as clinic websites). We are not responsible for the content or privacy practices of these external sites.",en
+terms_ip_title,terms,ip_title,Intellectual Property,en
+terms_ip_text,terms,ip_text,"The content on this website, including text, graphics, and logos, is the property of Compare The Wait and is protected by copyright laws. You may not reproduce or distribute this content without permission.",en
+terms_changes_title,terms,changes_title,Changes to Terms,en
+terms_changes_text,terms,changes_text,"We reserve the right to modify these Terms of Service at any time. Your continued use of the website after changes are posted constitutes acceptance of the modified terms.",en
+terms_contact_title,terms,contact_title,Contact Us,en
+terms_contact_text,terms,contact_text,"If you have questions about these Terms of Service, please contact us through our website.",en

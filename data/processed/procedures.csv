@@ -1,0 +1,5 @@
+procedure_id,name,specialty,description,nhs_code
+cataract,Cataract Surgery,Ophthalmology,Removal and replacement of cloudy lens,C71
+hip,Hip Replacement,Orthopedics,Total hip arthroplasty for arthritis,H08
+knee,Knee Replacement,Orthopedics,Total knee arthroplasty for arthritis,H09
+

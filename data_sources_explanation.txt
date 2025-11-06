@@ -1,0 +1,69 @@
+
+ВАЖНО: Мы НЕ берем конкретные клиники для сравнения "пациент к пациенту" 
+Вместо этого, мы берем АГРЕГИРОВАННЫЕ ДАННЫЕ ПО ГОРОДАМ
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ МОДЕЛЬ ДАННЫХ: "NHS WAIT vs PRIVATE COST RANGE" (НЕ конкретные клиники)  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+ЛЕВАЯ СТОРОНА: NHS данные (публичные, от NHS)
+├─ Источник: My Planned Care (https://www.myplannedcare.nhs.uk)
+├─ Данные: Среднее ожидание по процедурам по городам/трастам
+├─ Обновление: Еженедельно (от NHS)
+├─ Пример: "Cataract - London: average wait 18 weeks (as of Oct 2025)"
+└─ Структура: procedure → city → NHS_trust → avg_wait_weeks
+
+ПРАВАЯ СТОРОНА: Private цены и клиники (АГРЕГИРОВАННЫЕ ДАННЫЕ)
+├─ Источник 1: PHIN каталог (https://www.phin.org.uk)
+│  ├─ Данные: 96% консультантов опубликовали fees
+│  ├─ Формат: procedure → city → price_range → clinic_count
+│  └─ Пример: "Cataract - London: £2,500-£3,500 (12 clinics)"
+│
+├─ Источник 2: Clinic websites (публичные cost-страницы)
+│  ├─ Moorfields.nhs.uk/private/cataract/cost
+│  ├─ PracticeePlus.com/hip-replacement-costs
+│  ├─ CircleHealth.co.uk/private-knee-replacement
+│  ├─ SpireHealthcare.com (по городам)
+│  ├─ RamsayHealth.co.uk
+│  └─ NuffieldHealth.com
+│
+└─ Источник 3: CMA консультанты список (https://www.cma.org.uk)
+   ├─ Реестр всех registered консультантов
+   ├─ Опубликованные fees
+   └─ Ассоциированные private hospitals
+
+МОДЕЛЬ ОТОБРАЖЕНИЯ НА САЙТЕ:
+┌─────────────────────────────────────────────────┐
+│ Cataract Surgery, London (Nov 2025)            │
+├──────────────────┬──────────────────────────────┤
+│ NHS Route        │ Private Route               │
+├──────────────────┼──────────────────────────────┤
+│ Wait Time:       │ Wait Time:                 │
+│ 18 weeks         │ 1-2 weeks                │
+│ (My Planned      │ (typical clinics)        │
+│  Care Oct 2025)  │                          │
+│                  │ Cost Range:              │
+│ Cost: FREE       │ £2,500-£3,500            │
+│ (NHS)            │ (12 private clinics)    │
+│                  │                          │
+│                  │ Top Clinics:            │
+│                  │ • Moorfields: £2,800    │
+│                  │ • Circle Eye: £2,500    │
+│                  │ • Spire Eye: £3,200     │
+│                  │ + 9 other clinics       │
+│                  │                          │
+│                  │ [Get Quotes] (PPL form) │
+└────────────────────────────────────────────────┘
+
+ВАЖНО - НЕ ДЕЛАЕМ:
+❌ "Booking integration" (не управляем букингами)
+❌ "Clinic referral" (не направляем пациентов прямо)
+❌ "Lead capture" на этом этапе (Info-phase)
+❌ "Live pricing" (берем публичные данные)
+
+ДЕЛАЕМ:
+✅ Агрегированные данные (средние costs по городам)
+✅ Публичные источники (PHIN, My Planned Care, clinic websites)
+✅ Еженедельное обновление (парсер + GitHub Actions)
+✅ Сравнение NHS vs Private (информация, не продажа)
+✅ Калькулятор экономии (месяцы + деньги)
