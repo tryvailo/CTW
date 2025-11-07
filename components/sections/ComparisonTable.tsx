@@ -33,7 +33,8 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
               <div>
                 <strong className="block mb-2">WAITING TIME</strong>
                 <p className="text-elderly-base mb-2">
-                  <span className="text-elderly-warning font-bold">
+                  <span className="text-elderly-urgency font-bold">
+                    <span className="mr-1">⏰</span>
                     About {nhsWait?.avg_wait_weeks || 'N/A'} weeks
                   </span>
                   {nhsWait?.avg_wait_weeks && ` (${Math.round((nhsWait.avg_wait_weeks / 4) * 10) / 10}+ months)`}

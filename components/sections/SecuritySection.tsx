@@ -12,58 +12,62 @@ export const SecuritySection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="flex items-start gap-3">
-            <span className="text-2xl text-elderly-success">✓</span>
-            <div className="text-left">
-              <h3 className="text-elderly-lg font-semibold text-elderly-text mb-1">
+          {/* GDPR Compliant */}
+          <div className="bg-white p-4 rounded-lg border-elderly border-elderly-gray-medium text-left">
+            <div className="flex items-start gap-2 mb-2">
+              <span className="text-2xl text-elderly-success">✓</span>
+              <h3 className="text-elderly-sm font-semibold text-elderly-text">
                 GDPR Compliant
               </h3>
-              <p className="text-elderly-sm text-elderly-text">
-                We follow UK data protection regulations
-              </p>
             </div>
+            <p className="text-elderly-sm text-elderly-text">
+              We follow UK data protection laws and never collect unnecessary information.
+            </p>
           </div>
 
-          <div className="flex items-start gap-3">
-            <span className="text-2xl text-elderly-success">✓</span>
-            <div className="text-left">
-              <h3 className="text-elderly-lg font-semibold text-elderly-text mb-1">
+          {/* NHS-Grade Encryption */}
+          <div className="bg-white p-4 rounded-lg border-elderly border-elderly-gray-medium text-left">
+            <div className="flex items-start gap-2 mb-2">
+              <span className="text-2xl text-elderly-success">✓</span>
+              <h3 className="text-elderly-sm font-semibold text-elderly-text">
                 NHS-Grade Encryption
               </h3>
-              <p className="text-elderly-sm text-elderly-text">
-                Your information is protected with secure encryption
-              </p>
             </div>
+            <p className="text-elderly-sm text-elderly-text">
+              Your browsing is secure with the same encryption standards used by NHS services.
+            </p>
           </div>
 
-          <div className="flex items-start gap-3">
-            <span className="text-2xl text-elderly-success">✓</span>
-            <div className="text-left">
-              <h3 className="text-elderly-lg font-semibold text-elderly-text mb-1">
+          {/* No Ads or Tracking */}
+          <div className="bg-white p-4 rounded-lg border-elderly border-elderly-gray-medium text-left">
+            <div className="flex items-start gap-2 mb-2">
+              <span className="text-2xl text-elderly-success">✓</span>
+              <h3 className="text-elderly-sm font-semibold text-elderly-text">
                 No Ads or Tracking
               </h3>
-              <p className="text-elderly-sm text-elderly-text">
-                We don't use advertising or track your browsing
-              </p>
             </div>
+            <p className="text-elderly-sm text-elderly-text">
+              We don't use advertising cookies or sell your information to third parties.
+            </p>
           </div>
 
-          <div className="flex items-start gap-3">
-            <span className="text-2xl text-elderly-success">✓</span>
-            <div className="text-left">
-              <h3 className="text-elderly-lg font-semibold text-elderly-text mb-1">
+          {/* 100% Anonymous Comparison */}
+          <div className="bg-white p-4 rounded-lg border-elderly border-elderly-gray-medium text-left">
+            <div className="flex items-start gap-2 mb-2">
+              <span className="text-2xl text-elderly-success">✓</span>
+              <h3 className="text-elderly-sm font-semibold text-elderly-text">
                 100% Anonymous Comparison
               </h3>
-              <p className="text-elderly-sm text-elderly-text">
-                Compare options without sharing personal information
-              </p>
             </div>
+            <p className="text-elderly-sm text-elderly-text">
+              You can compare surgery options without providing any contact details.
+            </p>
           </div>
         </div>
 
         <div className="bg-white p-4 rounded-lg border-elderly border-elderly-gray-medium">
           <p className="text-elderly-base font-semibold text-elderly-text">
-            We never sell your data to clinics
+            We never sell your data to clinics or collect personal information for comparisons.
           </p>
         </div>
       </div>

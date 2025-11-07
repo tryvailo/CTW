@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
   ...props
 }) => {
-  const baseStyles = 'min-h-touch font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-elderly-primary focus:ring-offset-2';
+  const baseStyles = 'font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-elderly-primary focus:ring-offset-2';
   
   const variantStyles = {
     primary: 'bg-elderly-primary text-white hover:bg-elderly-primary-dark disabled:bg-elderly-gray-medium disabled:cursor-not-allowed',
@@ -22,8 +22,8 @@ export const Button: React.FC<ButtonProps> = ({
   };
   
   const sizeStyles = {
-    default: 'px-8 py-4 text-elderly-base',
-    large: 'px-10 py-5 text-elderly-lg',
+    default: 'px-8 py-4 text-elderly-base min-h-touch',
+    large: 'px-10 py-5 text-elderly-lg font-bold min-h-[52px]',
   };
   
   return (

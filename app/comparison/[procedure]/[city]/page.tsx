@@ -16,6 +16,7 @@ import {
   getAllComparisonCombinations,
   getFAQItems,
 } from '@/lib/data'
+import { groupFAQItems } from '@/lib/faq-utils'
 import type { ProcedureId, City } from '@/lib/types'
 import type { Metadata } from 'next'
 
@@ -149,6 +150,14 @@ export default async function ComparisonPage({ params }: PageProps) {
             />
           </header>
 
+          {/* Trust Badge */}
+          <div className="bg-elderly-primary-light border-l-4 border-elderly-primary p-4 mb-6 rounded">
+            <p className="text-elderly-sm text-elderly-text flex items-start gap-2">
+              <span className="text-elderly-primary text-lg">ℹ️</span>
+              <span>Independent comparison: We don't receive payment from any clinic listed below.</span>
+            </p>
+          </div>
+
           {/* Main Comparison Table */}
           <ComparisonTable data={comparisonData} />
 
@@ -163,7 +172,17 @@ export default async function ComparisonPage({ params }: PageProps) {
           />
 
           {/* FAQ Section */}
-          <FAQ items={getFAQItems(procedureId)} />
+          {(() => {
+            const faqItems = getFAQItems(procedureId);
+            const grouped = groupFAQItems(faqItems);
+            // If grouping returns empty, use items directly
+            if (grouped.length > 0) {
+              return <FAQ groupedItems={grouped} />;
+            } else if (faqItems.length > 0) {
+              return <FAQ items={faqItems} showTitle={true} />;
+            }
+            return null;
+          })()}
 
           {/* Related Comparisons */}
           <section className="mb-12 bg-elderly-primary-light p-6 rounded-lg border-elderly border-elderly-gray-medium">

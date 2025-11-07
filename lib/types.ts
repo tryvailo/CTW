@@ -69,7 +69,7 @@ export interface FAQData {
   question: string;
   answer: string;
   procedure_id: ProcedureId | 'general';
-  category: 'general' | 'procedure';
+  category: 'general' | 'procedure' | 'extended';
 }
 
 export interface ContentData {
@@ -78,5 +78,11 @@ export interface ContentData {
   key: string;
   value: string;
   language: string;
+}
+
+export interface ExtendedFAQ {
+  question: string;
+  answer: string;
+  category: 'safety' | 'process' | 'cost' | 'aftercare';
 }
 

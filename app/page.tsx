@@ -1,6 +1,5 @@
 import { Hero } from '@/components/sections/Hero'
 import { TrustSection } from '@/components/sections/TrustSection'
-import { ValueProps } from '@/components/sections/ValueProps'
 import { QuickFind } from '@/components/sections/QuickFind'
 import { DataInsights } from '@/components/sections/DataInsights'
 import { SecuritySection } from '@/components/sections/SecuritySection'
@@ -42,14 +41,14 @@ export default function Home() {
           {/* Trust Section */}
           <TrustSection />
 
-          {/* Value Props Section */}
-          <ValueProps />
-
           {/* Quick Find Section */}
           <QuickFind />
 
           {/* Data Insights Section */}
           <DataInsights />
+
+          {/* Security Section */}
+          <SecuritySection />
 
           {/* About Section */}
           <section className="mb-12 bg-elderly-primary-light p-6 rounded-lg border-elderly border-elderly-gray-medium">
@@ -72,9 +71,6 @@ export default function Home() {
               </p>
             </div>
           </section>
-
-          {/* Security Section */}
-          <SecuritySection />
         </div>
       </div>
     </>

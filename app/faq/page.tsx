@@ -2,7 +2,7 @@ import { Breadcrumbs } from '@/components/common/Breadcrumbs'
 import { FAQ } from '@/components/sections/FAQ'
 import { JsonLd } from '@/components/common/JsonLd'
 import { generateStaticPageMetadata } from '@/lib/metadata'
-import { getFAQItems } from '@/lib/data'
+import { getFAQItems, getExtendedFAQItems } from '@/lib/data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = generateStaticPageMetadata('faq')
@@ -51,6 +51,62 @@ export default function FAQPage() {
               Common questions about NHS vs private surgery, waiting times, costs, and making informed decisions.
             </p>
           </header>
+
+          {/* Extended FAQ Section */}
+          <section className="mb-12">
+            <h2 className="text-elderly-xl font-bold text-elderly-primary mb-6">
+              Common Questions from Patients Like You
+            </h2>
+            
+            {(() => {
+              const extendedFAQs = getExtendedFAQItems();
+              const categories = {
+                safety: { title: 'Safety and Quality', items: extendedFAQs.filter(f => f.category === 'safety') },
+                process: { title: 'The Process', items: extendedFAQs.filter(f => f.category === 'process') },
+                cost: { title: 'Costs and Payment', items: extendedFAQs.filter(f => f.category === 'cost') },
+                aftercare: { title: 'After Surgery', items: extendedFAQs.filter(f => f.category === 'aftercare') },
+              };
+
+              return (
+                <div className="space-y-8">
+                  {Object.entries(categories).map(([key, category]) => (
+                    category.items.length > 0 && (
+                      <div key={key}>
+                        <h3 className="text-elderly-lg font-bold text-elderly-primary mb-4">
+                          {category.title}
+                        </h3>
+                        <div className="space-y-4">
+                          {category.items.map((item, index) => (
+                            <div
+                              key={index}
+                              className="bg-white border-elderly border-elderly-gray-medium rounded-lg"
+                            >
+                              <details className="group">
+                                <summary className="px-6 py-4 cursor-pointer list-none flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-elderly-primary focus:ring-offset-2 rounded-lg">
+                                  <span className="text-elderly-base font-semibold text-elderly-text pr-4">
+                                    {item.question}
+                                  </span>
+                                  <span className="text-elderly-lg text-elderly-primary flex-shrink-0">
+                                    <span className="group-open:hidden">+</span>
+                                    <span className="group-open:inline hidden">−</span>
+                                  </span>
+                                </summary>
+                                <div className="px-6 pb-4">
+                                  <p className="text-elderly-sm text-elderly-text leading-[1.8]">
+                                    {item.answer}
+                                  </p>
+                                </div>
+                              </details>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  ))}
+                </div>
+              );
+            })()}
+          </section>
 
           {/* General FAQ */}
           <section className="mb-12">

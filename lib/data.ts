@@ -19,6 +19,7 @@ import {
   FAQData,
   FAQItem,
   ContentData,
+  ExtendedFAQ,
 } from './types';
 
 // Path to data directory
@@ -331,6 +332,7 @@ export function getFAQItems(procedureId?: ProcedureId): FAQItem[] {
   return [...procedureItems, ...generalItems];
 }
 
+
 /**
  * Load content data from CSV
  */
@@ -366,5 +368,37 @@ export function getSectionContent(section: string, language: string = 'en'): Rec
     result[item.key] = item.value;
   });
   return result;
+}
+
+/**
+ * Get extended FAQ items addressing elderly-specific concerns
+ * Reads from faq.csv with category='extended'
+ */
+export function getExtendedFAQItems(): ExtendedFAQ[] {
+  const faqData = loadFAQData();
+  
+  // Map category from CSV to ExtendedFAQ category
+  const categoryMap: Record<string, 'safety' | 'process' | 'cost' | 'aftercare'> = {
+    'safety': 'safety',
+    'process': 'process',
+    'cost': 'cost',
+    'aftercare': 'aftercare',
+  };
+  
+  return faqData
+    .filter(item => item.category === 'extended')
+    .map(item => {
+      // Extract category from faq_id (format: extended_safety_1, extended_process_1, etc.)
+      const categoryMatch = item.faq_id.match(/extended_(safety|process|cost|aftercare)/);
+      const mappedCategory = categoryMatch 
+        ? (categoryMap[categoryMatch[1]] || 'safety')
+        : 'safety';
+      
+      return {
+        question: item.question,
+        answer: item.answer,
+        category: mappedCategory,
+      };
+    });
 }
 
