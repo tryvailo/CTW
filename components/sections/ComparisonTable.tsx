@@ -209,7 +209,7 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
       </Table>
 
       <p className="text-elderly-xs text-elderly-gray-dark italic mt-4">
-        Data sources: NHS My Planned Care, PHIN consultant registry, clinic websites. Updated weekly. 
+        Data sources: NHS My Planned Care, PHIN consultant registry, clinic websites. Updated every 2 weeks. 
         This is informational only—consult your doctor before deciding.
       </p>
     </section>

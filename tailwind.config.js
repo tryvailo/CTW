@@ -15,6 +15,7 @@ module.exports = {
         'elderly-lg': ['20px', { lineHeight: '1.8', letterSpacing: '0.01em' }],
         'elderly-xl': ['24px', { lineHeight: '1.8', letterSpacing: '0.01em' }],
         'elderly-2xl': ['28px', { lineHeight: '1.8', letterSpacing: '0.01em' }],
+        'elderly-hero': ['32px', { lineHeight: '1.2', letterSpacing: '0.01em' }], // Hero H1 - более заметный для пожилых
       },
       // WCAG AAA цвета (контраст минимум 7:1) - NHS-inspired для UK healthcare
       colors: {

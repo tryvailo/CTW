@@ -1,0 +1,62 @@
+{
+  "successful": [
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/cataract-surgery",
+      "result": {
+        "procedure_id": "cataract",
+        "city": "London",
+        "cost_min": 2796,
+        "cost_max": 2796,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire London East Hospital",
+        "rating": 3.3,
+        "avg_uk_price": 2980,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/cataract-surgery"
+      }
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/cataract-surgery",
+      "result": {
+        "procedure_id": "cataract",
+        "city": "London",
+        "cost_min": 1854,
+        "cost_max": 1854,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+        "rating": 2.7,
+        "avg_uk_price": 2980,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/cataract-surgery"
+      }
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/cataract-surgery",
+      "result": {
+        "procedure_id": "cataract",
+        "city": "London",
+        "cost_min": 2920,
+        "cost_max": 2920,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Nuffield Health Brentwood Hospital",
+        "rating": 4.3,
+        "avg_uk_price": 2843,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/cataract-surgery"
+      }
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/moorfields-eye-hospital-london/cataract-surgery",
+      "error": "No data returned"
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-the-manor-hospital-london/cataract-surgery",
+      "error": "No data returned"
+    }
+  ]
+}

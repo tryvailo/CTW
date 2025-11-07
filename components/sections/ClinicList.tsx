@@ -30,7 +30,7 @@ export const ClinicList: React.FC<ClinicListProps> = ({ clinics, procedureName, 
       </h2>
       <p className="text-elderly-sm text-elderly-text mb-6">
         These are {clinics.length} clinics we found offering {procedureName.toLowerCase()} in {city} in 2025. 
-        Prices updated weekly. Clinic order is by lowest to highest cost.
+        Prices updated every 2 weeks. Clinic order is by lowest to highest cost.
       </p>
 
       <div className="space-y-4">

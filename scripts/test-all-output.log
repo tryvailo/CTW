@@ -1,0 +1,1072 @@
+🧪 Comprehensive TreatmentConnect Testing
+============================================================
+
+📊 Testing Statistics:
+  Total URLs: 49
+  By city: { london: 15, manchester: 9, birmingham: 9, leeds: 8, bristol: 8 }
+  By procedure: { cataract: 17, hip: 17, knee: 15 }
+
+🚀 Starting comprehensive tests...
+
+
+[1/49] (2%) Testing: cataract in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/cataract...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "IG4 5PZ",
+  "price_gbp": 2796,
+  "avg_uk_price": 2980,
+  "rating_count": 19,
+  "rating_stars": 3.3,
+  "hospital_name": "Spire London East Hospital",
+  "price_max_gbp": 2796,
+  "price_min_gbp": 2796,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: Spire London East Hospital - £2796
+
+[2/49] (4%) Testing: cataract in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/moorfields-eye-hospital-london/cata...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name="Hospital Name"
+
+[3/49] (6%) Testing: cataract in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospi...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "E1 4NL",
+  "price_gbp": 1854,
+  "avg_uk_price": 2980,
+  "rating_count": 45,
+  "rating_stars": 2.7,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "price_max_gbp": 1854,
+  "price_min_gbp": 1854,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: The London Independent Hospital, part of Circle Health Group - £1854
+
+[4/49] (8%) Testing: cataract in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-the-manor-hospital-london/ca...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: hospital_name, price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name="Hospital Name"
+
+[5/49] (10%) Testing: cataract in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "CM15 8EH",
+  "price_gbp": 2920,
+  "avg_uk_price": 2843,
+  "rating_count": 7,
+  "rating_stars": 4.3,
+  "hospital_name": "Nuffield Health Brentwood Hospital",
+  "price_max_gbp": 2920,
+  "price_min_gbp": 2920,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 3765,
+  "price_range_uk_min": 1995
+}
+  ✅ Success: Nuffield Health Brentwood Hospital - £2920
+
+[6/49] (12%) Testing: hip in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospi...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "E1 4NL",
+  "price_gbp": 12595,
+  "avg_uk_price": 14485,
+  "rating_count": 45,
+  "rating_stars": 2.7,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "price_max_gbp": 12595,
+  "price_min_gbp": 12595,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: The London Independent Hospital, part of Circle Health Group - £12595
+
+[7/49] (14%) Testing: hip in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "CM15 8EH",
+  "price_gbp": 16540,
+  "avg_uk_price": 14485,
+  "rating_count": 7,
+  "rating_stars": 4.3,
+  "hospital_name": "Nuffield Health Brentwood Hospital",
+  "price_max_gbp": 16540,
+  "price_min_gbp": 16540,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Nuffield Health Brentwood Hospital - £16540
+
+[8/49] (16%) Testing: hip in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-rivers-hospital/hip-replacem...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "CM21 0HH",
+  "price_gbp": 15484,
+  "avg_uk_price": 14485,
+  "rating_count": 17,
+  "rating_stars": 4.4,
+  "hospital_name": "Ramsay Rivers Hospital",
+  "price_max_gbp": 15484,
+  "price_min_gbp": 15484,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Ramsay Rivers Hospital - £15484
+
+[9/49] (18%) Testing: hip in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/hip-repl...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "IG4 5PZ",
+  "price_gbp": 14066,
+  "avg_uk_price": 14485,
+  "rating_count": 19,
+  "rating_stars": 3.3,
+  "hospital_name": "Spire London East Hospital",
+  "price_max_gbp": 14066,
+  "price_min_gbp": 14066,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Spire London East Hospital - £14066
+
+[10/49] (20%) Testing: hip in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/the-blackheath-hospital/hip-replace...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name=""
+
+[11/49] (22%) Testing: knee in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospi...
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: Request failed with status code 503
+  Attempt 2/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "E1 4NL",
+  "price_gbp": 11545,
+  "avg_uk_price": 14941,
+  "rating_count": 45,
+  "rating_stars": 2.7,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "price_max_gbp": 11545,
+  "price_min_gbp": 11545,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: The London Independent Hospital, part of Circle Health Group - £11545
+
+[12/49] (24%) Testing: knee in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/shirley-oaks-hospital/knee-replacem...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: price_gbp
+  ❌ Failed: Request failed with status code 503
+
+[13/49] (27%) Testing: knee in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/the-cavell-hospital/knee-replacemen...
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: Request failed with status code 503
+  Attempt 2/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name=""
+
+[14/49] (29%) Testing: knee in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/the-blackheath-hospital/knee-replac...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name="Hospital Name"
+
+[15/49] (31%) Testing: knee in London
+  URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "postcode": "CM15 8EH",
+  "price_gbp": 16745,
+  "avg_uk_price": 14941,
+  "rating_count": 7,
+  "rating_stars": 4.3,
+  "hospital_name": "Nuffield Health Brentwood Hospital",
+  "price_max_gbp": 16745,
+  "price_min_gbp": 16745,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Nuffield Health Brentwood Hospital - £16745
+
+[16/49] (33%) Testing: cataract in Manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/cataract-...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name="Hospital Name"
+
+[17/49] (35%) Testing: cataract in Manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/alexandra-hospital-manchester/catar...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name="Hospital Name"
+
+[18/49] (37%) Testing: cataract in Manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-springfield-hospital/catarac...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "postcode": "CM1 7GU",
+  "price_gbp": 2894,
+  "avg_uk_price": 2980,
+  "rating_count": 16,
+  "rating_stars": 3.9,
+  "hospital_name": "Ramsay Springfield Hospital",
+  "price_max_gbp": 2894,
+  "price_min_gbp": 2894,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: Ramsay Springfield Hospital - £2894
+
+[19/49] (39%) Testing: hip in Manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-repla...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "postcode": "M20 2AF",
+  "price_gbp": 14055,
+  "avg_uk_price": 14485,
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "price_max_gbp": 14055,
+  "price_min_gbp": 14055,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Spire Manchester Hospital - £14055
+
+[20/49] (41%) Testing: hip in Manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/alexandra-hospital-manchester/hip-r...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: price_gbp
+  ❌ Failed: Request failed with status code 503
+
+[21/49] (43%) Testing: hip in Manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/the-wilmslow-hospital/hip-replaceme...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: hospital_name, price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name=""
+
+[22/49] (45%) Testing: knee in Manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/knee-repl...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "postcode": "M20 2AF",
+  "price_gbp": 14545,
+  "avg_uk_price": 14941,
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "price_max_gbp": 14545,
+  "price_min_gbp": 14545,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Spire Manchester Hospital - £14545
+
+[23/49] (47%) Testing: knee in Manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/alexandra-hospital-manchester/knee-...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: hospital_name, price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name=""
+
+[24/49] (49%) Testing: knee in Manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/the-wilmslow-hospital/knee-replacem...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: hospital_name, price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name=""
+
+[25/49] (51%) Testing: cataract in Birmingham
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/cataract-sur...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "postcode": "B91 2PP",
+  "price_gbp": 3143,
+  "avg_uk_price": 2980,
+  "rating_count": 6,
+  "rating_stars": 3.4,
+  "hospital_name": "Spire Parkway Hospital",
+  "price_max_gbp": 3143,
+  "price_min_gbp": 3143,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: Spire Parkway Hospital - £3143
+
+[26/49] (53%) Testing: cataract in Birmingham
+  URL: https://www.treatmentconnect.co.uk/hospitals/birmingham-womens-hospital/cataract...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name=""
+
+[27/49] (55%) Testing: cataract in Birmingham
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-little-aston-hospital/catara...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: hospital_name, price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name="Hospital Name"
+
+[28/49] (57%) Testing: hip in Birmingham
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/hip-replacem...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "postcode": "B91 2PP",
+  "price_gbp": 14906,
+  "avg_uk_price": 14485,
+  "rating_count": 6,
+  "rating_stars": 3.4,
+  "hospital_name": "Spire Parkway Hospital",
+  "price_max_gbp": 14906,
+  "price_min_gbp": 14906,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Spire Parkway Hospital - £14906
+
+[29/49] (59%) Testing: hip in Birmingham
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/hip-rep...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "postcode": "ST17 9AQ",
+  "price_gbp": 10761,
+  "avg_uk_price": 14485,
+  "rating_count": 20,
+  "rating_stars": 3.9,
+  "hospital_name": "Ramsay Rowley Hall Hospital",
+  "price_max_gbp": 10761,
+  "price_min_gbp": 10761,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Ramsay Rowley Hall Hospital - £10761
+
+[30/49] (61%) Testing: hip in Birmingham
+  URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospi...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "postcode": "WV6 8LE",
+  "price_gbp": 15785,
+  "avg_uk_price": 14485,
+  "rating_count": 5,
+  "rating_stars": 4.4,
+  "hospital_name": "Nuffield Health Wolverhampton Hospital",
+  "price_max_gbp": 15785,
+  "price_min_gbp": 15785,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Nuffield Health Wolverhampton Hospital - £15785
+
+[31/49] (63%) Testing: knee in Birmingham
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/knee-replace...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "postcode": "B91 2PP",
+  "price_gbp": 14880,
+  "avg_uk_price": 14941,
+  "rating_count": 6,
+  "rating_stars": 3.4,
+  "hospital_name": "Spire Parkway Hospital",
+  "price_max_gbp": 14880,
+  "price_min_gbp": 14880,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Spire Parkway Hospital - £14880
+
+[32/49] (65%) Testing: knee in Birmingham
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/knee-re...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "postcode": "ST17 9AQ",
+  "price_gbp": 11814,
+  "avg_uk_price": 14941,
+  "rating_count": 20,
+  "rating_stars": 3.9,
+  "hospital_name": "Ramsay Rowley Hall Hospital",
+  "price_max_gbp": 11814,
+  "price_min_gbp": 11814,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Ramsay Rowley Hall Hospital - £11814
+
+[33/49] (67%) Testing: knee in Birmingham
+  URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospi...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "postcode": "WV6 8LE",
+  "price_gbp": 16460,
+  "avg_uk_price": 14941,
+  "rating_count": 5,
+  "rating_stars": 4.4,
+  "hospital_name": "Nuffield Health Wolverhampton Hospital",
+  "price_max_gbp": 16460,
+  "price_min_gbp": 16460,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Nuffield Health Wolverhampton Hospital - £16460
+
+[34/49] (69%) Testing: cataract in Leeds
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/cataract-surge...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "postcode": "LS8 1NT",
+  "price_gbp": 2941,
+  "avg_uk_price": 2980,
+  "rating_count": 7,
+  "rating_stars": 4.6,
+  "hospital_name": "Spire Leeds Hospital",
+  "price_max_gbp": 2941,
+  "price_min_gbp": 2941,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: Spire Leeds Hospital - £2941
+
+[35/49] (71%) Testing: cataract in Leeds
+  URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/cata...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: hospital_name, price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name=""
+
+[36/49] (73%) Testing: cataract in Leeds
+  URL: https://www.treatmentconnect.co.uk/hospitals/the-yorkshire-clinic/cataract-surge...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "postcode": "",
+  "price_gbp": 0,
+  "avg_uk_price": 0,
+  "rating_count": 0,
+  "rating_stars": 0,
+  "hospital_name": "",
+  "price_max_gbp": 0,
+  "price_min_gbp": 0,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 0,
+  "price_range_uk_min": 0
+}
+  ⚠️  Missing required fields: hospital_name, price_gbp
+  ❌ Failed: No data extracted
+     Raw response: price_gbp=0, hospital_name="Hospital Name"
+
+[37/49] (76%) Testing: hip in Leeds
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/hip-replacemen...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "postcode": "LS8 1NT",
+  "price_gbp": 14730,
+  "avg_uk_price": 14485,
+  "rating_count": 7,
+  "rating_stars": 4.6,
+  "hospital_name": "Spire Leeds Hospital",
+  "price_max_gbp": 14730,
+  "price_min_gbp": 14730,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Spire Leeds Hospital - £14730
+
+[38/49] (78%) Testing: hip in Leeds
+  URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/hip-...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "postcode": "LS1 3EB",
+  "price_gbp": 15855,
+  "avg_uk_price": 14485,
+  "rating_count": 21,
+  "rating_stars": 4.5,
+  "hospital_name": "Nuffield Health Leeds Hospital",
+  "price_max_gbp": 15855,
+  "price_min_gbp": 15855,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Nuffield Health Leeds Hospital - £15855
+
+[39/49] (80%) Testing: hip in Leeds
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/hip-re...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "postcode": "YO30 5RA",
+  "price_gbp": 13800,
+  "avg_uk_price": 14485,
+  "rating_count": 7,
+  "rating_stars": 4.5,
+  "hospital_name": "Ramsay Clifton Park Hospital",
+  "price_max_gbp": 13800,
+  "price_min_gbp": 13800,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Ramsay Clifton Park Hospital - £13800
+
+[40/49] (82%) Testing: knee in Leeds
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/knee-replaceme...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "postcode": "LS8 1NT",
+  "price_gbp": 15060,
+  "avg_uk_price": 14941,
+  "rating_count": 7,
+  "rating_stars": 4.6,
+  "hospital_name": "Spire Leeds Hospital",
+  "price_max_gbp": 15060,
+  "price_min_gbp": 15060,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Spire Leeds Hospital - £15060
+
+[41/49] (84%) Testing: knee in Leeds
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/knee-r...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "postcode": "YO30 5RA",
+  "price_gbp": 13995,
+  "avg_uk_price": 14941,
+  "rating_count": 7,
+  "rating_stars": 4.5,
+  "hospital_name": "Ramsay Clifton Park Hospital",
+  "price_max_gbp": 13995,
+  "price_min_gbp": 13995,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Ramsay Clifton Park Hospital - £13995
+
+[42/49] (86%) Testing: cataract in Bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/cataract-sur...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "postcode": "BS6 6UT",
+  "price_gbp": 3670,
+  "avg_uk_price": 2980,
+  "rating_count": 12,
+  "rating_stars": 4.2,
+  "hospital_name": "Spire Bristol Hospital",
+  "price_max_gbp": 3670,
+  "price_min_gbp": 3670,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: Spire Bristol Hospital - £3670
+
+[43/49] (88%) Testing: cataract in Bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/ca...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "postcode": "BS8 1BN",
+  "price_gbp": 3660,
+  "avg_uk_price": 2980,
+  "rating_count": 4,
+  "rating_stars": 4.1,
+  "hospital_name": "Nuffield Health Bristol Hospital",
+  "price_max_gbp": 3660,
+  "price_min_gbp": 3660,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: Nuffield Health Bristol Hospital - £3660
+
+[44/49] (90%) Testing: cataract in Bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/practice-plus-group-hospital-emerso...
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: Request failed with status code 503
+  Attempt 2/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "postcode": "",
+  "price_gbp": 2500,
+  "avg_uk_price": null,
+  "rating_count": null,
+  "rating_stars": null,
+  "hospital_name": "Hospital Name",
+  "price_max_gbp": 2500,
+  "price_min_gbp": 2500,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": null,
+  "price_range_uk_min": null
+}
+  ✅ Success: Hospital Name - £2500
+
+[45/49] (92%) Testing: hip in Bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/hip-replacem...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "postcode": "BS6 6UT",
+  "price_gbp": 14750,
+  "avg_uk_price": 14485,
+  "rating_count": 12,
+  "rating_stars": 4.2,
+  "hospital_name": "Spire Bristol Hospital",
+  "price_max_gbp": 14750,
+  "price_min_gbp": 14750,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Spire Bristol Hospital - £14750
+
+[46/49] (94%) Testing: hip in Bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/hi...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "postcode": "BS8 1BN",
+  "price_gbp": 15070,
+  "avg_uk_price": 14485,
+  "rating_count": 4,
+  "rating_stars": 4.1,
+  "hospital_name": "Nuffield Health Bristol Hospital",
+  "price_max_gbp": 15070,
+  "price_min_gbp": 15070,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Nuffield Health Bristol Hospital - £15070
+
+[47/49] (96%) Testing: hip in Bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/hip-replacement...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "postcode": "BA2 7BR",
+  "price_gbp": 13700,
+  "avg_uk_price": 14065,
+  "rating_count": 13,
+  "rating_stars": 4.9,
+  "hospital_name": "Bath Clinic, part of Circle Health Group",
+  "price_max_gbp": 13700,
+  "price_min_gbp": 13700,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Bath Clinic, part of Circle Health Group - £13700
+
+[48/49] (98%) Testing: knee in Bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/knee-replace...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "postcode": "BS6 6UT",
+  "price_gbp": 15995,
+  "avg_uk_price": 14941,
+  "rating_count": 12,
+  "rating_stars": 4.2,
+  "hospital_name": "Spire Bristol Hospital",
+  "price_max_gbp": 15995,
+  "price_min_gbp": 15995,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Spire Bristol Hospital - £15995
+
+[49/49] (100%) Testing: knee in Bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-thornbury-hospital/knee-repl...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "postcode": "",
+  "price_gbp": 15225,
+  "avg_uk_price": 14941,
+  "rating_count": 33,
+  "rating_stars": 4.1,
+  "hospital_name": "Thornbury Hospital, part of Circle Health Group",
+  "price_max_gbp": 15225,
+  "price_min_gbp": 15225,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Thornbury Hospital, part of Circle Health Group - £15225
+
+============================================================
+📊 Final Statistics
+============================================================
+  Total processed: 49
+  ✅ Successful: 33
+  ❌ Failed: 16
+  Success rate: 67%
+
+💾 Full results saved to: /Users/alexandertryvailo/Documents/Products/CompareTheWait/scripts/test-results-all-treatmentconnect.json
+💾 Failure report saved to: /Users/alexandertryvailo/Documents/Products/CompareTheWait/scripts/FAILED_CASES_REPORT.json
+
+============================================================
+❌ Failed Cases Summary
+============================================================
+
+1. [cataract] in [London]
+   URL: https://www.treatmentconnect.co.uk/hospitals/moorfields-eye-hospital-london/cataract-surgery
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name="Hospital Name"
+
+2. [cataract] in [London]
+   URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-the-manor-hospital-london/cataract-surgery
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name="Hospital Name"
+
+3. [hip] in [London]
+   URL: https://www.treatmentconnect.co.uk/hospitals/the-blackheath-hospital/hip-replacement
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name=""
+
+4. [knee] in [London]
+   URL: https://www.treatmentconnect.co.uk/hospitals/shirley-oaks-hospital/knee-replacement
+   Error: Firecrawl error: Request failed with status code 503
+
+5. [knee] in [London]
+   URL: https://www.treatmentconnect.co.uk/hospitals/the-cavell-hospital/knee-replacement
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name=""
+
+6. [knee] in [London]
+   URL: https://www.treatmentconnect.co.uk/hospitals/the-blackheath-hospital/knee-replacement
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name="Hospital Name"
+
+7. [cataract] in [Manchester]
+   URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/cataract-surgery
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name="Hospital Name"
+
+8. [cataract] in [Manchester]
+   URL: https://www.treatmentconnect.co.uk/hospitals/alexandra-hospital-manchester/cataract-surgery
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name="Hospital Name"
+
+9. [hip] in [Manchester]
+   URL: https://www.treatmentconnect.co.uk/hospitals/alexandra-hospital-manchester/hip-replacement
+   Error: Firecrawl error: Request failed with status code 503
+
+10. [hip] in [Manchester]
+   URL: https://www.treatmentconnect.co.uk/hospitals/the-wilmslow-hospital/hip-replacement
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name=""
+
+11. [knee] in [Manchester]
+   URL: https://www.treatmentconnect.co.uk/hospitals/alexandra-hospital-manchester/knee-replacement
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name=""
+
+12. [knee] in [Manchester]
+   URL: https://www.treatmentconnect.co.uk/hospitals/the-wilmslow-hospital/knee-replacement
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name=""
+
+13. [cataract] in [Birmingham]
+   URL: https://www.treatmentconnect.co.uk/hospitals/birmingham-womens-hospital/cataract-surgery
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name=""
+
+14. [cataract] in [Birmingham]
+   URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-little-aston-hospital/cataract-surgery
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name="Hospital Name"
+
+15. [cataract] in [Leeds]
+   URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/cataract-surgery
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name=""
+
+16. [cataract] in [Leeds]
+   URL: https://www.treatmentconnect.co.uk/hospitals/the-yorkshire-clinic/cataract-surgery
+   Error: No data extracted
+   Raw data: price_gbp=0, hospital_name="Hospital Name"
+
+✅ Testing complete!

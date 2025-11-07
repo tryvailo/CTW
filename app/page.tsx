@@ -1,5 +1,6 @@
 import { Hero } from '@/components/sections/Hero'
 import { TrustSection } from '@/components/sections/TrustSection'
+import { HowItWorks } from '@/components/sections/HowItWorks'
 import { QuickFind } from '@/components/sections/QuickFind'
 import { DataInsights } from '@/components/sections/DataInsights'
 import { SecuritySection } from '@/components/sections/SecuritySection'
@@ -41,6 +42,9 @@ export default function Home() {
           {/* Trust Section */}
           <TrustSection />
 
+          {/* How It Works Section */}
+          <HowItWorks />
+
           {/* Quick Find Section */}
           <QuickFind />
 
@@ -66,7 +70,7 @@ export default function Home() {
                 real waiting times and real costs so you can make an informed decision.
               </p>
               <p>
-                We update this data weekly from NHS records and clinic websites. Everything is free 
+                We update this data every 2 weeks from NHS records and clinic websites. Everything is free 
                 to compare.
               </p>
             </div>

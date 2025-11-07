@@ -14,7 +14,7 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section className="text-center mb-12 bg-elderly-primary-light p-8 rounded-lg border-elderly border-elderly-gray-medium">
-      <h1 className="text-elderly-2xl font-bold text-elderly-primary mb-6">
+      <h1 className="text-elderly-hero font-bold text-elderly-primary mb-6">
         {title}
       </h1>
       <p className="text-elderly-base text-elderly-text mb-8 max-w-3xl mx-auto">

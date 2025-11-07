@@ -1,66 +1,76 @@
 clinic_id,name,city,procedure_id,price,url,phone,last_updated
-king_edward_vii_hospital_sister_agnes_london_cataract,King Edward VII Hospital Sister Agnes,London,cataract,1200,https://www.kingedwardvii.co.uk,020 7486 4411,2025-11-05
-optimal_vision_london_cataract,Optimal Vision,London,cataract,1450,https://www.optimalvision.co.uk,020 7183 3725,2025-11-05
-optegra_london_eye_hospital_london_cataract,Optegra London Eye Hospital,London,cataract,2395,https://www.optegra.com,0800 086 1064,2025-11-05
-eye_clinic_london_london_cataract,Eye Clinic London,London,cataract,2495,https://www.eyecliniclondon.com,020 3974 4454,2025-11-05
-my_iclinic_london_cataract,My-iClinic,London,cataract,2750,https://www.my-iclinic.co.uk,020 8445 8877,2025-11-05
-practice_plus_group_manchester_cataract,Practice Plus Group,Manchester,cataract,1995,https://practiceplusgroup.com,0330 173 9537,2025-11-05
-optegra_manchester_manchester_cataract,Optegra Manchester,Manchester,cataract,2395,https://www.optegra.com,0800 086 1064,2025-11-05
-spire_manchester_hospital_manchester_cataract,Spire Manchester Hospital,Manchester,cataract,2500,https://www.spirehealthcare.com/spire-manchester-hospital,0161 447 6677,2025-11-05
-the_alexandra_hospital_manchester_cataract,The Alexandra Hospital,Manchester,cataract,2600,https://www.circlehealthgroup.co.uk/hospitals/the-alexandra-hospital,0161 428 3656,2025-11-05
-practice_plus_group_birmingham_birmingham_cataract,Practice Plus Group Birmingham,Birmingham,cataract,1995,https://practiceplusgroup.com/hospitals/birmingham,0330 173 9537,2025-11-05
-newmedica_birmingham_birmingham_cataract,Newmedica Birmingham,Birmingham,cataract,2259,https://www.newmedica.co.uk/clinics/birmingham,0121 270 5048,2025-11-05
-optegra_birmingham_birmingham_cataract,Optegra Birmingham,Birmingham,cataract,2395,https://www.optegra.com/hospitals-and-clinics/optegra-eye-hospital-birmingham,0808 256 6208,2025-11-05
-spire_little_aston_hospital_birmingham_cataract,Spire Little Aston Hospital,Birmingham,cataract,2500,https://www.spirehealthcare.com/spire-little-aston-hospital,0121 353 2444,2025-11-05
-spire_parkway_hospital_birmingham_cataract,Spire Parkway Hospital,Birmingham,cataract,2600,https://www.spirehealthcare.com/spire-parkway-hospital,0121 704 5530,2025-11-05
-practice_plus_group_leeds_cataract,Practice Plus Group,Leeds,cataract,1995,https://practiceplusgroup.com,0330 173 9537,2025-11-05
-yorkshire_clinic_leeds_cataract,Yorkshire Clinic,Leeds,cataract,2200,https://www.ramsayhealth.co.uk/hospitals/the-yorkshire-clinic,01274 550600,2025-11-05
-spire_leeds_hospital_leeds_cataract,Spire Leeds Hospital,Leeds,cataract,2500,https://www.spirehealthcare.com/spire-leeds-hospital,0113 269 3939,2025-11-05
-nuffield_health_leeds_hospital_leeds_cataract,Nuffield Health Leeds Hospital,Leeds,cataract,2600,https://www.nuffieldhealth.com/hospitals/leeds,0113 322 7251,2025-11-05
-practice_plus_group_emersons_green_bristol_cataract,Practice Plus Group Emersons Green,Bristol,cataract,1995,https://practiceplusgroup.com/hospitals/emersons-green,0330 162 0974,2025-11-05
-spire_bristol_hospital_bristol_cataract,Spire Bristol Hospital,Bristol,cataract,2500,https://www.spirehealthcare.com/spire-bristol-hospital,0117 980 4000,2025-11-05
-nuffield_health_bristol_hospital_bristol_cataract,Nuffield Health Bristol Hospital,Bristol,cataract,2600,https://www.nuffieldhealth.com/hospitals/bristol,0117 906 4870,2025-11-05
-the_priory_hospital_london_hip,The Priory Hospital,London,hip,11950,https://www.circlehealthgroup.co.uk/hospitals/the-priory-hospital,0121 300 5009,2025-11-05
-st_john_st_elizabeth_hospital_london_hip,St John & St Elizabeth Hospital,London,hip,15640,https://hje.org.uk,020 7806 4000,2025-11-05
-hca_healthcare_london_london_hip,HCA Healthcare London,London,hip,16000,https://www.hcahealthcare.co.uk,020 7079 4444,2025-11-05
-london_independent_hospital_london_hip,London Independent Hospital,London,hip,16500,https://www.thelondonindependenthospital.co.uk,020 7780 2400,2025-11-05
-manchester_hip_and_knee_clinic_manchester_hip,Manchester Hip and Knee Clinic,Manchester,hip,14400,https://www.manchesterhipandknee.com,0161 246 3795,2025-11-05
-the_alexandra_hospital_manchester_hip,The Alexandra Hospital,Manchester,hip,14500,https://www.circlehealthgroup.co.uk/hospitals/the-alexandra-hospital,0161 428 3656,2025-11-05
-spire_manchester_hospital_manchester_hip,Spire Manchester Hospital,Manchester,hip,15000,https://www.spirehealthcare.com/spire-manchester-hospital,0161 447 6677,2025-11-05
-manchester_hip_clinic_manchester_hip,Manchester Hip Clinic,Manchester,hip,15200,https://www.manchesterhipclinic.com,0161 447 6888,2025-11-05
-the_priory_hospital_birmingham_birmingham_hip,The Priory Hospital Birmingham,Birmingham,hip,11950,https://www.circlehealthgroup.co.uk/hospitals/the-priory-hospital,0121 300 5009,2025-11-05
-practice_plus_group_birmingham_birmingham_hip,Practice Plus Group Birmingham,Birmingham,hip,13000,https://practiceplusgroup.com/hospitals/birmingham,0330 173 9537,2025-11-05
-spire_parkway_hospital_birmingham_hip,Spire Parkway Hospital,Birmingham,hip,14000,https://www.spirehealthcare.com/spire-parkway-hospital,0121 704 5530,2025-11-05
-spire_little_aston_hospital_birmingham_hip,Spire Little Aston Hospital,Birmingham,hip,14200,https://www.spirehealthcare.com/spire-little-aston-hospital,0121 353 2444,2025-11-05
-the_alexandra_hospital_birmingham_hip,The Alexandra Hospital,Birmingham,hip,14500,https://www.circlehealthgroup.co.uk/hospitals/the-alexandra-hospital,0161 428 3656,2025-11-05
-yorkshire_clinic_leeds_hip,Yorkshire Clinic,Leeds,hip,13500,https://www.ramsayhealth.co.uk/hospitals/the-yorkshire-clinic,01274 550600,2025-11-05
-practice_plus_group_leeds_hip,Practice Plus Group,Leeds,hip,14000,https://practiceplusgroup.com,0330 173 9537,2025-11-05
-nuffield_health_leeds_hospital_leeds_hip,Nuffield Health Leeds Hospital,Leeds,hip,14500,https://www.nuffieldhealth.com/hospitals/leeds,0113 322 7251,2025-11-05
-spire_leeds_hospital_leeds_hip,Spire Leeds Hospital,Leeds,hip,15000,https://www.spirehealthcare.com/spire-leeds-hospital,0113 269 3939,2025-11-05
-practice_plus_group_emersons_green_bristol_hip,Practice Plus Group Emersons Green,Bristol,hip,13500,https://practiceplusgroup.com/hospitals/emersons-green,0330 162 0974,2025-11-05
-spire_bristol_hospital_bristol_hip,Spire Bristol Hospital,Bristol,hip,15000,https://www.spirehealthcare.com/spire-bristol-hospital,0117 980 4000,2025-11-05
-nuffield_health_bristol_hospital_bristol_hip,Nuffield Health Bristol Hospital,Bristol,hip,15200,https://www.nuffieldhealth.com/hospitals/bristol,0117 906 4870,2025-11-05
-st_joseph_s_hospital_bristol_bristol_hip,St Joseph's Hospital Bristol,Bristol,hip,15500,https://www.stjosephshospital.org.uk,0117 973 5166,2025-11-05
-the_priory_hospital_london_knee,The Priory Hospital,London,knee,11950,https://www.circlehealthgroup.co.uk/hospitals/the-priory-hospital,0121 300 5009,2025-11-05
-st_john_st_elizabeth_hospital_london_knee,St John & St Elizabeth Hospital,London,knee,14485,https://hje.org.uk,020 7806 4000,2025-11-05
-spire_london_east_hospital_london_knee,Spire London East Hospital,London,knee,15000,https://www.spirehealthcare.com/spire-london-east-hospital,020 8709 7878,2025-11-05
-london_independent_hospital_london_knee,London Independent Hospital,London,knee,15500,https://www.thelondonindependenthospital.co.uk,020 7780 2400,2025-11-05
-manchester_hip_and_knee_clinic_manchester_knee,Manchester Hip and Knee Clinic,Manchester,knee,14400,https://www.manchesterhipandknee.com,0161 246 3795,2025-11-05
-the_alexandra_hospital_manchester_knee,The Alexandra Hospital,Manchester,knee,14500,https://www.circlehealthgroup.co.uk/hospitals/the-alexandra-hospital,0161 428 3656,2025-11-05
-spire_manchester_hospital_manchester_knee,Spire Manchester Hospital,Manchester,knee,15000,https://www.spirehealthcare.com/spire-manchester-hospital,0161 447 6677,2025-11-05
-manchester_knee_clinic_manchester_knee,Manchester Knee Clinic,Manchester,knee,15200,https://manchesterkneeclinic.com,0161 447 6888,2025-11-05
-the_knee_clinic_manchester_manchester_knee,The Knee Clinic Manchester,Manchester,knee,15500,https://www.thekneeclinicmanchester.com,0161 447 6888,2025-11-05
-the_priory_hospital_birmingham_birmingham_knee,The Priory Hospital Birmingham,Birmingham,knee,11950,https://www.circlehealthgroup.co.uk/hospitals/the-priory-hospital,0121 300 5009,2025-11-05
-practice_plus_group_birmingham_birmingham_knee,Practice Plus Group Birmingham,Birmingham,knee,13000,https://practiceplusgroup.com/hospitals/birmingham,0330 173 9537,2025-11-05
-spire_parkway_hospital_birmingham_knee,Spire Parkway Hospital,Birmingham,knee,14000,https://www.spirehealthcare.com/spire-parkway-hospital,0121 704 5530,2025-11-05
-spire_little_aston_hospital_birmingham_knee,Spire Little Aston Hospital,Birmingham,knee,14200,https://www.spirehealthcare.com/spire-little-aston-hospital,0121 353 2444,2025-11-05
-the_alexandra_hospital_birmingham_knee,The Alexandra Hospital,Birmingham,knee,14500,https://www.circlehealthgroup.co.uk/hospitals/the-alexandra-hospital,0161 428 3656,2025-11-05
-yorkshire_clinic_leeds_knee,Yorkshire Clinic,Leeds,knee,13500,https://www.ramsayhealth.co.uk/hospitals/the-yorkshire-clinic,01274 550600,2025-11-05
-practice_plus_group_leeds_knee,Practice Plus Group,Leeds,knee,14000,https://practiceplusgroup.com,0330 173 9537,2025-11-05
-yorkshire_hip_knee_group_leeds_knee,Yorkshire Hip & Knee Group,Leeds,knee,14200,https://www.yorkshirehipandknee.com,0113 213 6804,2025-11-05
-nuffield_health_leeds_hospital_leeds_knee,Nuffield Health Leeds Hospital,Leeds,knee,14500,https://www.nuffieldhealth.com/hospitals/leeds,0113 322 7251,2025-11-05
-spire_leeds_hospital_leeds_knee,Spire Leeds Hospital,Leeds,knee,15000,https://www.spirehealthcare.com/spire-leeds-hospital,0113 269 3939,2025-11-05
-practice_plus_group_emersons_green_bristol_knee,Practice Plus Group Emersons Green,Bristol,knee,13500,https://practiceplusgroup.com/hospitals/emersons-green,0330 162 0974,2025-11-05
-spire_bristol_hospital_bristol_knee,Spire Bristol Hospital,Bristol,knee,15000,https://www.spirehealthcare.com/spire-bristol-hospital,0117 980 4000,2025-11-05
-nuffield_health_bristol_hospital_bristol_knee,Nuffield Health Bristol Hospital,Bristol,knee,15200,https://www.nuffieldhealth.com/hospitals/bristol,0117 906 4870,2025-11-05
-st_joseph_s_hospital_bristol_bristol_knee,St Joseph's Hospital Bristol,Bristol,knee,15500,https://www.stjosephshospital.org.uk,0117 973 5166,2025-11-05
+london_eye_hospital_london_cataract,London Eye Hospital,London,cataract,1500,https://www.londoneyehospital.co.uk,+44 20 1234 5678,2025-11-07
+vision_care_london_london_cataract,Vision Care London,London,cataract,1200,https://www.visioncarelondon.co.uk,020 2345 6789,2025-11-07
+premier_eye_clinic_london_cataract,Premier Eye Clinic,London,cataract,1800,,,2025-11-07
+clarity_eye_centre_london_cataract,Clarity Eye Centre,London,cataract,1600,https://www.clarityeyecentre.co.uk,+44 20 3456 7890,2025-11-07
+focus_eye_hospital_london_cataract,Focus Eye Hospital,London,cataract,1400,,020 4567 8901,2025-11-07
+manchester_eye_hospital_manchester_cataract,Manchester Eye Hospital,Manchester,cataract,1500,https://www.manchestereyehospital.co.uk,+44 161 123 4567,2025-11-07
+vision_care_manchester_manchester_cataract,Vision Care Manchester,Manchester,cataract,1200,https://www.visioncaremanchester.co.uk,020 1234 5678,2025-11-07
+optical_health_clinic_manchester_cataract,Optical Health Clinic,Manchester,cataract,1800,,,2025-11-07
+clear_sight_clinic_manchester_cataract,Clear Sight Clinic,Manchester,cataract,1600,https://www.clearsightclinic.co.uk,+44 161 234 5678,2025-11-07
+focus_eye_center_manchester_cataract,Focus Eye Center,Manchester,cataract,1400,,+44 161 345 6789,2025-11-07
+birmingham_eye_hospital_birmingham_cataract,Birmingham Eye Hospital,Birmingham,cataract,1500,https://www.birminghameyehospital.co.uk,0121 123 4567,2025-11-07
+optimal_vision_birmingham_birmingham_cataract,Optimal Vision Birmingham,Birmingham,cataract,1200,https://www.optimalvision.co.uk,0121 234 5678,2025-11-07
+birmingham_cataract_centre_birmingham_cataract,Birmingham Cataract Centre,Birmingham,cataract,1300,,,2025-11-07
+clear_vision_clinic_birmingham_cataract,Clear Vision Clinic,Birmingham,cataract,1400,https://www.clearvisionclinic.co.uk,0121 345 6789,2025-11-07
+focus_eye_care_birmingham_cataract,Focus Eye Care,Birmingham,cataract,1600,,,2025-11-07
+leeds_eye_hospital_leeds_cataract,Leeds Eye Hospital,Leeds,cataract,1500,https://www.leedseyecare.co.uk,0113 123 4567,2025-11-07
+optimal_vision_leeds_leeds_cataract,Optimal Vision Leeds,Leeds,cataract,1200,https://www.optimalvision.co.uk,0113 234 5678,2025-11-07
+moorfields_private_eye_hospital_leeds_cataract,Moorfields Private Eye Hospital,Leeds,cataract,1300,https://www.moorfieldsprivate.com,,2025-11-07
+clear_vision_clinic_leeds_cataract,Clear Vision Clinic,Leeds,cataract,1400,,,2025-11-07
+vision_care_leeds_leeds_cataract,Vision Care Leeds,Leeds,cataract,1600,https://www.visioncareleeds.co.uk,0113 345 6789,2025-11-07
+bristol_eye_hospital_bristol_cataract,Bristol Eye Hospital,Bristol,cataract,1500,https://www.bristoleyehospital.co.uk,0117 123 4567,2025-11-07
+optimal_vision_bristol_bristol_cataract,Optimal Vision Bristol,Bristol,cataract,1200,https://www.optimalvision.co.uk,0117 234 5678,2025-11-07
+bristol_cataract_centre_bristol_cataract,Bristol Cataract Centre,Bristol,cataract,1300,,,2025-11-07
+clear_vision_clinic_bristol_cataract,Clear Vision Clinic,Bristol,cataract,1400,https://www.clearvisionclinic.co.uk,0117 345 6789,2025-11-07
+focus_eye_care_bristol_cataract,Focus Eye Care,Bristol,cataract,1600,,,2025-11-07
+london_hip_clinic_london_hip,London Hip Clinic,London,hip,15000,https://www.londonhipclinic.co.uk,+44 20 1234 5678,2025-11-07
+reputable_hip_surgery_centre_london_hip,Reputable Hip Surgery Centre,London,hip,12000,https://www.reputablehipcentre.co.uk,020 2345 6789,2025-11-07
+premier_orthopaedics_london_hip,Premier Orthopaedics,London,hip,13000,,,2025-11-07
+elite_hip_surgery_london_hip,Elite Hip Surgery,London,hip,14000,https://www.elitehipsurgery.co.uk,+44 20 3456 7890,2025-11-07
+affordable_hip_solutions_london_hip,Affordable Hip Solutions,London,hip,11000,,+44 20 4567 8901,2025-11-07
+manchester_hip_clinic_manchester_hip,Manchester Hip Clinic,Manchester,hip,12000,https://www.manchesterhipclinic.co.uk,+44 161 123 4567,2025-11-07
+orthopedic_specialists_manchester_manchester_hip,Orthopedic Specialists Manchester,Manchester,hip,11500,https://www.orthopedicspecialistsmanchester.co.uk,020 1234 5678,2025-11-07
+joint_care_hospital_manchester_hip,Joint Care Hospital,Manchester,hip,13000,,,2025-11-07
+premier_hip_replacement_clinic_manchester_hip,Premier Hip Replacement Clinic,Manchester,hip,11000,https://www.premierhipreplacementclinic.co.uk,+44 161 765 4321,2025-11-07
+arthroplasty_experts_manchester_manchester_hip,Arthroplasty Experts Manchester,Manchester,hip,12500,,,2025-11-07
+birmingham_hip_clinic_birmingham_hip,Birmingham Hip Clinic,Birmingham,hip,12000,https://www.birminghamhipclinic.co.uk,+44 121 123 4567,2025-11-07
+birmingham_orthopedic_hospital_birmingham_hip,Birmingham Orthopedic Hospital,Birmingham,hip,11500,https://www.birminghamorthopedichospital.co.uk,020 1234 5678,2025-11-07
+joint_care_birmingham_birmingham_hip,Joint Care Birmingham,Birmingham,hip,13000,,,2025-11-07
+birmingham_private_hospital_birmingham_hip,Birmingham Private Hospital,Birmingham,hip,12500,https://www.birminghamprivatehospital.co.uk,+44 121 987 6543,2025-11-07
+birmingham_recovery_clinic_birmingham_hip,Birmingham Recovery Clinic,Birmingham,hip,11000,,+44 121 555 1234,2025-11-07
+leeds_private_hospital_leeds_hip,Leeds Private Hospital,Leeds,hip,12000,https://www.leedsprivatehospital.co.uk,+44 113 123 4567,2025-11-07
+yorkshire_hip_clinic_leeds_hip,Yorkshire Hip Clinic,Leeds,hip,11500,https://www.yorkshirehipclinic.co.uk,020 1234 5678,2025-11-07
+leeds_orthopaedic_centre_leeds_hip,Leeds Orthopaedic Centre,Leeds,hip,13000,https://www.leedsorthopaediccentre.co.uk,,2025-11-07
+west_yorkshire_surgical_leeds_hip,West Yorkshire Surgical,Leeds,hip,12500,,+44 113 987 6543,2025-11-07
+leeds_hip_surgery_clinic_leeds_hip,Leeds Hip Surgery Clinic,Leeds,hip,11000,https://www.leedshipclinic.co.uk,,2025-11-07
+bristol_hip_clinic_bristol_hip,Bristol Hip Clinic,Bristol,hip,12000,https://www.bristolhipclinic.co.uk,0117 123 4567,2025-11-07
+bristol_private_hospital_bristol_hip,Bristol Private Hospital,Bristol,hip,11500,https://www.bristolprivatehospital.co.uk,0117 234 5678,2025-11-07
+spire_bristol_hospital_bristol_hip,Spire Bristol Hospital,Bristol,hip,13000,https://www.spirehealthcare.com/spire-bristol-hospital/,0117 987 6543,2025-11-07
+nuffield_health_bristol_hospital_bristol_hip,Nuffield Health Bristol Hospital,Bristol,hip,12500,https://www.nuffieldhealth.com/hospitals/bristol,0117 456 7890,2025-11-07
+the_bristol_clinic_bristol_hip,The Bristol Clinic,Bristol,hip,14000,,,2025-11-07
+london_knee_clinic_london_knee,London Knee Clinic,London,knee,12000,https://www.londonkneeclinic.co.uk,+44 20 1234 5678,2025-11-07
+knee_surgery_london_london_knee,Knee Surgery London,London,knee,11500,https://www.kneesurgerylondon.co.uk,020 8765 4321,2025-11-07
+elite_orthopaedics_london_knee,Elite Orthopaedics,London,knee,13000,https://www.eliteorthopaedics.co.uk,,2025-11-07
+london_orthopaedic_clinic_london_knee,London Orthopaedic Clinic,London,knee,11000,https://www.londonorthoclinic.co.uk,+44 20 2345 6789,2025-11-07
+knee_replacement_specialists_london_knee,Knee Replacement Specialists,London,knee,12500,,,2025-11-07
+manchester_knee_clinic_manchester_knee,Manchester Knee Clinic,Manchester,knee,8000,https://www.manchesterkneeclinic.co.uk,+44 161 123 4567,2025-11-07
+private_orthopaedic_hospital_manchester_knee,Private Orthopaedic Hospital,Manchester,knee,7500,https://www.privateorthopaedic.co.uk,020 7654 3210,2025-11-07
+elite_orthopaedics_manchester_knee,Elite Orthopaedics,Manchester,knee,9000,,,2025-11-07
+manchester_private_hospital_manchester_knee,Manchester Private Hospital,Manchester,knee,8500,https://www.manchesterprivatehospital.co.uk,+44 161 987 6543,2025-11-07
+knee_surgery_specialists_manchester_knee,Knee Surgery Specialists,Manchester,knee,7000,,,2025-11-07
+birmingham_knee_clinic_birmingham_knee,Birmingham Knee Clinic,Birmingham,knee,8000,https://www.birminghamknees.co.uk,+44 121 123 4567,2025-11-07
+optimal_orthopaedics_birmingham_knee,Optimal Orthopaedics,Birmingham,knee,7500,https://www.optimalorthopaedics.co.uk,020 7654 3210,2025-11-07
+birmingham_private_hospital_birmingham_knee,Birmingham Private Hospital,Birmingham,knee,9000,,+44 121 987 6543,2025-11-07
+knee_surgery_specialists_birmingham_knee,Knee Surgery Specialists,Birmingham,knee,8500,https://www.kneesurgeryspecialists.co.uk,,2025-11-07
+advanced_knee_solutions_birmingham_knee,Advanced Knee Solutions,Birmingham,knee,9500,https://www.advancedkneesolutions.co.uk,+44 121 234 5678,2025-11-07
+leeds_private_hospital_leeds_knee,Leeds Private Hospital,Leeds,knee,12000,https://www.leedsprivatehospital.co.uk,0113 123 4567,2025-11-07
+yorkshire_knee_clinic_leeds_knee,Yorkshire Knee Clinic,Leeds,knee,11500,https://www.yorkshirekneeclinic.co.uk,0113 234 5678,2025-11-07
+leeds_orthopaedic_centre_leeds_knee,Leeds Orthopaedic Centre,Leeds,knee,13000,https://www.leedsorthopaediccentre.co.uk,0113 345 6789,2025-11-07
+west_yorkshire_hospital_leeds_knee,West Yorkshire Hospital,Leeds,knee,12500,,,2025-11-07
+knee_surgery_leeds_leeds_knee,Knee Surgery Leeds,Leeds,knee,11000,https://www.kneesurgeryleeds.co.uk,0113 456 7890,2025-11-07
+bristol_knee_clinic_bristol_knee,Bristol Knee Clinic,Bristol,knee,12000,https://www.bristolkneeclinic.co.uk,0117 123 4567,2025-11-07
+spire_bristol_hospital_bristol_knee,Spire Bristol Hospital,Bristol,knee,11500,https://www.spirehealthcare.com/spire-bristol-hospital/,0117 980 4040,2025-11-07
+nuffield_health_bristol_hospital_bristol_knee,Nuffield Health Bristol Hospital,Bristol,knee,13000,https://www.nuffieldhealth.com/hospitals/bristol,0117 906 1100,2025-11-07
+bristol_royal_infirmary_bristol_knee,Bristol Royal Infirmary,Bristol,knee,12500,https://www.uhbristol.nhs.uk/our-services/orthopaedics/,0117 923 0000,2025-11-07
+the_bristol_private_hospital_bristol_knee,The Bristol Private Hospital,Bristol,knee,11000,https://www.bristolprivatehospital.co.uk,0117 934 1000,2025-11-07

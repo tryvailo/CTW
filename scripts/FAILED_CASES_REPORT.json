@@ -1,0 +1,151 @@
+{
+  "timestamp": "2025-11-07T19:50:36.256Z",
+  "total_tests": 39,
+  "successful": 37,
+  "failed": 2,
+  "success_rate": "95%",
+  "failed_cases": [
+    {
+      "test_number": 9,
+      "url": "https://www.treatmentconnect.co.uk/hospitals/bmi-the-sloane-hospital/hip-replacement",
+      "city": "London",
+      "procedure": "hip",
+      "error": "No data extracted",
+      "missing_fields": null,
+      "prompt_used": {
+        "length": 1286,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "raw_firecrawl_response": {
+        "city": "London",
+        "postcode": "",
+        "price_gbp": 0,
+        "avg_uk_price": 0,
+        "rating_count": 0,
+        "rating_stars": 0,
+        "hospital_name": "",
+        "price_max_gbp": 0,
+        "price_min_gbp": 0,
+        "procedure_name": "Hip Replacement",
+        "price_range_uk_max": 0,
+        "price_range_uk_min": 0
+      },
+      "raw_data_analysis": {
+        "has_hospital_name": false,
+        "has_price_gbp": false,
+        "price_gbp_value": 0,
+        "hospital_name_value": "",
+        "all_fields": [
+          "city",
+          "postcode",
+          "price_gbp",
+          "avg_uk_price",
+          "rating_count",
+          "rating_stars",
+          "hospital_name",
+          "price_max_gbp",
+          "price_min_gbp",
+          "procedure_name",
+          "price_range_uk_max",
+          "price_range_uk_min"
+        ],
+        "all_values": {
+          "city": "London",
+          "postcode": "",
+          "price_gbp": 0,
+          "avg_uk_price": 0,
+          "rating_count": 0,
+          "rating_stars": 0,
+          "hospital_name": "",
+          "price_max_gbp": 0,
+          "price_min_gbp": 0,
+          "procedure_name": "Hip Replacement",
+          "price_range_uk_max": 0,
+          "price_range_uk_min": 0
+        }
+      },
+      "firecrawl_error": null
+    },
+    {
+      "test_number": 34,
+      "url": "https://www.treatmentconnect.co.uk/hospitals/practice-plus-group-hospital-emersons-green/cataract-surgery",
+      "city": "Bristol",
+      "procedure": "cataract",
+      "error": "No data extracted",
+      "missing_fields": null,
+      "prompt_used": {
+        "length": 1321,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "raw_firecrawl_response": {
+        "city": "Bristol",
+        "postcode": "",
+        "price_gbp": 2500,
+        "avg_uk_price": null,
+        "rating_count": null,
+        "rating_stars": null,
+        "hospital_name": "Hospital Name",
+        "price_max_gbp": 2500,
+        "price_min_gbp": 2500,
+        "procedure_name": "Cataract Surgery",
+        "price_range_uk_max": null,
+        "price_range_uk_min": null
+      },
+      "raw_data_analysis": {
+        "has_hospital_name": true,
+        "has_price_gbp": true,
+        "price_gbp_value": 2500,
+        "hospital_name_value": "Hospital Name",
+        "all_fields": [
+          "city",
+          "postcode",
+          "price_gbp",
+          "avg_uk_price",
+          "rating_count",
+          "rating_stars",
+          "hospital_name",
+          "price_max_gbp",
+          "price_min_gbp",
+          "procedure_name",
+          "price_range_uk_max",
+          "price_range_uk_min"
+        ],
+        "all_values": {
+          "city": "Bristol",
+          "postcode": "",
+          "price_gbp": 2500,
+          "avg_uk_price": null,
+          "rating_count": null,
+          "rating_stars": null,
+          "hospital_name": "Hospital Name",
+          "price_max_gbp": 2500,
+          "price_min_gbp": 2500,
+          "procedure_name": "Cataract Surgery",
+          "price_range_uk_max": null,
+          "price_range_uk_min": null
+        }
+      },
+      "firecrawl_error": null
+    }
+  ]
+}

@@ -56,14 +56,14 @@ export const TrustSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Updated Weekly */}
+        {/* Updated Every 2 Weeks */}
         <div className="text-center">
           <div className="text-3xl mb-3 text-elderly-accent">✓</div>
           <h3 className="text-elderly-lg font-bold mb-2 text-elderly-text">
-            Data Updated Weekly
+            Data Updated Every 2 Weeks
           </h3>
           <p className="text-elderly-sm text-elderly-text">
-            Fresh data every week from official sources
+            Fresh data every 2 weeks from official sources
           </p>
         </div>
 

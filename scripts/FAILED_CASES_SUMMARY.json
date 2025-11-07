@@ -1,0 +1,136 @@
+{
+  "timestamp": "2025-11-07T19:25:48.756Z",
+  "total_tests": 49,
+  "successful": 33,
+  "failed": 16,
+  "success_rate": "67%",
+  "errors_breakdown": {
+    "No data extracted": 14,
+    "Firecrawl error: Request failed with status code 503": 2
+  },
+  "failed_by_procedure": {
+    "cataract": 8,
+    "hip": 3,
+    "knee": 5
+  },
+  "failed_by_city": {
+    "London": 6,
+    "Manchester": 6,
+    "Birmingham": 2,
+    "Leeds": 2
+  },
+  "failed_urls": [
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/moorfields-eye-hospital-london/cataract-surgery",
+      "procedure": "cataract",
+      "city": "London",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-the-manor-hospital-london/cataract-surgery",
+      "procedure": "cataract",
+      "city": "London",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/the-blackheath-hospital/hip-replacement",
+      "procedure": "hip",
+      "city": "London",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/shirley-oaks-hospital/knee-replacement",
+      "procedure": "knee",
+      "city": "London",
+      "error": "Firecrawl error: Request failed with status code 503",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/the-cavell-hospital/knee-replacement",
+      "procedure": "knee",
+      "city": "London",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/the-blackheath-hospital/knee-replacement",
+      "procedure": "knee",
+      "city": "London",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/cataract-surgery",
+      "procedure": "cataract",
+      "city": "Manchester",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/alexandra-hospital-manchester/cataract-surgery",
+      "procedure": "cataract",
+      "city": "Manchester",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/alexandra-hospital-manchester/hip-replacement",
+      "procedure": "hip",
+      "city": "Manchester",
+      "error": "Firecrawl error: Request failed with status code 503",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/the-wilmslow-hospital/hip-replacement",
+      "procedure": "hip",
+      "city": "Manchester",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/alexandra-hospital-manchester/knee-replacement",
+      "procedure": "knee",
+      "city": "Manchester",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/the-wilmslow-hospital/knee-replacement",
+      "procedure": "knee",
+      "city": "Manchester",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/birmingham-womens-hospital/cataract-surgery",
+      "procedure": "cataract",
+      "city": "Birmingham",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-little-aston-hospital/cataract-surgery",
+      "procedure": "cataract",
+      "city": "Birmingham",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/cataract-surgery",
+      "procedure": "cataract",
+      "city": "Leeds",
+      "error": "No data extracted",
+      "missing_fields": null
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/the-yorkshire-clinic/cataract-surgery",
+      "procedure": "cataract",
+      "city": "Leeds",
+      "error": "No data extracted",
+      "missing_fields": null
+    }
+  ]
+}

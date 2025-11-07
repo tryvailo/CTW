@@ -1,0 +1,283 @@
+🧪 Testing New URLs Found by Claude AI
+============================================================
+
+📋 Testing 13 new URLs:
+
+
+[1/13] Testing: cataract in manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/catar...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "manchester",
+  "postcode": "OL11 4LZ",
+  "price_gbp": 2829,
+  "avg_uk_price": 2980,
+  "rating_count": 19,
+  "rating_stars": 4,
+  "hospital_name": "The Highfield Hospital, part of Circle Health Group",
+  "price_max_gbp": 2829,
+  "price_min_gbp": 2829,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: The Highfield Hospital, part of Circle Health Group - £2829
+
+[2/13] Testing: cataract in manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/cataract-s...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "manchester",
+  "postcode": "M6 8AQ",
+  "price_gbp": 3153,
+  "avg_uk_price": 2980,
+  "rating_count": 26,
+  "rating_stars": 2.9,
+  "hospital_name": "Ramsay Oaklands Hospital",
+  "price_max_gbp": 3153,
+  "price_min_gbp": 3153,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: Ramsay Oaklands Hospital - £3153
+
+[3/13] Testing: cataract in manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/catar...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "manchester",
+  "postcode": "SK8 2PX",
+  "price_gbp": 2829,
+  "avg_uk_price": 2980,
+  "rating_count": 20,
+  "rating_stars": 4.5,
+  "hospital_name": "The Alexandra Hospital, part of Circle Health Group",
+  "price_max_gbp": 2829,
+  "price_min_gbp": 2829,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: The Alexandra Hospital, part of Circle Health Group - £2829
+
+[4/13] Testing: hip in manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/hip-r...
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: Request failed with status code 503
+  Attempt 2/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "manchester",
+  "postcode": "OL11 4LZ",
+  "price_gbp": 14543,
+  "avg_uk_price": 14485,
+  "rating_count": 19,
+  "rating_stars": 4,
+  "hospital_name": "The Highfield Hospital, part of Circle Health Group",
+  "price_max_gbp": 14543,
+  "price_min_gbp": 14543,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: The Highfield Hospital, part of Circle Health Group - £14543
+
+[5/13] Testing: hip in manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/hip-replac...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "manchester",
+  "postcode": "M6 8AQ",
+  "price_gbp": 14136,
+  "avg_uk_price": 14485,
+  "rating_count": 26,
+  "rating_stars": 2.9,
+  "hospital_name": "Ramsay Oaklands Hospital",
+  "price_max_gbp": 14136,
+  "price_min_gbp": 14136,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Ramsay Oaklands Hospital - £14136
+
+[6/13] Testing: hip in manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/hip-r...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "manchester",
+  "postcode": "SK8 2PX",
+  "price_gbp": 14543,
+  "avg_uk_price": 14485,
+  "rating_count": 20,
+  "rating_stars": 4.5,
+  "hospital_name": "The Alexandra Hospital, part of Circle Health Group",
+  "price_max_gbp": 14543,
+  "price_min_gbp": 14543,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: The Alexandra Hospital, part of Circle Health Group - £14543
+
+[7/13] Testing: knee in manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/knee-...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "manchester",
+  "postcode": "OL11 4LZ",
+  "price_gbp": 15225,
+  "avg_uk_price": 14941,
+  "rating_count": 19,
+  "rating_stars": 4,
+  "hospital_name": "The Highfield Hospital, part of Circle Health Group",
+  "price_max_gbp": 15225,
+  "price_min_gbp": 15225,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: The Highfield Hospital, part of Circle Health Group - £15225
+
+[8/13] Testing: knee in manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/knee-repla...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "manchester",
+  "postcode": "M6 8AQ",
+  "price_gbp": 15811,
+  "avg_uk_price": 14941,
+  "rating_count": 26,
+  "rating_stars": 2.9,
+  "hospital_name": "Ramsay Oaklands Hospital",
+  "price_max_gbp": 15811,
+  "price_min_gbp": 15811,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Ramsay Oaklands Hospital - £15811
+
+[9/13] Testing: knee in manchester
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/knee-...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "manchester",
+  "postcode": "SK8 2PX",
+  "price_gbp": 15225,
+  "avg_uk_price": 14941,
+  "rating_count": 20,
+  "rating_stars": 4.5,
+  "hospital_name": "The Alexandra Hospital, part of Circle Health Group",
+  "price_max_gbp": 15225,
+  "price_min_gbp": 15225,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: The Alexandra Hospital, part of Circle Health Group - £15225
+
+[10/13] Testing: hip in london
+  URL: https://www.treatmentconnect.co.uk/hospitals/bmi-the-blackheath-hospital/hip-rep...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "london",
+  "postcode": "SE3 9UD",
+  "price_gbp": 13066,
+  "avg_uk_price": 14485,
+  "rating_count": 17,
+  "rating_stars": 3.9,
+  "hospital_name": "The Blackheath Hospital, part of Circle Health Group",
+  "price_max_gbp": 13066,
+  "price_min_gbp": 13066,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: The Blackheath Hospital, part of Circle Health Group - £13066
+
+[11/13] Testing: hip in london
+  URL: https://www.treatmentconnect.co.uk/hospitals/bmi-hendon-hospital/hip-replacement...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "london",
+  "postcode": "NW4 1RP",
+  "price_gbp": 12825,
+  "avg_uk_price": 14065,
+  "rating_count": 2,
+  "rating_stars": 5,
+  "hospital_name": "Hendon Hospital, part of Circle Health Group",
+  "price_max_gbp": 12825,
+  "price_min_gbp": 12825,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ Success: Hendon Hospital, part of Circle Health Group - £12825
+
+[12/13] Testing: cataract in bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/cataract-surgery...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "bristol",
+  "postcode": "BA2 7BR",
+  "price_gbp": 3300,
+  "avg_uk_price": 2926,
+  "rating_count": 13,
+  "rating_stars": 4.9,
+  "hospital_name": "Bath Clinic, part of Circle Health Group",
+  "price_max_gbp": 3300,
+  "price_min_gbp": 3300,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4100,
+  "price_range_uk_min": 1995
+}
+  ✅ Success: Bath Clinic, part of Circle Health Group - £3300
+
+[13/13] Testing: cataract in bristol
+  URL: https://www.treatmentconnect.co.uk/hospitals/practice-plus-shepton-mallet-hospit...
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: Request failed with status code 503
+  Attempt 2/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "bristol",
+  "postcode": "BA4 4LP",
+  "price_gbp": 1995,
+  "avg_uk_price": 2980,
+  "rating_count": 28,
+  "rating_stars": 4.7,
+  "hospital_name": "Practice Plus Group Hospital, Shepton Mallet",
+  "price_max_gbp": 1995,
+  "price_min_gbp": 1995,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ Success: Practice Plus Group Hospital, Shepton Mallet - £1995
+
+============================================================
+📊 Final Statistics
+============================================================
+  Total processed: 13
+  ✅ Successful: 13
+  ❌ Failed: 0
+  Success rate: 100%
+
+💾 Results saved to: /Users/alexandertryvailo/Documents/Products/CompareTheWait/scripts/test-results-new-urls.json
+
+✅ Successful extractions (13):
+  1. The Highfield Hospital, part of Circle Health Group - £2829 (cataract in manchester)
+  2. Ramsay Oaklands Hospital - £3153 (cataract in manchester)
+  3. The Alexandra Hospital, part of Circle Health Group - £2829 (cataract in manchester)
+  4. The Highfield Hospital, part of Circle Health Group - £14543 (hip in manchester)
+  5. Ramsay Oaklands Hospital - £14136 (hip in manchester)
+  6. The Alexandra Hospital, part of Circle Health Group - £14543 (hip in manchester)
+  7. The Highfield Hospital, part of Circle Health Group - £15225 (knee in manchester)
+  8. Ramsay Oaklands Hospital - £15811 (knee in manchester)
+  9. The Alexandra Hospital, part of Circle Health Group - £15225 (knee in manchester)
+  10. The Blackheath Hospital, part of Circle Health Group - £13066 (hip in london)
+  11. Hendon Hospital, part of Circle Health Group - £12825 (hip in london)
+  12. Bath Clinic, part of Circle Health Group - £3300 (cataract in bristol)
+  13. Practice Plus Group Hospital, Shepton Mallet - £1995 (cataract in bristol)
+
+✅ Testing complete!

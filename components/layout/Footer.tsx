@@ -15,11 +15,11 @@ export const Footer: React.FC = () => {
               About Our Service
             </h3>
             <p className="text-elderly-sm text-elderly-text mb-4">
-              CompareTheWait provides free, unbiased comparisons of NHS waiting times vs private surgery costs. We collect data from official sources and update it weekly.
+              CompareTheWait provides free, unbiased comparisons of NHS waiting times vs private surgery costs. We collect data from official sources and update it every 2 weeks.
             </p>
             <div className="space-y-2 text-elderly-sm text-elderly-text">
               <p>
-                <strong>Data updated:</strong> Weekly
+                <strong>Data updated:</strong> Every 2 weeks
               </p>
               <p>
                 <strong>Sources:</strong> NHS MyPlannedCare, PHIN
@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-green-600 font-bold text-lg">✓</span>
-                <span>Updated Weekly - Latest waiting times and costs</span>
+                <span>Updated Every 2 Weeks - Latest waiting times and costs</span>
               </div>
             </div>
           </div>

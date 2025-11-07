@@ -1,0 +1,93 @@
+{
+  "london": {
+    "cataract": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/cataract-surgery",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/cataract-surgery",
+      "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/cataract-surgery"
+    ],
+    "hip": [
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/ramsay-rivers-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/practice-plus-ilford-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/bmi-the-blackheath-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/bmi-hendon-hospital/hip-replacement"
+    ],
+    "knee": [
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-shirley-oaks-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-cavell-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/knee-replacement"
+    ]
+  },
+  "manchester": {
+    "cataract": [
+      "https://www.treatmentconnect.co.uk/hospitals/ramsay-springfield-hospital/cataract-surgery",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/cataract-surgery",
+      "https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/cataract-surgery",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/cataract-surgery"
+    ],
+    "hip": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/hip-replacement"
+    ],
+    "knee": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/knee-replacement"
+    ]
+  },
+  "birmingham": {
+    "cataract": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/cataract-surgery"
+    ],
+    "hip": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/hip-replacement"
+    ],
+    "knee": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/knee-replacement"
+    ]
+  },
+  "leeds": {
+    "cataract": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/cataract-surgery"
+    ],
+    "hip": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/hip-replacement"
+    ],
+    "knee": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/knee-replacement"
+    ]
+  },
+  "bristol": {
+    "cataract": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/cataract-surgery",
+      "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/cataract-surgery",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/cataract-surgery",
+      "https://www.treatmentconnect.co.uk/hospitals/practice-plus-shepton-mallet-hospital/cataract-surgery"
+    ],
+    "hip": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/hip-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/hip-replacement"
+    ],
+    "knee": [
+      "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/knee-replacement",
+      "https://www.treatmentconnect.co.uk/hospitals/circle-thornbury-hospital/knee-replacement"
+    ]
+  }
+}
+

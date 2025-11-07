@@ -103,7 +103,7 @@ export default function ProceduresPage() {
                 <li>Clinic listings with contact information</li>
               </ul>
               <p>
-                All data is updated weekly from NHS records and private clinic websites.
+                All data is updated every 2 weeks from NHS records and private clinic websites.
               </p>
             </div>
           </section>

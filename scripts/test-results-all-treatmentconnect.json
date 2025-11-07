@@ -1,0 +1,1563 @@
+{
+  "successful": [
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/cataract-surgery",
+      "city": "London",
+      "procedure": "cataract",
+      "test_number": 1,
+      "timestamp": "2025-11-07T19:43:22.594Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1319,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "cataract",
+        "city": "London",
+        "cost_min": 2796,
+        "cost_max": 2796,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire London East Hospital",
+        "rating": 3.3,
+        "avg_uk_price": 2980,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/cataract-surgery"
+      },
+      "price": 2796,
+      "hospital_name": "Spire London East Hospital",
+      "rating": 3.3
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/cataract-surgery",
+      "city": "London",
+      "procedure": "cataract",
+      "test_number": 2,
+      "timestamp": "2025-11-07T19:43:33.037Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1319,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "cataract",
+        "city": "London",
+        "cost_min": 1854,
+        "cost_max": 1854,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+        "rating": 2.7,
+        "avg_uk_price": 2980,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/cataract-surgery"
+      },
+      "price": 1854,
+      "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+      "rating": 2.7
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/cataract-surgery",
+      "city": "London",
+      "procedure": "cataract",
+      "test_number": 3,
+      "timestamp": "2025-11-07T19:43:43.131Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1319,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "cataract",
+        "city": "London",
+        "cost_min": 2920,
+        "cost_max": 2920,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Nuffield Health Brentwood Hospital",
+        "rating": 4.3,
+        "avg_uk_price": 2843,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/cataract-surgery"
+      },
+      "price": 2920,
+      "hospital_name": "Nuffield Health Brentwood Hospital",
+      "rating": 4.3
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/hip-replacement",
+      "city": "London",
+      "procedure": "hip",
+      "test_number": 4,
+      "timestamp": "2025-11-07T19:43:53.233Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1286,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "London",
+        "cost_min": 12595,
+        "cost_max": 12595,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+        "rating": 2.7,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/hip-replacement"
+      },
+      "price": 12595,
+      "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+      "rating": 2.7
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/hip-replacement",
+      "city": "London",
+      "procedure": "hip",
+      "test_number": 5,
+      "timestamp": "2025-11-07T19:44:04.579Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1286,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "London",
+        "cost_min": 16540,
+        "cost_max": 16540,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Nuffield Health Brentwood Hospital",
+        "rating": 4.3,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/hip-replacement"
+      },
+      "price": 16540,
+      "hospital_name": "Nuffield Health Brentwood Hospital",
+      "rating": 4.3
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rivers-hospital/hip-replacement",
+      "city": "London",
+      "procedure": "hip",
+      "test_number": 6,
+      "timestamp": "2025-11-07T19:44:14.806Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1286,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "London",
+        "cost_min": 15484,
+        "cost_max": 15484,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Ramsay Rivers Hospital",
+        "rating": 4.4,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rivers-hospital/hip-replacement"
+      },
+      "price": 15484,
+      "hospital_name": "Ramsay Rivers Hospital",
+      "rating": 4.4
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/hip-replacement",
+      "city": "London",
+      "procedure": "hip",
+      "test_number": 7,
+      "timestamp": "2025-11-07T19:44:31.489Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1286,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "London",
+        "cost_min": 14066,
+        "cost_max": 14066,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire London East Hospital",
+        "rating": 3.3,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/hip-replacement"
+      },
+      "price": 14066,
+      "hospital_name": "Spire London East Hospital",
+      "rating": 3.3
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/hip-replacement",
+      "city": "London",
+      "procedure": "hip",
+      "test_number": 8,
+      "timestamp": "2025-11-07T19:44:41.954Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1286,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "London",
+        "cost_min": 13066,
+        "cost_max": 13066,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "The Blackheath Hospital, part of Circle Health Group",
+        "rating": 3.9,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/hip-replacement"
+      },
+      "price": 13066,
+      "hospital_name": "The Blackheath Hospital, part of Circle Health Group",
+      "rating": 3.9
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/practice-plus-ilford-hospital/hip-replacement",
+      "city": "London",
+      "procedure": "hip",
+      "test_number": 10,
+      "timestamp": "2025-11-07T19:45:11.389Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1286,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "London",
+        "cost_min": 10720,
+        "cost_max": 10720,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Practice Plus Group Hospital, Ilford",
+        "rating": 3.8,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/practice-plus-ilford-hospital/hip-replacement"
+      },
+      "price": 10720,
+      "hospital_name": "Practice Plus Group Hospital, Ilford",
+      "rating": 3.8
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/knee-replacement",
+      "city": "London",
+      "procedure": "knee",
+      "test_number": 11,
+      "timestamp": "2025-11-07T19:45:22.448Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1291,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "London",
+        "cost_min": 11545,
+        "cost_max": 11545,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+        "rating": 2.7,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/knee-replacement"
+      },
+      "price": 11545,
+      "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+      "rating": 2.7
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-shirley-oaks-hospital/knee-replacement",
+      "city": "London",
+      "procedure": "knee",
+      "test_number": 12,
+      "timestamp": "2025-11-07T19:45:32.267Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1291,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "London",
+        "cost_min": 12981,
+        "cost_max": 12981,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Shirley Oaks Hospital, part of Circle Health Group",
+        "rating": 2.9,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-shirley-oaks-hospital/knee-replacement"
+      },
+      "price": 12981,
+      "hospital_name": "Shirley Oaks Hospital, part of Circle Health Group",
+      "rating": 2.9
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-cavell-hospital/knee-replacement",
+      "city": "London",
+      "procedure": "knee",
+      "test_number": 13,
+      "timestamp": "2025-11-07T19:45:45.586Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1291,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "London",
+        "cost_min": 14438,
+        "cost_max": 14438,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "The Cavell Hospital, part of Circle Health Group",
+        "rating": 3.8,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-cavell-hospital/knee-replacement"
+      },
+      "price": 14438,
+      "hospital_name": "The Cavell Hospital, part of Circle Health Group",
+      "rating": 3.8
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/knee-replacement",
+      "city": "London",
+      "procedure": "knee",
+      "test_number": 14,
+      "timestamp": "2025-11-07T19:45:56.772Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1291,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "London",
+        "cost_min": 15178,
+        "cost_max": 15178,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "The Blackheath Hospital, part of Circle Health Group",
+        "rating": 3.9,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/knee-replacement"
+      },
+      "price": 15178,
+      "hospital_name": "The Blackheath Hospital, part of Circle Health Group",
+      "rating": 3.9
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/knee-replacement",
+      "city": "London",
+      "procedure": "knee",
+      "test_number": 15,
+      "timestamp": "2025-11-07T19:46:07.872Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1291,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "London",
+        "cost_min": 16745,
+        "cost_max": 16745,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Nuffield Health Brentwood Hospital",
+        "rating": 4.3,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/knee-replacement"
+      },
+      "price": 16745,
+      "hospital_name": "Nuffield Health Brentwood Hospital",
+      "rating": 4.3
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-springfield-hospital/cataract-surgery",
+      "city": "Manchester",
+      "procedure": "cataract",
+      "test_number": 16,
+      "timestamp": "2025-11-07T19:46:17.495Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1327,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "cataract",
+        "city": "Manchester",
+        "cost_min": 2894,
+        "cost_max": 2894,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Ramsay Springfield Hospital",
+        "rating": 3.9,
+        "avg_uk_price": 2980,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-springfield-hospital/cataract-surgery"
+      },
+      "price": 2894,
+      "hospital_name": "Ramsay Springfield Hospital",
+      "rating": 3.9
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-replacement",
+      "city": "Manchester",
+      "procedure": "hip",
+      "test_number": 17,
+      "timestamp": "2025-11-07T19:46:27.933Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1294,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Manchester",
+        "cost_min": 14055,
+        "cost_max": 14055,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Manchester Hospital",
+        "rating": 5,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-replacement"
+      },
+      "price": 14055,
+      "hospital_name": "Spire Manchester Hospital",
+      "rating": 5
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/knee-replacement",
+      "city": "Manchester",
+      "procedure": "knee",
+      "test_number": 18,
+      "timestamp": "2025-11-07T19:46:38.288Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1299,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "Manchester",
+        "cost_min": 14545,
+        "cost_max": 14545,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Manchester Hospital",
+        "rating": 5,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/knee-replacement"
+      },
+      "price": 14545,
+      "hospital_name": "Spire Manchester Hospital",
+      "rating": 5
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/cataract-surgery",
+      "city": "Birmingham",
+      "procedure": "cataract",
+      "test_number": 19,
+      "timestamp": "2025-11-07T19:46:54.537Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1327,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "cataract",
+        "city": "Birmingham",
+        "cost_min": 3143,
+        "cost_max": 3143,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Parkway Hospital",
+        "rating": 3.4,
+        "avg_uk_price": 2980,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/cataract-surgery"
+      },
+      "price": 3143,
+      "hospital_name": "Spire Parkway Hospital",
+      "rating": 3.4
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/hip-replacement",
+      "city": "Birmingham",
+      "procedure": "hip",
+      "test_number": 20,
+      "timestamp": "2025-11-07T19:47:04.628Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1294,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Birmingham",
+        "cost_min": 14906,
+        "cost_max": 14906,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Parkway Hospital",
+        "rating": 3.4,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/hip-replacement"
+      },
+      "price": 14906,
+      "hospital_name": "Spire Parkway Hospital",
+      "rating": 3.4
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/hip-replacement",
+      "city": "Birmingham",
+      "procedure": "hip",
+      "test_number": 21,
+      "timestamp": "2025-11-07T19:47:15.389Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1294,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Birmingham",
+        "cost_min": 10761,
+        "cost_max": 10761,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Ramsay Rowley Hall Hospital",
+        "rating": 3.9,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/hip-replacement"
+      },
+      "price": 10761,
+      "hospital_name": "Ramsay Rowley Hall Hospital",
+      "rating": 3.9
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/hip-replacement",
+      "city": "Birmingham",
+      "procedure": "hip",
+      "test_number": 22,
+      "timestamp": "2025-11-07T19:47:24.805Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1294,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Birmingham",
+        "cost_min": 15785,
+        "cost_max": 15785,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Nuffield Health Wolverhampton Hospital",
+        "rating": 4.4,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/hip-replacement"
+      },
+      "price": 15785,
+      "hospital_name": "Nuffield Health Wolverhampton Hospital",
+      "rating": 4.4
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/knee-replacement",
+      "city": "Birmingham",
+      "procedure": "knee",
+      "test_number": 23,
+      "timestamp": "2025-11-07T19:47:35.343Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1299,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "Birmingham",
+        "cost_min": 14880,
+        "cost_max": 14880,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Parkway Hospital",
+        "rating": 3.4,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/knee-replacement"
+      },
+      "price": 14880,
+      "hospital_name": "Spire Parkway Hospital",
+      "rating": 3.4
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/knee-replacement",
+      "city": "Birmingham",
+      "procedure": "knee",
+      "test_number": 24,
+      "timestamp": "2025-11-07T19:47:45.797Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1299,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "Birmingham",
+        "cost_min": 11814,
+        "cost_max": 11814,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Ramsay Rowley Hall Hospital",
+        "rating": 3.9,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/knee-replacement"
+      },
+      "price": 11814,
+      "hospital_name": "Ramsay Rowley Hall Hospital",
+      "rating": 3.9
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/knee-replacement",
+      "city": "Birmingham",
+      "procedure": "knee",
+      "test_number": 25,
+      "timestamp": "2025-11-07T19:47:54.920Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1299,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "Birmingham",
+        "cost_min": 16460,
+        "cost_max": 16460,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Nuffield Health Wolverhampton Hospital",
+        "rating": 4.4,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/knee-replacement"
+      },
+      "price": 16460,
+      "hospital_name": "Nuffield Health Wolverhampton Hospital",
+      "rating": 4.4
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/cataract-surgery",
+      "city": "Leeds",
+      "procedure": "cataract",
+      "test_number": 26,
+      "timestamp": "2025-11-07T19:48:11.461Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1317,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "cataract",
+        "city": "Leeds",
+        "cost_min": 2941,
+        "cost_max": 2941,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Leeds Hospital",
+        "rating": 4.6,
+        "avg_uk_price": 2980,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/cataract-surgery"
+      },
+      "price": 2941,
+      "hospital_name": "Spire Leeds Hospital",
+      "rating": 4.6
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/hip-replacement",
+      "city": "Leeds",
+      "procedure": "hip",
+      "test_number": 27,
+      "timestamp": "2025-11-07T19:48:21.933Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1284,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Leeds",
+        "cost_min": 14730,
+        "cost_max": 14730,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Leeds Hospital",
+        "rating": 4.6,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/hip-replacement"
+      },
+      "price": 14730,
+      "hospital_name": "Spire Leeds Hospital",
+      "rating": 4.6
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/hip-replacement",
+      "city": "Leeds",
+      "procedure": "hip",
+      "test_number": 28,
+      "timestamp": "2025-11-07T19:48:30.739Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1284,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Leeds",
+        "cost_min": 15855,
+        "cost_max": 15855,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Nuffield Health Leeds Hospital",
+        "rating": 4.5,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/hip-replacement"
+      },
+      "price": 15855,
+      "hospital_name": "Nuffield Health Leeds Hospital",
+      "rating": 4.5
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/hip-replacement",
+      "city": "Leeds",
+      "procedure": "hip",
+      "test_number": 29,
+      "timestamp": "2025-11-07T19:48:39.873Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1284,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Leeds",
+        "cost_min": 13800,
+        "cost_max": 13800,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Ramsay Clifton Park Hospital",
+        "rating": 4.5,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/hip-replacement"
+      },
+      "price": 13800,
+      "hospital_name": "Ramsay Clifton Park Hospital",
+      "rating": 4.5
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/knee-replacement",
+      "city": "Leeds",
+      "procedure": "knee",
+      "test_number": 30,
+      "timestamp": "2025-11-07T19:48:50.097Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1289,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "Leeds",
+        "cost_min": 15060,
+        "cost_max": 15060,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Leeds Hospital",
+        "rating": 4.6,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/knee-replacement"
+      },
+      "price": 15060,
+      "hospital_name": "Spire Leeds Hospital",
+      "rating": 4.6
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/knee-replacement",
+      "city": "Leeds",
+      "procedure": "knee",
+      "test_number": 31,
+      "timestamp": "2025-11-07T19:48:59.949Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1289,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "Leeds",
+        "cost_min": 13995,
+        "cost_max": 13995,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Ramsay Clifton Park Hospital",
+        "rating": 4.5,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/knee-replacement"
+      },
+      "price": 13995,
+      "hospital_name": "Ramsay Clifton Park Hospital",
+      "rating": 4.5
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/cataract-surgery",
+      "city": "Bristol",
+      "procedure": "cataract",
+      "test_number": 32,
+      "timestamp": "2025-11-07T19:49:17.415Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1321,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "cataract",
+        "city": "Bristol",
+        "cost_min": 3670,
+        "cost_max": 3670,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Bristol Hospital",
+        "rating": 4.2,
+        "avg_uk_price": 2980,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/cataract-surgery"
+      },
+      "price": 3670,
+      "hospital_name": "Spire Bristol Hospital",
+      "rating": 4.2
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/cataract-surgery",
+      "city": "Bristol",
+      "procedure": "cataract",
+      "test_number": 33,
+      "timestamp": "2025-11-07T19:49:27.740Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1321,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "cataract",
+        "city": "Bristol",
+        "cost_min": 3660,
+        "cost_max": 3660,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Nuffield Health Bristol Hospital",
+        "rating": 4.1,
+        "avg_uk_price": 2980,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/cataract-surgery"
+      },
+      "price": 3660,
+      "hospital_name": "Nuffield Health Bristol Hospital",
+      "rating": 4.1
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/hip-replacement",
+      "city": "Bristol",
+      "procedure": "hip",
+      "test_number": 35,
+      "timestamp": "2025-11-07T19:49:51.162Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1288,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Bristol",
+        "cost_min": 14750,
+        "cost_max": 14750,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Bristol Hospital",
+        "rating": 4.2,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/hip-replacement"
+      },
+      "price": 14750,
+      "hospital_name": "Spire Bristol Hospital",
+      "rating": 4.2
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/hip-replacement",
+      "city": "Bristol",
+      "procedure": "hip",
+      "test_number": 36,
+      "timestamp": "2025-11-07T19:50:01.052Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1288,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Bristol",
+        "cost_min": 15070,
+        "cost_max": 15070,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Nuffield Health Bristol Hospital",
+        "rating": 4.1,
+        "avg_uk_price": 14485,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/hip-replacement"
+      },
+      "price": 15070,
+      "hospital_name": "Nuffield Health Bristol Hospital",
+      "rating": 4.1
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/hip-replacement",
+      "city": "Bristol",
+      "procedure": "hip",
+      "test_number": 37,
+      "timestamp": "2025-11-07T19:50:11.391Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1288,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "hip",
+        "city": "Bristol",
+        "cost_min": 13700,
+        "cost_max": 13700,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Bath Clinic, part of Circle Health Group",
+        "rating": 4.9,
+        "avg_uk_price": 14065,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/hip-replacement"
+      },
+      "price": 13700,
+      "hospital_name": "Bath Clinic, part of Circle Health Group",
+      "rating": 4.9
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/knee-replacement",
+      "city": "Bristol",
+      "procedure": "knee",
+      "test_number": 38,
+      "timestamp": "2025-11-07T19:50:21.261Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1293,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "Bristol",
+        "cost_min": 15995,
+        "cost_max": 15995,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Spire Bristol Hospital",
+        "rating": 4.2,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/knee-replacement"
+      },
+      "price": 15995,
+      "hospital_name": "Spire Bristol Hospital",
+      "rating": 4.2
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/circle-thornbury-hospital/knee-replacement",
+      "city": "Bristol",
+      "procedure": "knee",
+      "test_number": 39,
+      "timestamp": "2025-11-07T19:50:32.369Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1293,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "success",
+      "extracted_data": {
+        "procedure_id": "knee",
+        "city": "Bristol",
+        "cost_min": 15225,
+        "cost_max": 15225,
+        "clinic_count": 1,
+        "date": "2025-11-07",
+        "source": "TreatmentConnect",
+        "hospital_name": "Thornbury Hospital, part of Circle Health Group",
+        "rating": 4.1,
+        "avg_uk_price": 14941,
+        "url": "https://www.treatmentconnect.co.uk/hospitals/circle-thornbury-hospital/knee-replacement"
+      },
+      "price": 15225,
+      "hospital_name": "Thornbury Hospital, part of Circle Health Group",
+      "rating": 4.1
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/bmi-the-sloane-hospital/hip-replacement",
+      "city": "London",
+      "procedure": "hip",
+      "test_number": 9,
+      "timestamp": "2025-11-07T19:44:55.602Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1286,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "failed",
+      "error": "No data extracted",
+      "raw_firecrawl_response": {
+        "city": "London",
+        "postcode": "",
+        "price_gbp": 0,
+        "avg_uk_price": 0,
+        "rating_count": 0,
+        "rating_stars": 0,
+        "hospital_name": "",
+        "price_max_gbp": 0,
+        "price_min_gbp": 0,
+        "procedure_name": "Hip Replacement",
+        "price_range_uk_max": 0,
+        "price_range_uk_min": 0
+      },
+      "firecrawl_success": false,
+      "raw_data_analysis": {
+        "has_hospital_name": false,
+        "has_price_gbp": false,
+        "price_gbp_value": 0,
+        "hospital_name_value": "",
+        "all_fields": [
+          "city",
+          "postcode",
+          "price_gbp",
+          "avg_uk_price",
+          "rating_count",
+          "rating_stars",
+          "hospital_name",
+          "price_max_gbp",
+          "price_min_gbp",
+          "procedure_name",
+          "price_range_uk_max",
+          "price_range_uk_min"
+        ],
+        "all_values": {
+          "city": "London",
+          "postcode": "",
+          "price_gbp": 0,
+          "avg_uk_price": 0,
+          "rating_count": 0,
+          "rating_stars": 0,
+          "hospital_name": "",
+          "price_max_gbp": 0,
+          "price_min_gbp": 0,
+          "procedure_name": "Hip Replacement",
+          "price_range_uk_max": 0,
+          "price_range_uk_min": 0
+        }
+      }
+    },
+    {
+      "url": "https://www.treatmentconnect.co.uk/hospitals/practice-plus-group-hospital-emersons-green/cataract-surgery",
+      "city": "Bristol",
+      "procedure": "cataract",
+      "test_number": 34,
+      "timestamp": "2025-11-07T19:49:37.986Z",
+      "schema_used": {
+        "type": "object",
+        "required_fields": [
+          "hospital_name",
+          "procedure_name",
+          "price_gbp",
+          "city"
+        ],
+        "properties_count": 12
+      },
+      "prompt_used": {
+        "length": 1321,
+        "first_200_chars": "You are extracting pricing information from TreatmentConnect.co.uk hospital pages.\n\nCRITICAL RULES:\n1. Extract ONLY numeric values for all prices (no currency symbols, no commas)\n2. Convert \"£2,500\" t"
+      },
+      "status": "failed",
+      "error": "No data extracted",
+      "raw_firecrawl_response": {
+        "city": "Bristol",
+        "postcode": "",
+        "price_gbp": 2500,
+        "avg_uk_price": null,
+        "rating_count": null,
+        "rating_stars": null,
+        "hospital_name": "Hospital Name",
+        "price_max_gbp": 2500,
+        "price_min_gbp": 2500,
+        "procedure_name": "Cataract Surgery",
+        "price_range_uk_max": null,
+        "price_range_uk_min": null
+      },
+      "firecrawl_success": false,
+      "raw_data_analysis": {
+        "has_hospital_name": true,
+        "has_price_gbp": true,
+        "price_gbp_value": 2500,
+        "hospital_name_value": "Hospital Name",
+        "all_fields": [
+          "city",
+          "postcode",
+          "price_gbp",
+          "avg_uk_price",
+          "rating_count",
+          "rating_stars",
+          "hospital_name",
+          "price_max_gbp",
+          "price_min_gbp",
+          "procedure_name",
+          "price_range_uk_max",
+          "price_range_uk_min"
+        ],
+        "all_values": {
+          "city": "Bristol",
+          "postcode": "",
+          "price_gbp": 2500,
+          "avg_uk_price": null,
+          "rating_count": null,
+          "rating_stars": null,
+          "hospital_name": "Hospital Name",
+          "price_max_gbp": 2500,
+          "price_min_gbp": 2500,
+          "procedure_name": "Cataract Surgery",
+          "price_range_uk_max": null,
+          "price_range_uk_min": null
+        }
+      }
+    }
+  ],
+  "stats": {
+    "total": 39,
+    "processed": 39,
+    "successful": 37,
+    "failed": 2
+  },
+  "timestamp": "2025-11-07T19:43:22.592Z"
+}

@@ -1,16 +1,16 @@
 procedure_id,city,nhs_trust,avg_wait_weeks,date,source
-cataract,London,Barts Health NHS Trust,13,2025-11-05,My Planned Care
-hip,London,Barts Health NHS Trust,19,2025-11-05,My Planned Care
-knee,London,Barts Health NHS Trust,19,2025-11-05,My Planned Care
-cataract,Manchester,Manchester University NHS Foundation Trust,18,2025-11-05,My Planned Care
-hip,Manchester,Manchester University NHS Foundation Trust,20,2025-11-05,My Planned Care
-knee,Manchester,Manchester University NHS Foundation Trust,20,2025-11-05,My Planned Care
-cataract,Birmingham,University Hospitals Birmingham NHS Foundation Trust,19,2025-11-05,My Planned Care
-hip,Birmingham,University Hospitals Birmingham NHS Foundation Trust,11,2025-11-05,My Planned Care
-knee,Birmingham,University Hospitals Birmingham NHS Foundation Trust,11,2025-11-05,My Planned Care
-cataract,Leeds,Leeds Teaching Hospitals NHS Trust,11,2025-11-05,My Planned Care
-hip,Leeds,Leeds Teaching Hospitals NHS Trust,18,2025-11-05,My Planned Care
-knee,Leeds,Leeds Teaching Hospitals NHS Trust,18,2025-11-05,My Planned Care
-cataract,Bristol,University Hospitals Bristol and Weston NHS Foundation Trust,12,2025-11-05,My Planned Care
-hip,Bristol,University Hospitals Bristol and Weston NHS Foundation Trust,14,2025-11-05,My Planned Care
-knee,Bristol,University Hospitals Bristol and Weston NHS Foundation Trust,14,2025-11-05,My Planned Care
+cataract,London,Barts Health NHS Trust,12,2025-11-07,My Planned Care
+cataract,Manchester,Manchester University NHS Foundation Trust,12,2025-11-07,My Planned Care
+cataract,Birmingham,Birmingham and Solihull Mental Health NHS Foundation Trust,12,2025-11-07,My Planned Care
+cataract,Leeds,Leeds Teaching Hospitals NHS Trust,12,2025-11-07,My Planned Care
+cataract,Bristol,Bristol Eye Hospital,12,2025-11-07,My Planned Care
+hip,London,Barts Health NHS Trust,18,2025-11-07,My Planned Care
+hip,Manchester,Manchester University NHS Foundation Trust,18,2025-11-07,My Planned Care
+hip,Birmingham,Birmingham Community Healthcare NHS Foundation Trust,12,2025-11-07,My Planned Care
+hip,Leeds,Leeds Teaching Hospitals NHS Trust,18,2025-11-07,My Planned Care
+hip,Bristol,North Bristol NHS Trust,18,2025-11-07,My Planned Care
+knee,London,Barts Health NHS Trust,12,2025-11-07,My Planned Care
+knee,Manchester,Manchester University NHS Foundation Trust,12,2025-11-07,My Planned Care
+knee,Birmingham,Birmingham Community Healthcare NHS Foundation Trust,12,2025-11-07,My Planned Care
+knee,Leeds,Leeds Teaching Hospitals NHS Trust,18,2025-11-07,My Planned Care
+knee,Bristol,North Bristol NHS Trust,18,2025-11-07,My Planned Care

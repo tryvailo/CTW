@@ -68,7 +68,7 @@ export default function AboutPage() {
                   Provide free information—no personal data required
                 </li>
                 <li>
-                  Update data weekly from NHS records and clinic websites
+                  Update data every 2 weeks from NHS records and clinic websites
                 </li>
                 <li>
                   Focus on procedures most common for people 65+: cataract surgery, hip replacement, and knee replacement
@@ -114,7 +114,7 @@ export default function AboutPage() {
                 How Often We Update
               </h2>
               <p>
-                We update our data <strong>weekly</strong> to ensure you have the most current information. 
+                We update our data <strong>every 2 weeks</strong> to ensure you have the most current information. 
                 NHS waiting times can change, and private clinic prices may fluctuate, so we make sure our 
                 comparisons reflect the latest available data.
               </p>

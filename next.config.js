@@ -4,5 +4,5 @@ const nextConfig = {
   // output: 'export' не нужен для Vercel деплоя
 }
 
-module.exports = nextConfig
+export default nextConfig
 

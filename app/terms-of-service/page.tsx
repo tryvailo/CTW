@@ -66,7 +66,7 @@ export default function TermsOfServicePage() {
             <p>
               We strive to provide accurate and up-to-date information, but we cannot guarantee the accuracy, 
               completeness, or timeliness of all data. NHS waiting times and private surgery costs may change. 
-              We update our data weekly, but you should verify current information with relevant sources.
+              We update our data every 2 weeks, but you should verify current information with relevant sources.
             </p>
           </section>
 
