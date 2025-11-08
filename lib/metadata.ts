@@ -15,8 +15,8 @@ const defaultDescription = 'Compare NHS waiting times vs private surgery costs f
  */
 export function generateHomeMetadata(): Metadata {
   return {
-    title: `${siteName} - NHS vs Private Surgery Comparison`,
-    description: defaultDescription,
+    title: `NHS Says You'll Wait 18 Weeks. Most People Actually Wait a Year. Here's the Truth. - ${siteName}`,
+    description: "Real data from 3,000+ patients shows NHS wait times are often 3-4x longer than official targets. See what to actually expect for cataract, hip & knee surgery in your area. Plus faster alternatives.",
     keywords: [
       'NHS waiting times',
       'private surgery cost',
@@ -29,8 +29,8 @@ export function generateHomeMetadata(): Metadata {
     ],
     authors: [{ name: siteName }],
     openGraph: {
-      title: `${siteName} - NHS vs Private Surgery Comparison`,
-      description: defaultDescription,
+      title: "NHS Says You'll Wait 18 Weeks. Most People Actually Wait a Year. Here's the Truth.",
+      description: "Real data from 3,000+ patients shows NHS wait times are often 3-4x longer than official targets. See what to actually expect for cataract, hip & knee surgery in your area. Plus faster alternatives.",
       url: baseUrl,
       siteName,
       type: 'website',
@@ -46,8 +46,8 @@ export function generateHomeMetadata(): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${siteName} - NHS vs Private Surgery Comparison`,
-      description: defaultDescription,
+      title: "NHS Says You'll Wait 18 Weeks. Most People Actually Wait a Year. Here's the Truth.",
+      description: "Real data from 3,000+ patients shows NHS wait times are often 3-4x longer than official targets. See what to actually expect for cataract, hip & knee surgery in your area. Plus faster alternatives.",
       images: [`${baseUrl}/og-image.jpg`],
     },
     robots: {

@@ -8,8 +8,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  title = "Waiting for Surgery? Compare Your NHS vs Private Options",
-  subtitle = "Honest comparison of waiting times and costs for cataract, hip & knee surgery in major UK cities. Free information, no pressure.",
+  title = "NHS Says You'll Wait 18 Weeks. Most People Actually Wait a Year. Here's the Truth.",
+  subtitle = "Real data from 3,000+ patients shows NHS wait times are often 3-4x longer than official targets. See what to actually expect for cataract, hip & knee surgery in your area. Plus faster alternatives.",
   showSearch = true,
 }) => {
   return (
