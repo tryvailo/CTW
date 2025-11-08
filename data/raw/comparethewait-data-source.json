@@ -1,0 +1,378 @@
+{
+  "metadata": {
+    "source": "comparethewait.co.uk",
+    "data_version": "1.0",
+    "last_updated": "2025-11-08",
+    "research_date": "2025-11-08",
+    "research_sources": [
+      "NHS official statistics",
+      "Healthcare provider surveys",
+      "Patient forum reports (Reddit, Patient.co.uk, BoneSmart, Care Opinion)",
+      "FOI requests to NHS trusts",
+      "BBC News reports"
+    ],
+    "disclaimer": "Data combines official NHS targets with real patient-reported experiences. We earn £100 per private clinic lead. All data is accurate regardless of our business model.",
+    "data_quality_notes": "Official targets represent 'decision to treat' to surgery. Patient-reported includes full journey from GP referral through post-op. Geographic variation significant."
+  },
+  "uk_wide": {
+    "cataract": {
+      "procedure_id": "cataract",
+      "procedure_name": "Cataract Surgery",
+      "average_age_at_procedure": "72",
+      "annual_procedures_uk": 330000,
+      "waiting_times": {
+        "official_nhs_target_weeks": 18,
+        "official_nhs_notes": "92% target (official guideline)",
+        "healthcare_provider_average_weeks": 23,
+        "healthcare_provider_notes": "Practice Plus Group, ACES, private partnerships",
+        "patient_reported_average_weeks": 76,
+        "patient_reported_median_weeks": 52,
+        "patient_reported_min_weeks": 6,
+        "patient_reported_max_weeks": 208,
+        "patient_reported_sample_size": 8,
+        "patient_reported_notes": "Real patient experiences from forums"
+      },
+      "private_comparison": {
+        "average_wait_weeks": 3,
+        "average_cost_pounds": 3415,
+        "cost_range_min_pounds": 2829,
+        "cost_range_max_pounds": 4766
+      },
+      "key_facts": [
+        "Official vs Reality gap: 76 weeks patient vs 18 weeks target",
+        "30-50% experience cancellations (adds 4-12 weeks each)",
+        "Fast-track centres (Manchester ACES, Leeds ACES) achieve 2-8 weeks",
+        "Regional variation: 6 weeks (best) to 208 weeks (worst)",
+        "NHS backlog persisting despite 50% improvement from 2020 peaks"
+      ],
+      "cancellation_risk": {
+        "percentage_experience": 45,
+        "average_delay_weeks": 8,
+        "cancellations_per_patient_average": 1.5
+      }
+    },
+    "hip_replacement": {
+      "procedure_id": "hip",
+      "procedure_name": "Hip Replacement (Hip Arthroplasty)",
+      "average_age_at_procedure": "69",
+      "annual_procedures_uk": 200000,
+      "waiting_times": {
+        "official_nhs_target_weeks": 18,
+        "official_nhs_notes": "RTT target 92% (varies by trust)",
+        "healthcare_provider_average_weeks": 28,
+        "healthcare_provider_notes": "NHS England official data March 2025: median 24.7 weeks",
+        "patient_reported_average_weeks": 59,
+        "patient_reported_median_weeks": 51,
+        "patient_reported_min_weeks": 12,
+        "patient_reported_max_weeks": 104,
+        "patient_reported_sample_size": 7,
+        "patient_reported_notes": "Limited sample - actively seeking more submissions"
+      },
+      "private_comparison": {
+        "average_wait_weeks": 4,
+        "average_cost_pounds": 8500,
+        "cost_range_min_pounds": 7200,
+        "cost_range_max_pounds": 10500
+      },
+      "key_facts": [
+        "Only 56.6% meeting 18-week target (NHS target is 92%)",
+        "36,894 patients exceeded 18 weeks (2023-24)",
+        "9,356 patients exceeded 52 weeks (2023-24)",
+        "Northern Ireland crisis: 64% waiting >1 year",
+        "Post-COVID recovery ongoing: still 50%+ slower than 2019"
+      ],
+      "cancellation_risk": {
+        "percentage_experience": 38,
+        "average_delay_weeks": 7,
+        "cancellations_per_patient_average": 1.2
+      }
+    },
+    "knee_replacement": {
+      "procedure_id": "knee",
+      "procedure_name": "Knee Replacement (Knee Arthroplasty)",
+      "average_age_at_procedure": "67",
+      "annual_procedures_uk": 180000,
+      "waiting_times": {
+        "official_nhs_target_weeks": 18,
+        "official_nhs_notes": "RTT target 92% (varies by trust)",
+        "healthcare_provider_average_weeks": 29,
+        "healthcare_provider_notes": "Highest volume orthopaedic procedure",
+        "patient_reported_average_weeks": 97,
+        "patient_reported_median_weeks": 78,
+        "patient_reported_min_weeks": 22,
+        "patient_reported_max_weeks": 234,
+        "patient_reported_sample_size": 9,
+        "patient_reported_notes": "Longest average wait times reported"
+      },
+      "private_comparison": {
+        "average_wait_weeks": 4,
+        "average_cost_pounds": 9000,
+        "cost_range_min_pounds": 8000,
+        "cost_range_max_pounds": 11000
+      },
+      "key_facts": [
+        "Highest volume NHS procedure (180,000+ annually)",
+        "48,183 exceeded 18 weeks (2023-24)",
+        "14,071 exceeded 52 weeks (2023-24)",
+        "Patient-reported waits 3.3x longer than official target",
+        "Highest variation by region (22-234 weeks)"
+      ],
+      "cancellation_risk": {
+        "percentage_experience": 42,
+        "average_delay_weeks": 8,
+        "cancellations_per_patient_average": 1.4
+      }
+    }
+  },
+  "regions": [
+    {
+      "region_id": "london",
+      "region_name": "London",
+      "nhs_trust_count": 7,
+      "population_55_plus": 800000,
+      "cataract": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 42,
+        "patient_reported_median_weeks": 36,
+        "patient_reported_range": "12-94",
+        "sample_size": 6,
+        "confidence": "medium",
+        "variation_note": "Moorfields high demand (18w avg) vs fast-track options (8-12w avg)",
+        "private_average_weeks": 3,
+        "private_average_cost_pounds": 3500,
+        "recommended_display": "19-50 weeks (depends on hospital choice)"
+      },
+      "hip": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 45,
+        "patient_reported_median_weeks": 40,
+        "patient_reported_range": "18-68",
+        "sample_size": 2,
+        "confidence": "low",
+        "variation_note": "Major centres (St George's, Royal National)",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 8500,
+        "recommended_display": "25-35 weeks (estimated)"
+      },
+      "knee": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 52,
+        "patient_reported_median_weeks": 48,
+        "patient_reported_range": "28-76",
+        "sample_size": 3,
+        "confidence": "low",
+        "variation_note": "High demand from large population",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 9000,
+        "recommended_display": "25-40 weeks (estimated)"
+      },
+      "key_insight": "Large geographic variation within London. Choosing right NHS trust can save 10-30 weeks."
+    },
+    {
+      "region_id": "manchester",
+      "region_name": "Manchester",
+      "nhs_trust_count": 3,
+      "population_55_plus": 320000,
+      "cataract": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 5,
+        "patient_reported_median_weeks": 4,
+        "patient_reported_range": "2-8",
+        "sample_size": 2,
+        "confidence": "low",
+        "variation_note": "ACES fast-track centre operational - dramatically faster",
+        "private_average_weeks": 3,
+        "private_average_cost_pounds": 3400,
+        "recommended_display": "4-8 weeks (BEST - fast-track available)"
+      },
+      "hip": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 104,
+        "patient_reported_median_weeks": 104,
+        "patient_reported_range": "104-104",
+        "sample_size": 1,
+        "confidence": "very_low",
+        "variation_note": "Single outlier report - needs more data",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 8500,
+        "recommended_display": "40-60 weeks (based on region average)"
+      },
+      "knee": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 36,
+        "patient_reported_median_weeks": 36,
+        "patient_reported_range": "36-36",
+        "sample_size": 1,
+        "confidence": "very_low",
+        "variation_note": "Limited data - single submission",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 9000,
+        "recommended_display": "32-40 weeks (estimated)"
+      },
+      "key_insight": "ACES fast-track centres make Manchester exceptionally fast for cataract. Hip/knee data very limited - help us improve!"
+    },
+    {
+      "region_id": "birmingham",
+      "region_name": "Birmingham",
+      "nhs_trust_count": 2,
+      "population_55_plus": 280000,
+      "cataract": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 40,
+        "patient_reported_median_weeks": 40,
+        "patient_reported_range": "14-40",
+        "sample_size": 2,
+        "confidence": "low",
+        "variation_note": "Historic 40-week problem now improving with ACES partnership (became 4 weeks)",
+        "private_average_weeks": 3,
+        "private_average_cost_pounds": 3450,
+        "recommended_display": "20-28 weeks (improving, was 40 weeks)"
+      },
+      "hip": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 38,
+        "patient_reported_median_weeks": 38,
+        "patient_reported_range": "38-38",
+        "sample_size": 1,
+        "confidence": "very_low",
+        "variation_note": "Queen Elizabeth Hospital is major centre",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 8500,
+        "recommended_display": "32-40 weeks"
+      },
+      "knee": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": null,
+        "patient_reported_median_weeks": null,
+        "patient_reported_range": "N/A",
+        "sample_size": 0,
+        "confidence": "no_data",
+        "variation_note": "No patient submissions yet",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 9000,
+        "recommended_display": "30-40 weeks (estimated from region)"
+      },
+      "key_insight": "Birmingham had worst cataract waits in UK (40 weeks) - now improving. Hip/knee data needed."
+    },
+    {
+      "region_id": "leeds",
+      "region_name": "Leeds",
+      "nhs_trust_count": 2,
+      "population_55_plus": 200000,
+      "cataract": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 3,
+        "patient_reported_median_weeks": 3,
+        "patient_reported_range": "2-4",
+        "sample_size": 1,
+        "confidence": "very_low",
+        "variation_note": "ACES fast-track centre - exceptionally fast",
+        "private_average_weeks": 3,
+        "private_average_cost_pounds": 3400,
+        "recommended_display": "2-4 weeks (BEST - fast-track)"
+      },
+      "hip": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": null,
+        "patient_reported_median_weeks": null,
+        "patient_reported_range": "N/A",
+        "sample_size": 0,
+        "confidence": "no_data",
+        "variation_note": "No patient submissions yet",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 8500,
+        "recommended_display": "25-35 weeks (estimated)"
+      },
+      "knee": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": null,
+        "patient_reported_median_weeks": null,
+        "patient_reported_range": "N/A",
+        "sample_size": 0,
+        "confidence": "no_data",
+        "variation_note": "No patient submissions yet",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 9000,
+        "recommended_display": "25-35 weeks (estimated)"
+      },
+      "key_insight": "Leeds ACES fast-track is 2nd best option in UK for cataract. Hip/knee data critical gap."
+    },
+    {
+      "region_id": "bristol",
+      "region_name": "Bristol",
+      "nhs_trust_count": 2,
+      "population_55_plus": 180000,
+      "cataract": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 13,
+        "patient_reported_median_weeks": 13,
+        "patient_reported_range": "12-13",
+        "sample_size": 2,
+        "confidence": "low",
+        "variation_note": "Best general performer - good efficiency",
+        "private_average_weeks": 3,
+        "private_average_cost_pounds": 3450,
+        "recommended_display": "12-20 weeks (good performance)"
+      },
+      "hip": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": 29,
+        "patient_reported_median_weeks": 29,
+        "patient_reported_range": "29-29",
+        "sample_size": 1,
+        "confidence": "very_low",
+        "variation_note": "North Bristol NHS Trust",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 8500,
+        "recommended_display": "26-32 weeks"
+      },
+      "knee": {
+        "official_target_weeks": 18,
+        "patient_reported_average_weeks": null,
+        "patient_reported_median_weeks": null,
+        "patient_reported_range": "N/A",
+        "sample_size": 0,
+        "confidence": "no_data",
+        "variation_note": "No patient submissions yet",
+        "private_average_weeks": 4,
+        "private_average_cost_pounds": 9000,
+        "recommended_display": "25-35 weeks (estimated)"
+      },
+      "key_insight": "Bristol has best standard NHS performance. Southwest region generally performs well."
+    }
+  ],
+  "private_clinics_benchmark": {
+    "average_wait_days": 14,
+    "average_wait_weeks": 3,
+    "guaranteed_slot": true,
+    "cancellation_rate_percent": 0,
+    "cataract_average_cost": 3415,
+    "hip_average_cost": 8500,
+    "knee_average_cost": 9000,
+    "key_feature": "No waiting list, scheduled weeks in advance"
+  },
+  "messaging_guidelines": {
+    "tone": "Supportive, honest, British English",
+    "avoid": [
+      "Scare tactics",
+      "NHS criticism",
+      "Exaggeration",
+      "Hard-sell language"
+    ],
+    "key_phrases": [
+      "What patients actually waited",
+      "Real data from [X] patient submissions",
+      "Official vs reality",
+      "Your choices explained",
+      "Take your time deciding",
+      "No pressure, full information"
+    ],
+    "british_spellings": [
+      "colour/color",
+      "organise/organize",
+      "realise/realize",
+      "enquire/inquire",
+      "NHS not 'the NHS'"
+    ]
+  }
+}

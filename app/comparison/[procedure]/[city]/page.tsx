@@ -8,6 +8,9 @@ import { ClinicList } from '@/components/sections/ClinicList'
 import { FAQ } from '@/components/sections/FAQ'
 import { MedicalDisclaimer } from '@/components/common/MedicalDisclaimer'
 import { JsonLd } from '@/components/common/JsonLd'
+import { OfficialVsRealityComparison } from '@/components/OfficialVsRealityComparison'
+import { CancellationWarning } from '@/components/CancellationWarning'
+import { SubmitExperienceForm } from '@/components/SubmitExperienceForm'
 import { generateComparisonMetadata } from '@/lib/metadata'
 import {
   getComparisonData,
@@ -16,6 +19,7 @@ import {
   getAllComparisonCombinations,
   getFAQItems,
 } from '@/lib/data'
+import { getWaitingTimesData, getCancellationRiskData, getPrivateComparisonData, cityToRegionId } from '@/lib/utils/waitingTimesLoader'
 import { groupFAQItems } from '@/lib/faq-utils'
 import type { ProcedureId, City } from '@/lib/types'
 import type { Metadata } from 'next'
@@ -65,6 +69,12 @@ export default async function ComparisonPage({ params }: PageProps) {
   }
 
   const { procedure: procedureData, city: cityName, nhsWait, privateCost, clinics } = comparisonData
+
+  // Load official vs reality data
+  const regionId = cityToRegionId(cityName)
+  const waitingTimesData = getWaitingTimesData(procedureId, regionId || undefined)
+  const cancellationRiskData = getCancellationRiskData(procedureId)
+  const privateComparisonData = getPrivateComparisonData(procedureId, regionId || undefined)
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://comparethewait.co.uk'
   const url = `${baseUrl}/comparison/${procedure}/${city}`
@@ -146,7 +156,7 @@ export default async function ComparisonPage({ params }: PageProps) {
             </p>
             <LastUpdated 
               date={nhsWait.date || new Date().toISOString().split('T')[0]} 
-              source="weekly"
+              source="biweekly"
             />
           </header>
 
@@ -158,17 +168,32 @@ export default async function ComparisonPage({ params }: PageProps) {
             </p>
           </div>
 
+          {/* Official vs Reality Comparison */}
+          <OfficialVsRealityComparison data={waitingTimesData} variant="full" />
+
+          {/* Cancellation Warning Banner */}
+          <CancellationWarning 
+            data={cancellationRiskData}
+            procedure={procedureId}
+            region={regionId || undefined}
+            variant="banner"
+            procedureName={procedureData.name}
+          />
+
           {/* Main Comparison Table */}
           <ComparisonTable data={comparisonData} />
 
           {/* Savings Calculator */}
-          <SavingsCalculator data={comparisonData} />
+          <SavingsCalculator data={comparisonData} privateComparison={privateComparisonData} />
 
           {/* Clinic List */}
           <ClinicList 
             clinics={clinics}
             procedureName={procedureData.name}
             city={cityName}
+            procedureId={procedureId}
+            regionId={regionId || undefined}
+            cancellationRiskData={cancellationRiskData}
           />
 
           {/* FAQ Section */}
@@ -183,6 +208,23 @@ export default async function ComparisonPage({ params }: PageProps) {
             }
             return null;
           })()}
+
+          {/* Share Your Experience Section */}
+          <section className="mb-12">
+            <div className="bg-elderly-primary-light border-elderly border-elderly-gray-medium p-6 rounded-lg mb-6">
+              <h2 className="text-elderly-xl font-bold text-elderly-primary mb-3">
+                Just like this? Tell us how it went
+              </h2>
+              <p className="text-elderly-base text-elderly-text mb-4">
+                Help others make informed decisions by sharing your real experience. Takes 5 minutes.
+              </p>
+            </div>
+            <SubmitExperienceForm 
+              variant="full"
+              defaultProcedure={procedureId}
+              defaultLocation={regionId || undefined}
+            />
+          </section>
 
           {/* Related Comparisons */}
           <section className="mb-12 bg-elderly-primary-light p-6 rounded-lg border-elderly border-elderly-gray-medium">
@@ -221,6 +263,21 @@ export default async function ComparisonPage({ params }: PageProps) {
                 {procedureData.name} in other cities
               </Link>
             </div>
+          </section>
+
+          {/* Share Experience Section */}
+          <section className="mb-12 bg-elderly-primary-light p-6 rounded-lg border-elderly border-elderly-gray-medium">
+            <h2 className="text-elderly-xl font-bold text-elderly-primary mb-4">
+              Just like this? Tell us how it went
+            </h2>
+            <p className="text-elderly-base text-elderly-text mb-4">
+              Help others make informed decisions by sharing your real experience. Takes 5 minutes.
+            </p>
+            <SubmitExperienceForm 
+              variant="full"
+              defaultProcedure={procedureId}
+              defaultLocation={regionId || undefined}
+            />
           </section>
 
           {/* Medical Disclaimer */}

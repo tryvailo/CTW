@@ -1,20 +1,28 @@
 import React from 'react';
 import { Card } from '../ui/Card';
 import type { ComparisonData } from '@/lib/types';
+import type { PrivateComparison } from '@/lib/types/waitingTimes';
 
 interface SavingsCalculatorProps {
   data: ComparisonData;
+  privateComparison?: PrivateComparison | null;
 }
 
-export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ data }) => {
+export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ data, privateComparison }) => {
   const { nhsWait, privateCost } = data;
   
   if (!nhsWait || !privateCost) {
     return null;
   }
 
-  const timeSaved = nhsWait.avg_wait_weeks - 1.5; // Average private wait is 1-2 weeks
-  const avgCost = (privateCost.cost_min + privateCost.cost_max) / 2;
+  // Use private comparison data from JSON if available, otherwise fall back to defaults
+  const privateWaitWeeks = privateComparison?.average_wait_weeks || 1.5;
+  const avgCost = privateComparison?.average_cost_pounds || (privateCost.cost_min + privateCost.cost_max) / 2;
+  
+  // Use patient-reported average if available, otherwise use avg_wait_weeks
+  const nhsWaitWeeks = nhsWait.avg_wait_weeks;
+  
+  const timeSaved = nhsWaitWeeks - privateWaitWeeks;
   const monthsSaved = Math.round((timeSaved / 4) * 10) / 10;
   const costPerWeek = Math.round(avgCost / 52);
   const costPerMonth = Math.round(avgCost / 12);
@@ -40,7 +48,7 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ data }) =>
               TIME SAVED: {Math.round(timeSaved)} weeks
             </p>
             <p className="text-elderly-sm text-elderly-text">
-              ({nhsWait.avg_wait_weeks} weeks wait → 1-2 week wait)
+              ({nhsWaitWeeks} weeks wait → {privateWaitWeeks} week{privateWaitWeeks !== 1 ? 's' : ''} wait)
             </p>
             <p className="text-elderly-base font-bold text-elderly-text mt-4">
               That's {monthsSaved} months shorter!
@@ -63,7 +71,7 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ data }) =>
               Is it worth it?
             </h4>
             <ul className="list-disc list-inside text-elderly-sm text-elderly-text space-y-1">
-              <li>Getting treatment {Math.round(timeSaved)} weeks instead of {nhsWait.avg_wait_weeks} weeks</li>
+              <li>Getting treatment {Math.round(timeSaved)} weeks sooner (from {nhsWaitWeeks} weeks to {privateWaitWeeks} week{privateWaitWeeks !== 1 ? 's' : ''})</li>
               <li>Returning to normal activities {Math.round(timeSaved)} weeks sooner</li>
               <li>Peace of mind & known timeline</li>
             </ul>

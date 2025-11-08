@@ -46,9 +46,15 @@ export interface Clinic {
   city: City;
   procedure_id: ProcedureId;
   price: number;
-  url: string;
-  phone: string;
+  url?: string; // Optional - may be empty in CSV
+  phone?: string; // Optional - may be empty in CSV
+  address?: string; // Optional - full address
+  rating_stars?: number; // Optional - rating out of 5
+  rating_count?: number; // Optional - number of reviews
+  cqc_rating?: string; // Optional - CQC rating (Outstanding, Good, Requires improvement, Inadequate)
+  hospital_group?: string; // Optional - hospital group/chain name (Spire, Circle, Nuffield, etc.)
   last_updated: string; // YYYY-MM-DD format
+  details_last_updated?: string; // YYYY-MM-DD format - when details (address, phone, url, ratings) were last updated
 }
 
 export interface ComparisonData {

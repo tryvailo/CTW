@@ -202,7 +202,7 @@ function validatePrivateCosts(filePath) {
 function validateClinics(filePath) {
   const result = validateCSV(
     filePath,
-    ['clinic_id', 'name', 'city', 'procedure_id', 'price', 'url', 'phone', 'last_updated'],
+    ['clinic_id', 'name', 'city', 'procedure_id', 'price', 'url', 'phone', 'address', 'rating_stars', 'rating_count', 'cqc_rating', 'hospital_group', 'last_updated', 'details_last_updated'],
     null // Может быть 45-75 строк
   );
 
@@ -219,12 +219,33 @@ function validateClinics(filePath) {
   const errors = [];
 
   for (let i = 1; i < lines.length; i++) {
-    const [clinic_id, name, city, procedure_id, price, url, phone, last_updated] = 
-      lines[i].split(',').map(c => c.trim());
+    // Parse CSV line (handle quoted values with commas)
+    const values = [];
+    let current = '';
+    let inQuotes = false;
+    const line = lines[i];
+    
+    for (let j = 0; j < line.length; j++) {
+      const char = line[j];
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        values.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    values.push(current.trim());
+    
+    const [
+      clinic_id, name, city, procedure_id, price, url, phone, address,
+      rating_stars, rating_count, cqc_rating, hospital_group, last_updated, details_last_updated
+    ] = values;
 
     // Проверка URL
-    if (url && !url.startsWith('https://')) {
-      errors.push(`Строка ${i + 1}: URL не начинается с https://: ${url}`);
+    if (url && url.trim() !== '' && !url.startsWith('https://') && !url.startsWith('http://')) {
+      errors.push(`Строка ${i + 1}: URL не начинается с https:// или http://: ${url}`);
     }
 
     // Проверка цены
@@ -232,9 +253,38 @@ function validateClinics(filePath) {
       errors.push(`Строка ${i + 1}: price не является валидным числом: ${price}`);
     }
 
-    // Проверка даты
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(last_updated)) {
-      errors.push(`Строка ${i + 1}: Неправильный формат даты: ${last_updated}`);
+    // Проверка рейтинга (если указан)
+    if (rating_stars && rating_stars.trim() !== '') {
+      const rating = parseFloat(rating_stars);
+      if (isNaN(rating) || rating < 0 || rating > 5) {
+        errors.push(`Строка ${i + 1}: rating_stars должен быть числом от 0 до 5: ${rating_stars}`);
+      }
+    }
+
+    // Проверка количества отзывов (если указано)
+    if (rating_count && rating_count.trim() !== '') {
+      const count = parseInt(rating_count);
+      if (isNaN(count) || count < 0) {
+        errors.push(`Строка ${i + 1}: rating_count должен быть положительным целым числом: ${rating_count}`);
+      }
+    }
+
+    // Проверка CQC рейтинга (если указан)
+    if (cqc_rating && cqc_rating.trim() !== '') {
+      const validCQCRatings = ['Outstanding', 'Good', 'Requires improvement', 'Inadequate'];
+      if (!validCQCRatings.includes(cqc_rating)) {
+        errors.push(`Строка ${i + 1}: cqc_rating должен быть одним из: ${validCQCRatings.join(', ')}: ${cqc_rating}`);
+      }
+    }
+
+    // Проверка даты last_updated
+    if (last_updated && !/^\d{4}-\d{2}-\d{2}$/.test(last_updated)) {
+      errors.push(`Строка ${i + 1}: Неправильный формат даты last_updated: ${last_updated}`);
+    }
+
+    // Проверка даты details_last_updated (если указана)
+    if (details_last_updated && details_last_updated.trim() !== '' && !/^\d{4}-\d{2}-\d{2}$/.test(details_last_updated)) {
+      errors.push(`Строка ${i + 1}: Неправильный формат даты details_last_updated: ${details_last_updated}`);
     }
   }
 

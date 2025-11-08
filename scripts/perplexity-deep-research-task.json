@@ -1,0 +1,535 @@
+{
+  "task_description": "Research real-world NHS waiting times for surgical procedures across the UK, gathering data from open internet sources including Reddit, local forums, patient communities, and social media, not just official NHS statistics.",
+  "research_scope": {
+    "geographic_scope": "United Kingdom",
+    "data_sources": [
+      "Reddit (r/nhs, r/AskUK, r/unitedkingdom, procedure-specific subreddits)",
+      "Local city forums and community boards",
+      "Patient review sites (NHS Choices, Care Opinion, Trustpilot)",
+      "Facebook groups for NHS patients",
+      "Twitter/X discussions and threads",
+      "Local news articles and reports",
+      "Patient advocacy websites",
+      "Medical professional forums (where patients discuss)",
+      "Other open internet sources with patient experiences"
+    ],
+    "exclusion_note": "Focus on real patient experiences and community-reported wait times, not just official NHS published statistics"
+  },
+  "procedures": [
+    {
+      "procedure_id": "cataract",
+      "procedure_name": "Cataract Surgery",
+      "research_queries": [
+        {
+          "scope": "UK-wide",
+          "query": "What are the real waiting times for cataract surgery on the NHS in the UK? Include patient experiences from Reddit, forums, and social media. What do people actually report waiting?",
+          "keywords": [
+            "NHS cataract surgery waiting times",
+            "cataract surgery wait UK",
+            "how long wait cataract surgery NHS",
+            "cataract surgery delay UK",
+            "NHS cataract waiting list"
+          ],
+          "reddit_sources": [
+            "r/nhs",
+            "r/AskUK",
+            "r/unitedkingdom",
+            "r/Blind",
+            "r/optometry"
+          ],
+          "forum_sources": [
+            "NHS Choices forums",
+            "Patient.co.uk",
+            "HealthUnlocked",
+            "Mumsnet health forums"
+          ]
+        },
+        {
+          "scope": "London",
+          "query": "What are the real waiting times for cataract surgery on the NHS in London? Include patient experiences from Reddit, local London forums, and social media. What do London patients actually report waiting?",
+          "keywords": [
+            "NHS cataract surgery London waiting times",
+            "cataract surgery wait London",
+            "London NHS cataract waiting list",
+            "Moorfields cataract waiting times",
+            "London eye hospital waiting times"
+          ],
+          "reddit_sources": [
+            "r/london",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "London-specific health forums",
+            "Local London community boards",
+            "NHS Choices London-specific discussions"
+          ]
+        },
+        {
+          "scope": "Manchester",
+          "query": "What are the real waiting times for cataract surgery on the NHS in Manchester? Include patient experiences from Reddit, local Manchester forums, and social media. What do Manchester patients actually report waiting?",
+          "keywords": [
+            "NHS cataract surgery Manchester waiting times",
+            "cataract surgery wait Manchester",
+            "Manchester NHS cataract waiting list",
+            "Manchester Royal Eye Hospital waiting times"
+          ],
+          "reddit_sources": [
+            "r/manchester",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Manchester-specific health forums",
+            "Local Manchester community boards",
+            "NHS Choices Manchester-specific discussions"
+          ]
+        },
+        {
+          "scope": "Birmingham",
+          "query": "What are the real waiting times for cataract surgery on the NHS in Birmingham? Include patient experiences from Reddit, local Birmingham forums, and social media. What do Birmingham patients actually report waiting?",
+          "keywords": [
+            "NHS cataract surgery Birmingham waiting times",
+            "cataract surgery wait Birmingham",
+            "Birmingham NHS cataract waiting list",
+            "Birmingham Eye Hospital waiting times"
+          ],
+          "reddit_sources": [
+            "r/brum",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Birmingham-specific health forums",
+            "Local Birmingham community boards",
+            "NHS Choices Birmingham-specific discussions"
+          ]
+        },
+        {
+          "scope": "Leeds",
+          "query": "What are the real waiting times for cataract surgery on the NHS in Leeds? Include patient experiences from Reddit, local Leeds forums, and social media. What do Leeds patients actually report waiting?",
+          "keywords": [
+            "NHS cataract surgery Leeds waiting times",
+            "cataract surgery wait Leeds",
+            "Leeds NHS cataract waiting list",
+            "Leeds Teaching Hospitals eye waiting times"
+          ],
+          "reddit_sources": [
+            "r/leeds",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Leeds-specific health forums",
+            "Local Leeds community boards",
+            "NHS Choices Leeds-specific discussions"
+          ]
+        },
+        {
+          "scope": "Bristol",
+          "query": "What are the real waiting times for cataract surgery on the NHS in Bristol? Include patient experiences from Reddit, local Bristol forums, and social media. What do Bristol patients actually report waiting?",
+          "keywords": [
+            "NHS cataract surgery Bristol waiting times",
+            "cataract surgery wait Bristol",
+            "Bristol NHS cataract waiting list",
+            "Bristol Eye Hospital waiting times"
+          ],
+          "reddit_sources": [
+            "r/bristol",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Bristol-specific health forums",
+            "Local Bristol community boards",
+            "NHS Choices Bristol-specific discussions"
+          ]
+        }
+      ]
+    },
+    {
+      "procedure_id": "hip",
+      "procedure_name": "Hip Replacement",
+      "research_queries": [
+        {
+          "scope": "UK-wide",
+          "query": "What are the real waiting times for hip replacement surgery on the NHS in the UK? Include patient experiences from Reddit, forums, and social media. What do people actually report waiting?",
+          "keywords": [
+            "NHS hip replacement waiting times",
+            "hip replacement wait UK",
+            "how long wait hip replacement NHS",
+            "hip replacement delay UK",
+            "NHS hip replacement waiting list",
+            "hip arthroplasty waiting times UK"
+          ],
+          "reddit_sources": [
+            "r/nhs",
+            "r/AskUK",
+            "r/unitedkingdom",
+            "r/Thritis",
+            "r/ChronicPain"
+          ],
+          "forum_sources": [
+            "NHS Choices forums",
+            "Patient.co.uk",
+            "HealthUnlocked",
+            "Arthritis Care forums",
+            "Mumsnet health forums"
+          ]
+        },
+        {
+          "scope": "London",
+          "query": "What are the real waiting times for hip replacement surgery on the NHS in London? Include patient experiences from Reddit, local London forums, and social media. What do London patients actually report waiting?",
+          "keywords": [
+            "NHS hip replacement London waiting times",
+            "hip replacement wait London",
+            "London NHS hip replacement waiting list",
+            "London orthopaedic waiting times",
+            "London hip surgery waiting times"
+          ],
+          "reddit_sources": [
+            "r/london",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "London-specific health forums",
+            "Local London community boards",
+            "NHS Choices London-specific discussions"
+          ]
+        },
+        {
+          "scope": "Manchester",
+          "query": "What are the real waiting times for hip replacement surgery on the NHS in Manchester? Include patient experiences from Reddit, local Manchester forums, and social media. What do Manchester patients actually report waiting?",
+          "keywords": [
+            "NHS hip replacement Manchester waiting times",
+            "hip replacement wait Manchester",
+            "Manchester NHS hip replacement waiting list",
+            "Manchester Royal Infirmary hip waiting times"
+          ],
+          "reddit_sources": [
+            "r/manchester",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Manchester-specific health forums",
+            "Local Manchester community boards",
+            "NHS Choices Manchester-specific discussions"
+          ]
+        },
+        {
+          "scope": "Birmingham",
+          "query": "What are the real waiting times for hip replacement surgery on the NHS in Birmingham? Include patient experiences from Reddit, local Birmingham forums, and social media. What do Birmingham patients actually report waiting?",
+          "keywords": [
+            "NHS hip replacement Birmingham waiting times",
+            "hip replacement wait Birmingham",
+            "Birmingham NHS hip replacement waiting list",
+            "Birmingham orthopaedic waiting times"
+          ],
+          "reddit_sources": [
+            "r/brum",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Birmingham-specific health forums",
+            "Local Birmingham community boards",
+            "NHS Choices Birmingham-specific discussions"
+          ]
+        },
+        {
+          "scope": "Leeds",
+          "query": "What are the real waiting times for hip replacement surgery on the NHS in Leeds? Include patient experiences from Reddit, local Leeds forums, and social media. What do Leeds patients actually report waiting?",
+          "keywords": [
+            "NHS hip replacement Leeds waiting times",
+            "hip replacement wait Leeds",
+            "Leeds NHS hip replacement waiting list",
+            "Leeds Teaching Hospitals hip waiting times"
+          ],
+          "reddit_sources": [
+            "r/leeds",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Leeds-specific health forums",
+            "Local Leeds community boards",
+            "NHS Choices Leeds-specific discussions"
+          ]
+        },
+        {
+          "scope": "Bristol",
+          "query": "What are the real waiting times for hip replacement surgery on the NHS in Bristol? Include patient experiences from Reddit, local Bristol forums, and social media. What do Bristol patients actually report waiting?",
+          "keywords": [
+            "NHS hip replacement Bristol waiting times",
+            "hip replacement wait Bristol",
+            "Bristol NHS hip replacement waiting list",
+            "North Bristol NHS Trust hip waiting times"
+          ],
+          "reddit_sources": [
+            "r/bristol",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Bristol-specific health forums",
+            "Local Bristol community boards",
+            "NHS Choices Bristol-specific discussions"
+          ]
+        }
+      ]
+    },
+    {
+      "procedure_id": "knee",
+      "procedure_name": "Knee Replacement",
+      "research_queries": [
+        {
+          "scope": "UK-wide",
+          "query": "What are the real waiting times for knee replacement surgery on the NHS in the UK? Include patient experiences from Reddit, forums, and social media. What do people actually report waiting?",
+          "keywords": [
+            "NHS knee replacement waiting times",
+            "knee replacement wait UK",
+            "how long wait knee replacement NHS",
+            "knee replacement delay UK",
+            "NHS knee replacement waiting list",
+            "knee arthroplasty waiting times UK"
+          ],
+          "reddit_sources": [
+            "r/nhs",
+            "r/AskUK",
+            "r/unitedkingdom",
+            "r/Thritis",
+            "r/ChronicPain"
+          ],
+          "forum_sources": [
+            "NHS Choices forums",
+            "Patient.co.uk",
+            "HealthUnlocked",
+            "Arthritis Care forums",
+            "Mumsnet health forums"
+          ]
+        },
+        {
+          "scope": "London",
+          "query": "What are the real waiting times for knee replacement surgery on the NHS in London? Include patient experiences from Reddit, local London forums, and social media. What do London patients actually report waiting?",
+          "keywords": [
+            "NHS knee replacement London waiting times",
+            "knee replacement wait London",
+            "London NHS knee replacement waiting list",
+            "London orthopaedic waiting times",
+            "London knee surgery waiting times"
+          ],
+          "reddit_sources": [
+            "r/london",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "London-specific health forums",
+            "Local London community boards",
+            "NHS Choices London-specific discussions"
+          ]
+        },
+        {
+          "scope": "Manchester",
+          "query": "What are the real waiting times for knee replacement surgery on the NHS in Manchester? Include patient experiences from Reddit, local Manchester forums, and social media. What do Manchester patients actually report waiting?",
+          "keywords": [
+            "NHS knee replacement Manchester waiting times",
+            "knee replacement wait Manchester",
+            "Manchester NHS knee replacement waiting list",
+            "Manchester Royal Infirmary knee waiting times"
+          ],
+          "reddit_sources": [
+            "r/manchester",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Manchester-specific health forums",
+            "Local Manchester community boards",
+            "NHS Choices Manchester-specific discussions"
+          ]
+        },
+        {
+          "scope": "Birmingham",
+          "query": "What are the real waiting times for knee replacement surgery on the NHS in Birmingham? Include patient experiences from Reddit, local Birmingham forums, and social media. What do Birmingham patients actually report waiting?",
+          "keywords": [
+            "NHS knee replacement Birmingham waiting times",
+            "knee replacement wait Birmingham",
+            "Birmingham NHS knee replacement waiting list",
+            "Birmingham orthopaedic waiting times"
+          ],
+          "reddit_sources": [
+            "r/brum",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Birmingham-specific health forums",
+            "Local Birmingham community boards",
+            "NHS Choices Birmingham-specific discussions"
+          ]
+        },
+        {
+          "scope": "Leeds",
+          "query": "What are the real waiting times for knee replacement surgery on the NHS in Leeds? Include patient experiences from Reddit, local Leeds forums, and social media. What do Leeds patients actually report waiting?",
+          "keywords": [
+            "NHS knee replacement Leeds waiting times",
+            "knee replacement wait Leeds",
+            "Leeds NHS knee replacement waiting list",
+            "Leeds Teaching Hospitals knee waiting times"
+          ],
+          "reddit_sources": [
+            "r/leeds",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Leeds-specific health forums",
+            "Local Leeds community boards",
+            "NHS Choices Leeds-specific discussions"
+          ]
+        },
+        {
+          "scope": "Bristol",
+          "query": "What are the real waiting times for knee replacement surgery on the NHS in Bristol? Include patient experiences from Reddit, local Bristol forums, and social media. What do Bristol patients actually report waiting?",
+          "keywords": [
+            "NHS knee replacement Bristol waiting times",
+            "knee replacement wait Bristol",
+            "Bristol NHS knee replacement waiting list",
+            "North Bristol NHS Trust knee waiting times"
+          ],
+          "reddit_sources": [
+            "r/bristol",
+            "r/nhs",
+            "r/AskUK"
+          ],
+          "forum_sources": [
+            "Bristol-specific health forums",
+            "Local Bristol community boards",
+            "NHS Choices Bristol-specific discussions"
+          ]
+        }
+      ]
+    }
+  ],
+  "output_format": {
+    "format": "JSON",
+    "structure": {
+      "procedure_id": "string (cataract, hip, or knee)",
+      "procedure_name": "string",
+      "uk_wide_data": {
+        "avg_wait_weeks": "number (average from all sources)",
+        "min_wait_weeks": "number (minimum reported)",
+        "max_wait_weeks": "number (maximum reported)",
+        "median_wait_weeks": "number (median from all sources)",
+        "sample_size": "number (number of reports found)",
+        "sources": [
+          {
+            "source_type": "string (reddit, forum, social_media, news, etc.)",
+            "source_name": "string (e.g., r/nhs, NHS Choices forum)",
+            "url": "string (if available)",
+            "reported_wait_weeks": "number",
+            "date_reported": "string (YYYY-MM-DD if available)",
+            "context": "string (brief description of the report)"
+          }
+        ],
+        "trends": "string (description of any trends noticed, e.g., 'increasing', 'decreasing', 'stable')",
+        "notes": "string (any additional relevant information)"
+      },
+      "city_data": [
+        {
+          "city": "string (London, Manchester, Birmingham, Leeds, or Bristol)",
+          "avg_wait_weeks": "number",
+          "min_wait_weeks": "number",
+          "max_wait_weeks": "number",
+          "median_wait_weeks": "number",
+          "sample_size": "number",
+          "sources": [
+            {
+              "source_type": "string",
+              "source_name": "string",
+              "url": "string (if available)",
+              "reported_wait_weeks": "number",
+              "date_reported": "string (YYYY-MM-DD if available)",
+              "context": "string"
+            }
+          ],
+          "trends": "string",
+          "notes": "string"
+        }
+      ],
+      "research_date": "string (YYYY-MM-DD)",
+      "research_notes": "string (overall observations, data quality, limitations)"
+    }
+  },
+  "research_instructions": {
+    "priority_sources": [
+      "Recent posts (last 12 months preferred, but include older if relevant)",
+      "Patient testimonials and personal experiences",
+      "Community discussions and threads",
+      "Local news reports about waiting times",
+      "Social media discussions"
+    ],
+    "data_extraction": [
+      "Extract actual wait times mentioned (convert months to weeks: 1 month = 4.33 weeks)",
+      "Note the date when the wait time was reported",
+      "Identify the specific NHS Trust or hospital if mentioned",
+      "Capture context (e.g., 'urgent case', 'routine', 'cancelled and rescheduled')",
+      "Note any patterns or trends across sources"
+    ],
+    "quality_checks": [
+      "Verify that wait times are for NHS procedures (not private)",
+      "Ensure location matches the query scope",
+      "Cross-reference multiple sources for consistency",
+      "Note any outliers or unusual reports",
+      "Include sample size to indicate data reliability"
+    ],
+    "reporting_guidelines": [
+      "If insufficient data is found for a specific city, note this in the 'notes' field",
+      "If sources conflict significantly, report both and explain",
+      "Include confidence level if possible (high/medium/low based on sample size and source quality)",
+      "Distinguish between 'time on waiting list' and 'time from referral to surgery' if possible"
+    ]
+  },
+  "example_output": {
+    "procedure_id": "cataract",
+    "procedure_name": "Cataract Surgery",
+    "uk_wide_data": {
+      "avg_wait_weeks": 16.5,
+      "min_wait_weeks": 8,
+      "max_wait_weeks": 52,
+      "median_wait_weeks": 14,
+      "sample_size": 45,
+      "sources": [
+        {
+          "source_type": "reddit",
+          "source_name": "r/nhs",
+          "url": "https://reddit.com/r/nhs/comments/...",
+          "reported_wait_weeks": 12,
+          "date_reported": "2024-10-15",
+          "context": "Patient reported 12 weeks wait in London area"
+        }
+      ],
+      "trends": "Slight increase in reported wait times over past 6 months",
+      "notes": "Many reports mention delays due to COVID backlog. Some urgent cases seen faster."
+    },
+    "city_data": [
+      {
+        "city": "London",
+        "avg_wait_weeks": 18.2,
+        "min_wait_weeks": 10,
+        "max_wait_weeks": 48,
+        "median_wait_weeks": 16,
+        "sample_size": 12,
+        "sources": [],
+        "trends": "Stable",
+        "notes": "Moorfields mentioned frequently. Some reports of 6+ month waits."
+      }
+    ],
+    "research_date": "2025-01-XX",
+    "research_notes": "Data gathered from multiple community sources. Official NHS stats show 12 weeks average, but patient reports suggest longer actual waits."
+  }
+}
+

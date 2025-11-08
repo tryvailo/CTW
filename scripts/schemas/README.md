@@ -41,8 +41,8 @@ const result = await app.scrape(url, {
 ✅ Соответствует (procedure_id и date добавляются при обработке)
 
 ### Clinics Schema
-**CSV поля:** `clinic_id, name, city, procedure_id, price, url, phone, last_updated`  
-**Schema поля (массив):** `clinic_name, price_gbp, phone_number, website_url, address`  
+**CSV поля:** `clinic_id, name, city, procedure_id, price, url, phone, address, rating_stars, rating_count, cqc_rating, hospital_group, last_updated, details_last_updated`  
+**Schema поля (массив):** `clinic_name, price_gbp, phone_number, website_url, address, rating_stars, rating_count, cqc_rating, hospital_group`  
 ✅ Соответствует (clinic_id генерируется, procedure_id добавляется при обработке)
 
 ## 📝 Примечания

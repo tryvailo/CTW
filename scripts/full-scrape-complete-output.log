@@ -1,0 +1,2506 @@
+🚀 Starting healthcare data scraper...
+📋 Mode: FULL (All data (quarterly))
+============================================================
+
+📡 Checking site availability...
+  My Planned Care: ✅ Available
+  PHIN: ✅ Available
+
+📊 Scraping 15 combinations...
+
+[1/15] Processing cataract in London...
+
+[cataract in London] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[cataract in London] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "Roding Lane South, Ilford, IG4 5PZ",
+  "postcode": "IG4 5PZ",
+  "price_gbp": 2796,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/",
+  "avg_uk_price": 2980,
+  "phone_number": "020 8551 1100",
+  "rating_count": 19,
+  "rating_stars": 3.3,
+  "hospital_name": "Spire London East Hospital",
+  "price_max_gbp": 2796,
+  "price_min_gbp": 2796,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ TreatmentConnect: Found cost data from Spire London East Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "Roding Lane South, Ilford, IG4 5PZ",
+  "postcode": "IG4 5PZ",
+  "price_gbp": 2796,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/",
+  "avg_uk_price": 2980,
+  "phone_number": "020 8551 1100",
+  "rating_count": 19,
+  "rating_stars": 3.3,
+  "hospital_name": "Spire London East Hospital",
+  "price_max_gbp": 2796,
+  "price_min_gbp": 2796,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: timeout of 35000ms exceeded
+  Attempt 2/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "Roding Lane South, Ilford, IG4 5PZ",
+  "postcode": "IG4 5PZ",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital",
+  "phone_number": "020 8551 1100",
+  "rating_count": 18,
+  "rating_stars": 3,
+  "hospital_name": "Spire London East Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire London East Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "1 Beaumont Square, Stepney Green, E1 4NL",
+  "postcode": "E1 4NL",
+  "price_gbp": 1854,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital",
+  "avg_uk_price": 2980,
+  "phone_number": "020 7780 2400",
+  "rating_count": 45,
+  "rating_stars": 2.7,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "price_max_gbp": 1854,
+  "price_min_gbp": 1854,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "1 Beaumont Square, Stepney Green, E1 4NL",
+  "postcode": "E1 4NL",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital",
+  "phone_number": "020 7780 2400",
+  "rating_count": 41,
+  "rating_stars": 3,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The London Independent Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "Shenfield Road, Brentwood, CM15 8EH",
+  "postcode": "CM15 8EH",
+  "price_gbp": 2920,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/cataract-surgery",
+  "avg_uk_price": 2843,
+  "phone_number": "01277 695 695",
+  "rating_count": 7,
+  "rating_stars": 4.3,
+  "hospital_name": "Nuffield Health Brentwood Hospital",
+  "price_max_gbp": 2920,
+  "price_min_gbp": 2920,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 3765,
+  "price_range_uk_min": 1995
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "Shenfield Road, Brentwood, CM15 8EH",
+  "postcode": "CM15 8EH",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital",
+  "phone_number": "+44 1277 695 695",
+  "rating_count": 6,
+  "rating_stars": 4,
+  "hospital_name": "Nuffield Health Brentwood Hospital",
+  "hospital_group": "Nuffield Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Nuffield Health Brentwood Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/cataract-surgery)
+  ✅ TreatmentConnect JSON Mode: Found 3 clinic(s) with real URLs
+
+[2/15] Processing cataract in Manchester...
+
+[cataract in Manchester] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[cataract in Manchester] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "Lawn Lane, Chelmsford, CM1 7GU",
+  "postcode": "CM1 7GU",
+  "price_gbp": 2894,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-springfield-hospital/cataract-surgery",
+  "avg_uk_price": 2980,
+  "phone_number": "01245 234 000",
+  "rating_count": 16,
+  "rating_stars": 3.9,
+  "hospital_name": "Ramsay Springfield Hospital",
+  "price_max_gbp": 2894,
+  "price_min_gbp": 2894,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ TreatmentConnect: Found cost data from Ramsay Springfield Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "Lawn Lane, Chelmsford, CM1 7GU",
+  "postcode": "CM1 7GU",
+  "price_gbp": 2894,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-springfield-hospital/cataract-surgery",
+  "avg_uk_price": 2980,
+  "phone_number": "01245 234 000",
+  "rating_count": 16,
+  "rating_stars": 3.9,
+  "hospital_name": "Ramsay Springfield Hospital",
+  "price_max_gbp": 2894,
+  "price_min_gbp": 2894,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/ramsay-springfield-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": null,
+  "postcode": null,
+  "cqc_rating": null,
+  "website_url": null,
+  "phone_number": null,
+  "rating_count": null,
+  "rating_stars": null,
+  "hospital_name": "Ramsay Springfield Hospital",
+  "hospital_group": "Ramsay Health Care UK",
+  "rating_categories": {},
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Ramsay Springfield Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-springfield-hospital/cataract-surgery)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "Manchester Road, Rochdale, OL11 4LZ",
+  "postcode": "OL11 4LZ",
+  "price_gbp": 2829,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/cataract-surgery",
+  "avg_uk_price": 2980,
+  "phone_number": "01706 655 121",
+  "rating_count": 19,
+  "rating_stars": 4,
+  "hospital_name": "The Highfield Hospital, part of Circle Health Group",
+  "price_max_gbp": 2829,
+  "price_min_gbp": 2829,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "Manchester Road, Rochdale, OL11 4LZ",
+  "postcode": "OL11 4LZ",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "+44 1706 655 121",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "The Highfield Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Highfield Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/cataract-surgery)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "19 Lancaster Road, Salford, M6 8AQ",
+  "postcode": "M6 8AQ",
+  "price_gbp": 3153,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/cataract-surgery",
+  "avg_uk_price": 2980,
+  "phone_number": "0161 787 7700",
+  "rating_count": 26,
+  "rating_stars": 2.9,
+  "hospital_name": "Ramsay Oaklands Hospital",
+  "price_max_gbp": 3153,
+  "price_min_gbp": 3153,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "19 Lancaster Road, Salford, M6 8AQ",
+  "postcode": "M6 8AQ",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/",
+  "phone_number": "0161 787 7700",
+  "rating_count": 0,
+  "rating_stars": 3,
+  "hospital_name": "Ramsay Oaklands Hospital",
+  "hospital_group": "Ramsay Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Ramsay Oaklands Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/cataract-surgery)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "Mill Lane, Cheadle, SK8 2PX",
+  "postcode": "SK8 2PX",
+  "price_gbp": 2829,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/cataract-surgery",
+  "avg_uk_price": 2980,
+  "phone_number": "0161 428 3656",
+  "rating_count": 20,
+  "rating_stars": 4.5,
+  "hospital_name": "The Alexandra Hospital, part of Circle Health Group",
+  "price_max_gbp": 2829,
+  "price_min_gbp": 2829,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "Mill Lane, Cheadle, SK8 2PX",
+  "postcode": "SK8 2PX",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "+44 161 428 3656",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "The Alexandra Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Alexandra Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/cataract-surgery)
+  ✅ TreatmentConnect JSON Mode: Found 4 clinic(s) with real URLs
+
+[3/15] Processing cataract in Birmingham...
+
+[cataract in Birmingham] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[cataract in Birmingham] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "1 Damson Parkway, Solihull, B91 2PP",
+  "postcode": "B91 2PP",
+  "price_gbp": 3143,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/cataract-surgery",
+  "avg_uk_price": 2980,
+  "phone_number": "0121 704 5500",
+  "rating_count": 6,
+  "rating_stars": 3.4,
+  "hospital_name": "Spire Parkway Hospital",
+  "price_max_gbp": 3143,
+  "price_min_gbp": 3143,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ TreatmentConnect: Found cost data from Spire Parkway Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "1 Damson Parkway, Solihull, B91 2PP",
+  "postcode": "B91 2PP",
+  "price_gbp": 3143,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/cataract-surgery",
+  "avg_uk_price": 2980,
+  "phone_number": "0121 704 5500",
+  "rating_count": 6,
+  "rating_stars": 3.4,
+  "hospital_name": "Spire Parkway Hospital",
+  "price_max_gbp": 3143,
+  "price_min_gbp": 3143,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Birmingham",
+  "address": "1 Damson Parkway, Solihull, B91 2PP",
+  "postcode": "B91 2PP",
+  "cqc_rating": "Good",
+  "website_url": "https://www.spirehealthcare.com/spire-parkway-hospital/",
+  "phone_number": "+44 121 704 5500",
+  "rating_count": 0,
+  "rating_stars": 3,
+  "hospital_name": "Spire Parkway Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Parkway Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/cataract-surgery)
+  ✅ TreatmentConnect JSON Mode: Found 1 clinic(s) with real URLs
+
+[4/15] Processing cataract in Leeds...
+
+[cataract in Leeds] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[cataract in Leeds] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "address": "Jackson Avenue, Leeds, LS8 1NT",
+  "postcode": "LS8 1NT",
+  "price_gbp": 2941,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/",
+  "avg_uk_price": 2980,
+  "phone_number": "0113 269 3939",
+  "rating_count": 7,
+  "rating_stars": 4.6,
+  "hospital_name": "Spire Leeds Hospital",
+  "price_max_gbp": 2941,
+  "price_min_gbp": 2941,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ TreatmentConnect: Found cost data from Spire Leeds Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "address": "Jackson Avenue, Leeds, LS8 1NT",
+  "postcode": "LS8 1NT",
+  "price_gbp": 2941,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/",
+  "avg_uk_price": 2980,
+  "phone_number": "0113 269 3939",
+  "rating_count": 7,
+  "rating_stars": 4.6,
+  "hospital_name": "Spire Leeds Hospital",
+  "price_max_gbp": 2941,
+  "price_min_gbp": 2941,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Leeds",
+  "address": "Jackson Avenue, Leeds, LS8 1NT",
+  "postcode": "LS8 1NT",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/",
+  "phone_number": "+44 113 269 3939",
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Leeds Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": 5,
+    "accommodation": 5,
+    "dignity_respect": 5,
+    "staff_cooperation": 5,
+    "involvement_decisions": 5
+  },
+  "recommendation_percentage": 100
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Leeds Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/)
+  ✅ TreatmentConnect JSON Mode: Found 1 clinic(s) with real URLs
+
+[5/15] Processing cataract in Bristol...
+
+[cataract in Bristol] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[cataract in Bristol] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "The Glen, Bristol, BS6 6UT",
+  "postcode": "BS6 6UT",
+  "price_gbp": 3670,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/",
+  "avg_uk_price": 2980,
+  "phone_number": "0117 980 4000",
+  "rating_count": 12,
+  "rating_stars": 4.2,
+  "hospital_name": "Spire Bristol Hospital",
+  "price_max_gbp": 3670,
+  "price_min_gbp": 3670,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  ✅ TreatmentConnect: Found cost data from Spire Bristol Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "The Glen, Bristol, BS6 6UT",
+  "postcode": "BS6 6UT",
+  "price_gbp": 3670,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/",
+  "avg_uk_price": 2980,
+  "phone_number": "0117 980 4000",
+  "rating_count": 12,
+  "rating_stars": 4.2,
+  "hospital_name": "Spire Bristol Hospital",
+  "price_max_gbp": 3670,
+  "price_min_gbp": 3670,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Bristol",
+  "address": "The Glen, Bristol, BS6 6UT",
+  "postcode": "BS6 6UT",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/",
+  "phone_number": "+44 117 980 4000",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "Spire Bristol Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Bristol Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "The Chesterfield, Bristol, BS8 1BN",
+  "postcode": "BS8 1BN",
+  "price_gbp": 3660,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/",
+  "avg_uk_price": 2980,
+  "phone_number": "0117 911 7483",
+  "rating_count": 4,
+  "rating_stars": 4.1,
+  "hospital_name": "Nuffield Health Bristol Hospital",
+  "price_max_gbp": 3660,
+  "price_min_gbp": 3660,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Bristol",
+  "address": "The Chesterfield, Bristol, BS8 1BN",
+  "postcode": "BS8 1BN",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/",
+  "phone_number": "+44 117 911 7483",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "Nuffield Health Bristol Hospital",
+  "hospital_group": "Nuffield Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Nuffield Health Bristol Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "Claverton Down Road, Bath, BA2 7BR",
+  "postcode": "BA2 7BR",
+  "price_gbp": 3300,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/",
+  "avg_uk_price": 2926,
+  "phone_number": "01225 807 438",
+  "rating_count": 13,
+  "rating_stars": 4.9,
+  "hospital_name": "Bath Clinic, part of Circle Health Group",
+  "price_max_gbp": 3300,
+  "price_min_gbp": 3300,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4100,
+  "price_range_uk_min": 1995
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Bristol",
+  "address": "Claverton Down Road, Bath, BA2 7BR",
+  "postcode": "BA2 7BR",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "+44 1225 807 438",
+  "rating_count": null,
+  "rating_stars": 5,
+  "hospital_name": "Bath Clinic, part of Circle Health Group",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Bath Clinic, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/)
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: timeout of 35000ms exceeded
+  Attempt 2/2 (JSON Mode)...
+  ❌ TreatmentConnect extraction failed: timeout of 35000ms exceeded
+  ✅ TreatmentConnect JSON Mode: Found 3 clinic(s) with real URLs
+
+[6/15] Processing hip in London...
+
+[hip in London] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[hip in London] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "1 Beaumont Square, Stepney Green, E1 4NL",
+  "postcode": "E1 4NL",
+  "price_gbp": 12595,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "020 7780 2400",
+  "rating_count": 45,
+  "rating_stars": 2.7,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "price_max_gbp": 12595,
+  "price_min_gbp": 12595,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from The London Independent Hospital, part of Circle Health Group
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "1 Beaumont Square, Stepney Green, E1 4NL",
+  "postcode": "E1 4NL",
+  "price_gbp": 12595,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "020 7780 2400",
+  "rating_count": 45,
+  "rating_stars": 2.7,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "price_max_gbp": 12595,
+  "price_min_gbp": 12595,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "1 Beaumont Square, Stepney Green, E1 4NL",
+  "postcode": "E1 4NL",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital",
+  "phone_number": "020 7780 2400",
+  "rating_count": 41,
+  "rating_stars": 3,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The London Independent Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "Shenfield Road, Brentwood, CM15 8EH",
+  "postcode": "CM15 8EH",
+  "price_gbp": 16540,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "01277 695 695",
+  "rating_count": 7,
+  "rating_stars": 4.3,
+  "hospital_name": "Nuffield Health Brentwood Hospital",
+  "price_max_gbp": 16540,
+  "price_min_gbp": 16540,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "Shenfield Road, Brentwood, CM15 8EH",
+  "postcode": "CM15 8EH",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital",
+  "phone_number": "+44 1277 695 695",
+  "rating_count": 6,
+  "rating_stars": 4,
+  "hospital_name": "Nuffield Health Brentwood Hospital",
+  "hospital_group": "Nuffield Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Nuffield Health Brentwood Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "High Wych Road, Sawbridgeworth, CM21 0HH",
+  "postcode": "CM21 0HH",
+  "price_gbp": 15484,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rivers-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "01279 600 282",
+  "rating_count": 17,
+  "rating_stars": 4.4,
+  "hospital_name": "Ramsay Rivers Hospital",
+  "price_max_gbp": 15484,
+  "price_min_gbp": 15484,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/ramsay-rivers-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "High Wych Road, Sawbridgeworth, CM21 0HH",
+  "postcode": "CM21 0HH",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rivers-hospital/",
+  "phone_number": "+44 1279 600 282",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "Ramsay Rivers Hospital",
+  "hospital_group": "Ramsay Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Ramsay Rivers Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-rivers-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "Roding Lane South, Ilford, IG4 5PZ",
+  "postcode": "IG4 5PZ",
+  "price_gbp": 14066,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "020 8551 1100",
+  "rating_count": 19,
+  "rating_stars": 3.3,
+  "hospital_name": "Spire London East Hospital",
+  "price_max_gbp": 14066,
+  "price_min_gbp": 14066,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "Roding Lane South, Ilford, IG4 5PZ",
+  "postcode": "IG4 5PZ",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital",
+  "phone_number": "020 8551 1100",
+  "rating_count": 18,
+  "rating_stars": 3,
+  "hospital_name": "Spire London East Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire London East Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "40-42 Lee Terrace, Blackheath, SE3 9UD",
+  "postcode": "SE3 9UD",
+  "price_gbp": 13066,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "020 8318 7722",
+  "rating_count": 17,
+  "rating_stars": 3.9,
+  "hospital_name": "The Blackheath Hospital, part of Circle Health Group",
+  "price_max_gbp": 13066,
+  "price_min_gbp": 13066,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "40-42 Lee Terrace, Blackheath, SE3 9UD",
+  "postcode": "SE3 9UD",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "020 8318 7722",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "The Blackheath Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Blackheath Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Ilford",
+  "address": "Barley Lane, Ilford, IG3 8YY",
+  "postcode": "IG3 8YY",
+  "price_gbp": 10720,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/practice-plus-ilford-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "03308 088 543",
+  "rating_count": 6,
+  "rating_stars": 3.8,
+  "hospital_name": "Practice Plus Group Hospital, Ilford",
+  "price_max_gbp": 10720,
+  "price_min_gbp": 10720,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/practice-plus-ilford-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "Barley Lane, Ilford, IG3 8YY",
+  "postcode": "IG3 8YY",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/practice-plus-ilford-hospital/",
+  "phone_number": "+44 3308 088 543",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "Practice Plus Group Hospital, Ilford",
+  "hospital_group": "Practice Plus Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Practice Plus Group Hospital, Ilford (URL: https://www.treatmentconnect.co.uk/hospitals/practice-plus-ilford-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "40-42 Lee Terrace, Blackheath, SE3 9UD",
+  "postcode": "SE3 9UD",
+  "price_gbp": 13066,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "020 8318 7722",
+  "rating_count": 17,
+  "rating_stars": 3.9,
+  "hospital_name": "The Blackheath Hospital, part of Circle Health Group",
+  "price_max_gbp": 13066,
+  "price_min_gbp": 13066,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/bmi-the-blackheath-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "40-42 Lee Terrace, Blackheath, SE3 9UD",
+  "postcode": "SE3 9UD",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "020 8318 7722",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "The Blackheath Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Blackheath Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "46-50 Sunny Gardens Road, Hendon, NW4 1RP",
+  "postcode": "NW4 1RP",
+  "price_gbp": 12825,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-hendon-hospital/hip-replacement",
+  "avg_uk_price": 14065,
+  "phone_number": "020 8457 4500",
+  "rating_count": 2,
+  "rating_stars": 5,
+  "hospital_name": "Hendon Hospital, part of Circle Health Group",
+  "price_max_gbp": 12825,
+  "price_min_gbp": 12825,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/bmi-hendon-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "46-50 Sunny Gardens Road, Hendon, NW4 1RP",
+  "postcode": "NW4 1RP",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "020 8457 4500",
+  "rating_count": 0,
+  "rating_stars": 5,
+  "hospital_name": "Hendon Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Hendon Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-hendon-hospital/hip-replacement)
+  ✅ TreatmentConnect JSON Mode: Found 8 clinic(s) with real URLs
+
+[7/15] Processing hip in Manchester...
+
+[hip in Manchester] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[hip in Manchester] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "170 Barlow Moor Road, Manchester, M20 2AF",
+  "postcode": "M20 2AF",
+  "price_gbp": 14055,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0161 447 6677",
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "price_max_gbp": 14055,
+  "price_min_gbp": 14055,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from Spire Manchester Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "170 Barlow Moor Road, Manchester, M20 2AF",
+  "postcode": "M20 2AF",
+  "price_gbp": 14055,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0161 447 6677",
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "price_max_gbp": 14055,
+  "price_min_gbp": 14055,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "170 Barlow Moor Road, Manchester, M20 2AF",
+  "postcode": "M20 2AF",
+  "cqc_rating": "Outstanding",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/",
+  "phone_number": "0161 447 6677",
+  "rating_count": 10,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": 5,
+    "accommodation": 5,
+    "dignity_respect": 5,
+    "staff_cooperation": 5,
+    "involvement_decisions": 5
+  },
+  "recommendation_percentage": 100
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Manchester Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "Manchester Road, Rochdale, OL11 4LZ",
+  "postcode": "OL11 4LZ",
+  "price_gbp": 14543,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "01706 655 121",
+  "rating_count": 19,
+  "rating_stars": 4,
+  "hospital_name": "The Highfield Hospital, part of Circle Health Group",
+  "price_max_gbp": 14543,
+  "price_min_gbp": 14543,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: timeout of 35000ms exceeded
+  Attempt 2/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "Manchester Road, Rochdale, OL11 4LZ",
+  "postcode": "OL11 4LZ",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "+44 1706 655 121",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "The Highfield Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Highfield Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "19 Lancaster Road, Salford, M6 8AQ",
+  "postcode": "M6 8AQ",
+  "price_gbp": 14136,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0161 787 7700",
+  "rating_count": 26,
+  "rating_stars": 2.9,
+  "hospital_name": "Ramsay Oaklands Hospital",
+  "price_max_gbp": 14136,
+  "price_min_gbp": 14136,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "19 Lancaster Road, Salford, M6 8AQ",
+  "postcode": "M6 8AQ",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/",
+  "phone_number": "0161 787 7700",
+  "rating_count": null,
+  "rating_stars": 3,
+  "hospital_name": "Ramsay Oaklands Hospital",
+  "hospital_group": "Ramsay Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Ramsay Oaklands Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "Mill Lane, Cheadle, SK8 2PX",
+  "postcode": "SK8 2PX",
+  "price_gbp": 14543,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0161 428 3656",
+  "rating_count": 20,
+  "rating_stars": 4.5,
+  "hospital_name": "The Alexandra Hospital, part of Circle Health Group",
+  "price_max_gbp": 14543,
+  "price_min_gbp": 14543,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "Mill Lane, Cheadle, SK8 2PX",
+  "postcode": "SK8 2PX",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "+44 161 428 3656",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "The Alexandra Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Alexandra Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/hip-replacement)
+  ✅ TreatmentConnect JSON Mode: Found 4 clinic(s) with real URLs
+
+[8/15] Processing hip in Birmingham...
+
+[hip in Birmingham] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[hip in Birmingham] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "1 Damson Parkway, Solihull, B91 2PP",
+  "postcode": "B91 2PP",
+  "price_gbp": 14906,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0121 704 5500",
+  "rating_count": 6,
+  "rating_stars": 3.4,
+  "hospital_name": "Spire Parkway Hospital",
+  "price_max_gbp": 14906,
+  "price_min_gbp": 14906,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from Spire Parkway Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "1 Damson Parkway, Solihull, B91 2PP",
+  "postcode": "B91 2PP",
+  "price_gbp": 14906,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0121 704 5500",
+  "rating_count": 6,
+  "rating_stars": 3.4,
+  "hospital_name": "Spire Parkway Hospital",
+  "price_max_gbp": 14906,
+  "price_min_gbp": 14906,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Birmingham",
+  "address": "1 Damson Parkway, Solihull, B91 2PP",
+  "postcode": "B91 2PP",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/",
+  "phone_number": "+44 121 704 5500",
+  "rating_count": null,
+  "rating_stars": 3,
+  "hospital_name": "Spire Parkway Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Parkway Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "Rowley Park, Stafford, ST17 9AQ",
+  "postcode": "ST17 9AQ",
+  "price_gbp": 10761,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "01785 223 203",
+  "rating_count": 20,
+  "rating_stars": 3.9,
+  "hospital_name": "Ramsay Rowley Hall Hospital",
+  "price_max_gbp": 10761,
+  "price_min_gbp": 10761,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Birmingham",
+  "address": null,
+  "postcode": null,
+  "cqc_rating": "Good",
+  "website_url": null,
+  "phone_number": null,
+  "rating_count": 0,
+  "rating_stars": 4,
+  "hospital_name": "Ramsay Rowley Hall Hospital",
+  "hospital_group": "Ramsay Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": 0
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Ramsay Rowley Hall Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "Wood Road, Wolverhampton, WV6 8LE",
+  "postcode": "WV6 8LE",
+  "price_gbp": 15785,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "01902 754 177",
+  "rating_count": 5,
+  "rating_stars": 4.4,
+  "hospital_name": "Nuffield Health Wolverhampton Hospital",
+  "price_max_gbp": 15785,
+  "price_min_gbp": 15785,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Birmingham",
+  "address": "Wood Road, Wolverhampton, WV6 8LE",
+  "postcode": "WV6 8LE",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/",
+  "phone_number": "+44 1902 754 177",
+  "rating_count": 0,
+  "rating_stars": 4,
+  "hospital_name": "Nuffield Health Wolverhampton Hospital",
+  "hospital_group": "Nuffield Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Nuffield Health Wolverhampton Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/hip-replacement)
+  ✅ TreatmentConnect JSON Mode: Found 3 clinic(s) with real URLs
+
+[9/15] Processing hip in Leeds...
+
+[hip in Leeds] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[hip in Leeds] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "address": "Jackson Avenue, Leeds, LS8 1NT",
+  "postcode": "LS8 1NT",
+  "price_gbp": 14730,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0113 269 3939",
+  "rating_count": 7,
+  "rating_stars": 4.6,
+  "hospital_name": "Spire Leeds Hospital",
+  "price_max_gbp": 14730,
+  "price_min_gbp": 14730,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from Spire Leeds Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "address": "Jackson Avenue, Leeds, LS8 1NT",
+  "postcode": "LS8 1NT",
+  "price_gbp": 14730,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0113 269 3939",
+  "rating_count": 7,
+  "rating_stars": 4.6,
+  "hospital_name": "Spire Leeds Hospital",
+  "price_max_gbp": 14730,
+  "price_min_gbp": 14730,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Leeds",
+  "address": "Jackson Avenue, Leeds, LS8 1NT",
+  "postcode": "LS8 1NT",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/",
+  "phone_number": "0113 269 3939",
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Leeds Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": 5,
+    "accommodation": 5,
+    "dignity_respect": 5,
+    "staff_cooperation": 5,
+    "involvement_decisions": 5
+  },
+  "recommendation_percentage": 100
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Leeds Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "address": "2 Leighton Street, Leeds, LS1 3EB",
+  "postcode": "LS1 3EB",
+  "price_gbp": 15855,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0113 388 2000",
+  "rating_count": 21,
+  "rating_stars": 4.5,
+  "hospital_name": "Nuffield Health Leeds Hospital",
+  "price_max_gbp": 15855,
+  "price_min_gbp": 15855,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Leeds",
+  "address": "2 Leighton Street, Leeds, LS1 3EB",
+  "postcode": "LS1 3EB",
+  "cqc_rating": "Outstanding",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/",
+  "phone_number": "0113 388 2000",
+  "rating_count": null,
+  "rating_stars": 5,
+  "hospital_name": "Nuffield Health Leeds Hospital",
+  "hospital_group": "Nuffield Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Nuffield Health Leeds Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-leeds-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "address": "Bluebeck Drive, York, YO30 5RA",
+  "postcode": "",
+  "price_gbp": 13800,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "01904 464 550",
+  "rating_count": 7,
+  "rating_stars": 4.5,
+  "hospital_name": "Ramsay Clifton Park Hospital",
+  "price_max_gbp": 13800,
+  "price_min_gbp": 13800,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Leeds",
+  "address": "Bluebeck Drive, York, YO30 5RA",
+  "postcode": "YO30 5RA",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/",
+  "phone_number": "01904 464 550",
+  "rating_count": null,
+  "rating_stars": 5,
+  "hospital_name": "Ramsay Clifton Park Hospital",
+  "hospital_group": "Ramsay Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Ramsay Clifton Park Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/hip-replacement)
+  ✅ TreatmentConnect JSON Mode: Found 3 clinic(s) with real URLs
+
+[10/15] Processing hip in Bristol...
+
+[hip in Bristol] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[hip in Bristol] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "The Glen, Bristol, BS6 6UT",
+  "postcode": "BS6 6UT",
+  "price_gbp": 14750,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0117 980 4000",
+  "rating_count": 12,
+  "rating_stars": 4.2,
+  "hospital_name": "Spire Bristol Hospital",
+  "price_max_gbp": 14750,
+  "price_min_gbp": 14750,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from Spire Bristol Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "The Glen, Bristol, BS6 6UT",
+  "postcode": "BS6 6UT",
+  "price_gbp": 14750,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0117 980 4000",
+  "rating_count": 12,
+  "rating_stars": 4.2,
+  "hospital_name": "Spire Bristol Hospital",
+  "price_max_gbp": 14750,
+  "price_min_gbp": 14750,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Bristol",
+  "address": "The Glen, Bristol, BS6 6UT",
+  "postcode": "BS6 6UT",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/",
+  "phone_number": "+44 117 980 4000",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "Spire Bristol Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Bristol Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "The Chesterfield, Bristol, BS8 1BN",
+  "postcode": "BS8 1BN",
+  "price_gbp": 15070,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0117 911 7483",
+  "rating_count": 4,
+  "rating_stars": 4.1,
+  "hospital_name": "Nuffield Health Bristol Hospital",
+  "price_max_gbp": 15070,
+  "price_min_gbp": 15070,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Bristol",
+  "address": "The Chesterfield, Bristol, BS8 1BN",
+  "postcode": "BS8 1BN",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/",
+  "phone_number": "+44 117 911 7483",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "Nuffield Health Bristol Hospital",
+  "hospital_group": "Nuffield Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Nuffield Health Bristol Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-bristol-hospital/hip-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "Claverton Down Road, Bath, BA2 7BR",
+  "postcode": "BA2 7BR",
+  "price_gbp": 13700,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/hip-replacement",
+  "avg_uk_price": 14065,
+  "phone_number": "01225 807 438",
+  "rating_count": 13,
+  "rating_stars": 4.9,
+  "hospital_name": "Bath Clinic, part of Circle Health Group",
+  "price_max_gbp": 13700,
+  "price_min_gbp": 13700,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Bristol",
+  "address": "Claverton Down Road, Bath, BA2 7BR",
+  "postcode": "BA2 7BR",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "+44 1225 807 438",
+  "rating_count": null,
+  "rating_stars": 5,
+  "hospital_name": "Bath Clinic, part of Circle Health Group",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Bath Clinic, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-bath-clinic/hip-replacement)
+  ✅ TreatmentConnect JSON Mode: Found 3 clinic(s) with real URLs
+
+[11/15] Processing knee in London...
+
+[knee in London] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: timeout of 35000ms exceeded
+  Attempt 2/2 (JSON Mode)...
+  ❌ JSON Mode extraction failed: timeout of 35000ms exceeded
+  ⚠️  JSON Mode returned no data, trying regex parser...
+  Attempt 1/2...
+  📦 Using CSV fallback data
+📦 Using fallback data from public/data/nhs_waits.csv (15 rows)
+  📦 Using 1 fallback record(s) from CSV
+
+[knee in London] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "1 Beaumont Square, Stepney Green, E1 4NL",
+  "postcode": "E1 4NL",
+  "price_gbp": 11545,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "020 7780 2400",
+  "rating_count": 45,
+  "rating_stars": 2.7,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "price_max_gbp": 11545,
+  "price_min_gbp": 11545,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from The London Independent Hospital, part of Circle Health Group
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "1 Beaumont Square, Stepney Green, E1 4NL",
+  "postcode": "E1 4NL",
+  "price_gbp": 11545,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "020 7780 2400",
+  "rating_count": 45,
+  "rating_stars": 2.7,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "price_max_gbp": 11545,
+  "price_min_gbp": 11545,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "1 Beaumont Square, Stepney Green, E1 4NL",
+  "postcode": "E1 4NL",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital",
+  "phone_number": "020 7780 2400",
+  "rating_count": 41,
+  "rating_stars": 3,
+  "hospital_name": "The London Independent Hospital, part of Circle Health Group",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The London Independent Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-london-independent-hospital/knee-replacement)
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: timeout of 35000ms exceeded
+  Attempt 2/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "Poppy Lane, Croydon, CR9 8AB",
+  "postcode": "CR9 8AB",
+  "price_gbp": 12981,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-shirley-oaks-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "020 8655 5500",
+  "rating_count": 9,
+  "rating_stars": 2.9,
+  "hospital_name": "Shirley Oaks Hospital, part of Circle Health Group",
+  "price_max_gbp": 12981,
+  "price_min_gbp": 12981,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-shirley-oaks-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "Poppy Lane, Croydon, CR9 8AB",
+  "postcode": "CR9 8AB",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "020 8655 5500",
+  "rating_count": null,
+  "rating_stars": 3,
+  "hospital_name": "Shirley Oaks Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Shirley Oaks Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-shirley-oaks-hospital/knee-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "Cavell Drive, Enfield, EN2 7PR",
+  "postcode": "EN2 7PR",
+  "price_gbp": 14438,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-cavell-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "020 8362 3640",
+  "rating_count": 10,
+  "rating_stars": 3.8,
+  "hospital_name": "The Cavell Hospital, part of Circle Health Group",
+  "price_max_gbp": 14438,
+  "price_min_gbp": 14438,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-cavell-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "Cavell Drive, Enfield, EN2 7PR",
+  "postcode": "EN2 7PR",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "020 8362 3640",
+  "rating_count": 0,
+  "rating_stars": 4,
+  "hospital_name": "The Cavell Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Cavell Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-cavell-hospital/knee-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "40-42 Lee Terrace, Blackheath, SE3 9UD",
+  "postcode": "SE3 9UD",
+  "price_gbp": 15178,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "020 8318 7722",
+  "rating_count": 17,
+  "rating_stars": 3.9,
+  "hospital_name": "The Blackheath Hospital, part of Circle Health Group",
+  "price_max_gbp": 15178,
+  "price_min_gbp": 15178,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "40-42 Lee Terrace, Blackheath, SE3 9UD",
+  "postcode": "SE3 9UD",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "020 8318 7722",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "The Blackheath Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Blackheath Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-blackheath-hospital/)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "Shenfield Road, Brentwood, CM15 8EH",
+  "postcode": "CM15 8EH",
+  "price_gbp": 16745,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "01277 695 695",
+  "rating_count": 7,
+  "rating_stars": 4.3,
+  "hospital_name": "Nuffield Health Brentwood Hospital",
+  "price_max_gbp": 16745,
+  "price_min_gbp": 16745,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "Shenfield Road, Brentwood, CM15 8EH",
+  "postcode": "CM15 8EH",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital",
+  "phone_number": "+44 1277 695 695",
+  "rating_count": 6,
+  "rating_stars": 4,
+  "hospital_name": "Nuffield Health Brentwood Hospital",
+  "hospital_group": "Nuffield Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Nuffield Health Brentwood Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-brentwood-hospital/knee-replacement)
+  ✅ TreatmentConnect JSON Mode: Found 5 clinic(s) with real URLs
+
+[12/15] Processing knee in Manchester...
+
+[knee in Manchester] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[knee in Manchester] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "170 Barlow Moor Road, Manchester, M20 2AF",
+  "postcode": "M20 2AF",
+  "price_gbp": 14545,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "0161 447 6677",
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "price_max_gbp": 14545,
+  "price_min_gbp": 14545,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from Spire Manchester Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "170 Barlow Moor Road, Manchester, M20 2AF",
+  "postcode": "M20 2AF",
+  "price_gbp": 14545,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "0161 447 6677",
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "price_max_gbp": 14545,
+  "price_min_gbp": 14545,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "170 Barlow Moor Road, Manchester, M20 2AF",
+  "postcode": "M20 2AF",
+  "cqc_rating": "Outstanding",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/",
+  "phone_number": "0161 447 6677",
+  "rating_count": 10,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": 5,
+    "accommodation": 5,
+    "dignity_respect": 5,
+    "staff_cooperation": 5,
+    "involvement_decisions": 5
+  },
+  "recommendation_percentage": 100
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Manchester Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "Manchester Road, Rochdale, OL11 4LZ",
+  "postcode": "OL11 4LZ",
+  "price_gbp": 15225,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "01706 655 121",
+  "rating_count": 19,
+  "rating_stars": 4,
+  "hospital_name": "The Highfield Hospital, part of Circle Health Group",
+  "price_max_gbp": 15225,
+  "price_min_gbp": 15225,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "Manchester Road, Rochdale, OL11 4LZ",
+  "postcode": "OL11 4LZ",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "+44 1706 655 121",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "The Highfield Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Highfield Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-highfield-hospital/knee-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "19 Lancaster Road, Salford, M6 8AQ",
+  "postcode": "M6 8AQ",
+  "price_gbp": 15811,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "0161 787 7700",
+  "rating_count": 26,
+  "rating_stars": 2.9,
+  "hospital_name": "Ramsay Oaklands Hospital",
+  "price_max_gbp": 15811,
+  "price_min_gbp": 15811,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "19 Lancaster Road, Salford, M6 8AQ",
+  "postcode": "M6 8AQ",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/",
+  "phone_number": "0161 787 7700",
+  "rating_count": 0,
+  "rating_stars": 3,
+  "hospital_name": "Ramsay Oaklands Hospital",
+  "hospital_group": "Ramsay Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Ramsay Oaklands Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-oaklands-hospital/knee-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "Mill Lane, Cheadle, SK8 2PX",
+  "postcode": "SK8 2PX",
+  "price_gbp": 15225,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "0161 428 3656",
+  "rating_count": 20,
+  "rating_stars": 4.5,
+  "hospital_name": "The Alexandra Hospital, part of Circle Health Group",
+  "price_max_gbp": 15225,
+  "price_min_gbp": 15225,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "Mill Lane, Cheadle, SK8 2PX",
+  "postcode": "SK8 2PX",
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "+44 161 428 3656",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "The Alexandra Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for The Alexandra Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-the-alexandra-hospital/)
+  ✅ TreatmentConnect JSON Mode: Found 4 clinic(s) with real URLs
+
+[13/15] Processing knee in Birmingham...
+
+[knee in Birmingham] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[knee in Birmingham] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "1 Damson Parkway, Solihull, B91 2PP",
+  "postcode": "B91 2PP",
+  "price_gbp": 14880,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "0121 704 5500",
+  "rating_count": 6,
+  "rating_stars": 3.4,
+  "hospital_name": "Spire Parkway Hospital",
+  "price_max_gbp": 14880,
+  "price_min_gbp": 14880,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from Spire Parkway Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "1 Damson Parkway, Solihull, B91 2PP",
+  "postcode": "B91 2PP",
+  "price_gbp": 14880,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "0121 704 5500",
+  "rating_count": 6,
+  "rating_stars": 3.4,
+  "hospital_name": "Spire Parkway Hospital",
+  "price_max_gbp": 14880,
+  "price_min_gbp": 14880,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Birmingham",
+  "address": "1 Damson Parkway, Solihull, B91 2PP",
+  "postcode": "B91 2PP",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/",
+  "phone_number": "+44 121 704 5500",
+  "rating_count": 0,
+  "rating_stars": 3,
+  "hospital_name": "Spire Parkway Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Parkway Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-parkway-hospital/)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "Rowley Park, Stafford, ST17 9AQ",
+  "postcode": "ST17 9AQ",
+  "price_gbp": 11814,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "01785 223 203",
+  "rating_count": 20,
+  "rating_stars": 3.9,
+  "hospital_name": "Ramsay Rowley Hall Hospital",
+  "price_max_gbp": 11814,
+  "price_min_gbp": 11814,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Birmingham",
+  "address": null,
+  "postcode": null,
+  "cqc_rating": "Good",
+  "website_url": null,
+  "phone_number": null,
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "Ramsay Rowley Hall Hospital",
+  "hospital_group": "Ramsay Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Ramsay Rowley Hall Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-rowley-hall-hospital/knee-replacement)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Birmingham",
+  "address": "Wood Road, Wolverhampton, WV6 8LE",
+  "postcode": "WV6 8LE",
+  "price_gbp": 16460,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "01902 754 177",
+  "rating_count": 5,
+  "rating_stars": 4.4,
+  "hospital_name": "Nuffield Health Wolverhampton Hospital",
+  "price_max_gbp": 16460,
+  "price_min_gbp": 16460,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Birmingham",
+  "address": "Wood Road, Wolverhampton, WV6 8LE",
+  "postcode": "WV6 8LE",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/",
+  "phone_number": "+44 1902 754 177",
+  "rating_count": 0,
+  "rating_stars": 4,
+  "hospital_name": "Nuffield Health Wolverhampton Hospital",
+  "hospital_group": "Nuffield Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Nuffield Health Wolverhampton Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/nuffield-health-wolverhampton-hospital/knee-replacement)
+  ✅ TreatmentConnect JSON Mode: Found 3 clinic(s) with real URLs
+
+[14/15] Processing knee in Leeds...
+
+[knee in Leeds] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[knee in Leeds] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "address": "Jackson Avenue, Leeds, LS8 1NT",
+  "postcode": "LS8 1NT",
+  "price_gbp": 15060,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "0113 269 3939",
+  "rating_count": 7,
+  "rating_stars": 4.6,
+  "hospital_name": "Spire Leeds Hospital",
+  "price_max_gbp": 15060,
+  "price_min_gbp": 15060,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from Spire Leeds Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "address": "Jackson Avenue, Leeds, LS8 1NT",
+  "postcode": "LS8 1NT",
+  "price_gbp": 15060,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "0113 269 3939",
+  "rating_count": 7,
+  "rating_stars": 4.6,
+  "hospital_name": "Spire Leeds Hospital",
+  "price_max_gbp": 15060,
+  "price_min_gbp": 15060,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/
+  Attempt 1/2 (JSON Mode)...
+  ⚠️  Retry 1 failed: timeout of 35000ms exceeded
+  Attempt 2/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Leeds",
+  "address": "Jackson Avenue, Leeds, LS8 1NT",
+  "postcode": "LS8 1NT",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/",
+  "phone_number": "0113 269 3939",
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Leeds Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": 5,
+    "accommodation": 5,
+    "dignity_respect": 5,
+    "staff_cooperation": 5,
+    "involvement_decisions": 5
+  },
+  "recommendation_percentage": 100
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Leeds Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-leeds-hospital/)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Leeds",
+  "address": "Bluebeck Drive, York, YO30 5RA",
+  "postcode": "YO30 5RA",
+  "price_gbp": 13995,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "01904 464 550",
+  "rating_count": 7,
+  "rating_stars": 4.5,
+  "hospital_name": "Ramsay Clifton Park Hospital",
+  "price_max_gbp": 13995,
+  "price_min_gbp": 13995,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Leeds",
+  "address": "Bluebeck Drive, York, YO30 5RA",
+  "postcode": "YO30 5RA",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/",
+  "phone_number": "01904 464 550",
+  "rating_count": null,
+  "rating_stars": 5,
+  "hospital_name": "Ramsay Clifton Park Hospital",
+  "hospital_group": "Ramsay Health",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Ramsay Clifton Park Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/ramsay-clifton-park-hospital/knee-replacement)
+  ✅ TreatmentConnect JSON Mode: Found 2 clinic(s) with real URLs
+
+[15/15] Processing knee in Bristol...
+
+[knee in Bristol] Scraping NHS waiting times...
+  🔍 Trying JSON Mode extraction...
+  Attempt 1/2 (JSON Mode)...
+  ✅ JSON Mode: Found NHS wait time data
+
+[knee in Bristol] Scraping private costs (mode: full)...
+  🔍 Trying TreatmentConnect (PRIMARY)...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "The Glen, Bristol, BS6 6UT",
+  "postcode": "BS6 6UT",
+  "price_gbp": 15995,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "0117 980 4000",
+  "rating_count": 12,
+  "rating_stars": 4.2,
+  "hospital_name": "Spire Bristol Hospital",
+  "price_max_gbp": 15995,
+  "price_min_gbp": 15995,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  ✅ TreatmentConnect: Found cost data from Spire Bristol Hospital
+  🔍 Extracting clinic data from TreatmentConnect URLs using JSON Mode...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "The Glen, Bristol, BS6 6UT",
+  "postcode": "BS6 6UT",
+  "price_gbp": 15995,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/",
+  "avg_uk_price": 14941,
+  "phone_number": "0117 980 4000",
+  "rating_count": 12,
+  "rating_stars": 4.2,
+  "hospital_name": "Spire Bristol Hospital",
+  "price_max_gbp": 15995,
+  "price_min_gbp": 15995,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Bristol",
+  "address": "The Glen, Bristol, BS6 6UT",
+  "postcode": "BS6 6UT",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/",
+  "phone_number": "+44 117 980 4000",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "Spire Bristol Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Spire Bristol Hospital (URL: https://www.treatmentconnect.co.uk/hospitals/spire-bristol-hospital/)
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Bristol",
+  "address": "312 Fulwood Road, Sheffield, S10 3BR",
+  "postcode": "S10 3BR",
+  "price_gbp": 15225,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/circle-thornbury-hospital/knee-replacement",
+  "avg_uk_price": 14941,
+  "phone_number": "0114 266 1133",
+  "rating_count": 33,
+  "rating_stars": 4.1,
+  "hospital_name": "Thornbury Hospital, part of Circle Health Group",
+  "price_max_gbp": 15225,
+  "price_min_gbp": 15225,
+  "procedure_name": "Knee Replacement",
+  "price_range_uk_max": 17840,
+  "price_range_uk_min": 10422
+}
+  🔍 Fetching hospital details from main page: https://www.treatmentconnect.co.uk/hospitals/circle-thornbury-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Bristol",
+  "address": null,
+  "postcode": null,
+  "cqc_rating": "Good",
+  "website_url": "https://www.circlehealthgroup.co.uk/myway?utm_source=TreatmentConnect&utm_medium=display&utm_campaign=TC-Banner",
+  "phone_number": "+44 114 266 1133",
+  "rating_count": null,
+  "rating_stars": 4,
+  "hospital_name": "Thornbury Hospital",
+  "hospital_group": "Circle Health Group",
+  "rating_categories": {},
+  "recommendation_percentage": null
+}
+  ✅ TreatmentConnect JSON Mode: Created clinic entry for Thornbury Hospital, part of Circle Health Group (URL: https://www.treatmentconnect.co.uk/hospitals/circle-thornbury-hospital/knee-replacement)
+  ✅ TreatmentConnect JSON Mode: Found 2 clinic(s) with real URLs
+
+🔍 Validating data...
+
+💾 Writing CSV files...
+✅ Wrote 15 rows to public/data/nhs_waits.csv
+✅ Wrote 15 rows to public/data/private_costs.csv
+✅ Wrote 49 rows to public/data/clinics.csv
+
+============================================================
+✅ Scraping complete!
+📊 Results:
+   NHS waits: 15 rows
+   Private costs: 15 rows
+   Clinics: 49 rows
+⏱️  Total time: 1256s
+============================================================

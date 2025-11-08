@@ -85,6 +85,12 @@ export const Footer: React.FC = () => {
               >
                 Contact Us
               </a>
+              <Link
+                href="#submit-experience"
+                className="text-elderly-sm text-elderly-primary hover:underline"
+              >
+                Share your real wait time (5 minutes)
+              </Link>
             </nav>
             <p className="text-elderly-sm text-elderly-text">
               Registered in England & Wales

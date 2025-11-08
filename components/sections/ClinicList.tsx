@@ -1,15 +1,27 @@
 import React from 'react';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
+import { CancellationWarning } from '../CancellationWarning';
 import type { Clinic } from '@/lib/types';
+import type { ProcedureId, RegionId, CancellationRiskData } from '@/lib/types/waitingTimes';
 
 interface ClinicListProps {
   clinics: Clinic[];
   procedureName: string;
   city: string;
+  procedureId?: ProcedureId;
+  regionId?: RegionId;
+  cancellationRiskData?: CancellationRiskData | null;
 }
 
-export const ClinicList: React.FC<ClinicListProps> = ({ clinics, procedureName, city }) => {
+export const ClinicList: React.FC<ClinicListProps> = ({ 
+  clinics, 
+  procedureName, 
+  city,
+  procedureId,
+  regionId,
+  cancellationRiskData,
+}) => {
   if (clinics.length === 0) {
     return (
       <section className="mb-12">
@@ -52,25 +64,37 @@ export const ClinicList: React.FC<ClinicListProps> = ({ clinics, procedureName, 
                 </p>
 
                 <div className="space-y-2 text-elderly-sm text-elderly-text">
-                  {clinic.url && (
+                  {/* Hospital Group */}
+                  {clinic.hospital_group && (
                     <p>
-                      <span className="font-semibold">📍</span>{' '}
-                      <a
-                        href={clinic.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-elderly-primary underline hover:text-elderly-primary-dark"
-                      >
-                        {city}
-                      </a>
+                      <span className="font-semibold">🏥</span> {clinic.hospital_group}
                     </p>
                   )}
-                  {clinic.phone && (
+                  
+                  {/* Address */}
+                  {clinic.address ? (
+                    <p>
+                      <span className="font-semibold">📍</span> {clinic.address}
+                    </p>
+                  ) : (
+                    <p>
+                      <span className="font-semibold">📍</span> {clinic.city || city}
+                    </p>
+                  )}
+                  
+                  {/* Phone */}
+                  {clinic.phone ? (
                     <p>
                       <span className="font-semibold">☎️</span> {clinic.phone}
                     </p>
+                  ) : (
+                    <p className="text-elderly-gray-dark">
+                      <span className="font-semibold">☎️</span> Phone not available
+                    </p>
                   )}
-                  {clinic.url && (
+                  
+                  {/* Website */}
+                  {clinic.url ? (
                     <p>
                       <span className="font-semibold">🌐</span>{' '}
                       <a
@@ -82,33 +106,73 @@ export const ClinicList: React.FC<ClinicListProps> = ({ clinics, procedureName, 
                         {clinic.url}
                       </a>
                     </p>
+                  ) : (
+                    <p className="text-elderly-gray-dark">
+                      <span className="font-semibold">🌐</span> Website not available
+                    </p>
+                  )}
+                  
+                  {/* Ratings */}
+                  {clinic.rating_stars && (
+                    <p>
+                      <span className="font-semibold">⭐</span> {clinic.rating_stars.toFixed(1)}/5.0
+                      {clinic.rating_count && ` (${clinic.rating_count} ${clinic.rating_count === 1 ? 'review' : 'reviews'})`}
+                    </p>
+                  )}
+                  
+                  {/* CQC Rating */}
+                  {clinic.cqc_rating && (
+                    <p>
+                      <span className="font-semibold">🏆</span> CQC Rating: <span className="font-semibold">{clinic.cqc_rating}</span>
+                    </p>
                   )}
                 </div>
               </div>
 
               <div className="flex flex-col gap-2 md:min-w-[200px]">
-                <a
-                  href={clinic.url || '#'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block"
-                >
-                  <Button variant="primary" className="w-full">
-                    Visit website
+                {clinic.url ? (
+                  <a
+                    href={clinic.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button variant="primary" className="w-full">
+                      Visit website
+                    </Button>
+                  </a>
+                ) : (
+                  <Button variant="primary" className="w-full" disabled>
+                    Website not available
                   </Button>
-                </a>
-                {clinic.phone && (
+                )}
+                {clinic.phone ? (
                   <a href={`tel:${clinic.phone}`} className="inline-block">
                     <Button variant="secondary" className="w-full">
                       Call clinic
                     </Button>
                   </a>
+                ) : (
+                  <Button variant="secondary" className="w-full" disabled>
+                    Phone not available
+                  </Button>
                 )}
               </div>
             </div>
           </Card>
         ))}
       </div>
+
+      {/* Inline Cancellation Warning */}
+      {cancellationRiskData && procedureId && regionId && (
+        <CancellationWarning
+          data={cancellationRiskData}
+          procedure={procedureId}
+          region={regionId}
+          variant="inline"
+          procedureName={procedureName}
+        />
+      )}
     </section>
   );
 };

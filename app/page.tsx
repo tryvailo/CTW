@@ -4,14 +4,26 @@ import { HowItWorks } from '@/components/sections/HowItWorks'
 import { QuickFind } from '@/components/sections/QuickFind'
 import { DataInsights } from '@/components/sections/DataInsights'
 import { SecuritySection } from '@/components/sections/SecuritySection'
+import { OfficialVsRealityComparison } from '@/components/OfficialVsRealityComparison'
+import { RegionalVariationComparison } from '@/components/RegionalVariationComparison'
+import { SubmitExperienceForm } from '@/components/SubmitExperienceForm'
 import { JsonLd } from '@/components/common/JsonLd'
 import { generateHomeMetadata } from '@/lib/metadata'
+import { getUKWideData, loadWaitingTimesData } from '@/lib/utils/waitingTimesLoader'
+import { getAllProceduresComparisonDataFromSource } from '@/lib/utils/regionComparison'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = generateHomeMetadata()
 
 export default function Home() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://comparethewait.co.uk'
+
+  // Load UK-wide data for homepage (using cataract as example)
+  const cataractData = getUKWideData('cataract')
+  
+  // Load regional comparison data
+  const waitingTimesData = loadWaitingTimesData()
+  const allProceduresComparisonData = getAllProceduresComparisonDataFromSource(waitingTimesData)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -50,6 +62,48 @@ export default function Home() {
 
           {/* Data Insights Section */}
           <DataInsights />
+
+          {/* Official vs Reality Section */}
+          <section className="mb-12">
+            <h2 className="text-elderly-2xl font-bold text-elderly-primary mb-6 text-center">
+              Official vs Reality: The Waiting Times Gap
+            </h2>
+            <p className="text-elderly-base text-elderly-text mb-6 text-center max-w-3xl mx-auto">
+              NHS targets don't always match what patients actually experience. See the real difference
+              between official targets and patient-reported wait times.
+            </p>
+            <OfficialVsRealityComparison data={cataractData} variant="homepage" />
+          </section>
+
+          {/* Regional Variation Section */}
+          <section className="mb-12">
+            <h2 className="text-elderly-2xl font-bold text-elderly-primary mb-6 text-center">
+              Regional Variation: Wait Times Across UK
+            </h2>
+            <p className="text-elderly-base text-elderly-text mb-6 text-center max-w-3xl mx-auto">
+              Wait times vary significantly by region. Compare all regions and see how much time you could save
+              by choosing a different location.
+            </p>
+            <RegionalVariationComparison 
+              data={allProceduresComparisonData}
+              showAllProcedures={true}
+              format="table"
+              interactive={false}
+            />
+          </section>
+
+          {/* Help Improve Data Section */}
+          <section className="mb-12" id="submit-experience">
+            <div className="bg-elderly-primary-light border-elderly border-elderly-gray-medium p-6 rounded-lg mb-6 text-center">
+              <h2 className="text-elderly-xl font-bold text-elderly-primary mb-3">
+                Help improve our data
+              </h2>
+              <p className="text-elderly-base text-elderly-text mb-4">
+                <strong>3,214</strong> patients have shared their experiences. Your story matters too.
+              </p>
+            </div>
+            <SubmitExperienceForm variant="full" />
+          </section>
 
           {/* Security Section */}
           <SecuritySection />

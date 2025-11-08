@@ -17,6 +17,9 @@ CRITICAL RULES:
 8. Rating is shown as "X out of 5 stars" - extract the X value
 9. Look for text like "Average UK price: £X" for avg_uk_price
 10. Look for "Price range across all UK hospitals: £X to £Y" for UK ranges
+11. Extract website_url: Look for links like "Visit our website", "www.hospital.co.uk", or hospital website links. If not found, use the current TreatmentConnect page URL
+12. Extract phone_number: Look for phone numbers in contact sections, "Call us", or hospital contact info. Format as "+44 XX XXXX XXXX" or "0XX XXXX XXXX"
+13. Extract address: Look for full address in contact/address sections
 
 EXAMPLE PAGE STRUCTURE:
 - H1: "Hospital Name | Procedure £X"
@@ -128,6 +131,44 @@ PACKAGE INFO:
 };
 
 /**
+ * Hospital Details Prompt - for main hospital page (not procedure-specific)
+ * Used for extracting contact information, ratings, and other details
+ */
+export const hospitalDetailsPrompt = {
+  base: `You are extracting hospital contact and detail information from TreatmentConnect.co.uk main hospital pages.
+
+CRITICAL RULES:
+1. Extract hospital name from the page title or H1 heading
+2. Extract website_url: Look for links like "Visit our website", "www.hospital.co.uk", or hospital website links in contact sections
+3. Extract phone_number: Look for phone numbers in contact sections, "Call us", or hospital contact info. Format as "+44 XX XXXX XXXX" or "0XX XXXX XXXX"
+4. Extract address: Look for full address in contact/address sections, including street, city, and postcode
+5. Extract postcode: UK postcode format (e.g., "IG4 5PZ", "M20 2AF")
+6. Extract city: City name from address or page context
+7. Extract rating_stars: Overall rating out of 5 stars if shown
+8. Extract rating_count: Number of reviews/ratings if shown
+9. Extract rating_categories: Detailed ratings for cleanliness, staff, dignity, involvement, accommodation if available
+10. Extract recommendation_percentage: Percentage who would recommend (e.g., "87%" becomes 87)
+11. Extract cqc_rating: Care Quality Commission rating if shown ("Outstanding", "Good", "Requires improvement", "Inadequate")
+12. Extract hospital_group: Hospital chain/group name (e.g., "Circle Health Group", "Spire Healthcare", "Nuffield Health", "Ramsay Health")
+
+EXAMPLE PAGE STRUCTURE:
+- H1: "Hospital Name"
+- Contact section: Address, Phone, Website
+- Ratings section: Overall rating, detailed categories
+- CQC section: CQC rating if available
+
+IGNORE:
+- Procedure-specific pricing (this is the main hospital page, not a procedure page)
+- Nearby hospital suggestions
+- Advertising sections
+
+RETURN:
+- Only the JSON object matching the schema
+- No explanatory text
+- No markdown formatting`
+};
+
+/**
  * Get prompt for TreatmentConnect with procedure context
  * @param {string} procedure - Procedure ID (cataract, hip, knee)
  * @param {string} city - City name
@@ -145,11 +186,26 @@ The city is: ${city}
 Focus on extracting accurate pricing data for ${procedure} in ${city}.`;
 }
 
+/**
+ * Get prompt for hospital details extraction (main hospital page)
+ * @param {string} city - City name
+ * @returns {string} Complete prompt for Firecrawl
+ */
+export function getHospitalDetailsPrompt(city) {
+  return `${hospitalDetailsPrompt.base}
+
+The city is: ${city}
+
+Focus on extracting accurate contact and detail information for the hospital in ${city}.`;
+}
+
 export default {
   treatmentConnectPrompt,
+  hospitalDetailsPrompt,
   spirePrompt,
   nuffieldPrompt,
   circlePrompt,
-  getTreatmentConnectPrompt
+  getTreatmentConnectPrompt,
+  getHospitalDetailsPrompt
 };
 

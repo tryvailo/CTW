@@ -1,0 +1,188 @@
+🧪 Testing Full Flow for 2 Clinics with Minimal Data
+================================================================================
+
+📋 Testing: Premier Eye Clinic (cataract in London)
+   URL: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/cataract-surgery
+--------------------------------------------------------------------------------
+
+🔍 Stage 1: Parsing procedure page for price...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "London",
+  "address": "Roding Lane South, Ilford, IG4 5PZ",
+  "postcode": "IG4 5PZ",
+  "price_gbp": 2796,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/",
+  "avg_uk_price": 2980,
+  "phone_number": "020 8551 1100",
+  "rating_count": 19,
+  "rating_stars": 3.3,
+  "hospital_name": "Spire London East Hospital",
+  "price_max_gbp": 2796,
+  "price_min_gbp": 2796,
+  "procedure_name": "Cataract Surgery",
+  "price_range_uk_max": 4766,
+  "price_range_uk_min": 1854
+}
+✅ Stage 1 Success:
+   Hospital Name: Spire London East Hospital
+   Price: £2796
+   URL (from procedure page): https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/
+   Phone (from procedure page): 020 8551 1100
+   Address (from procedure page): Roding Lane South, Ilford, IG4 5PZ
+
+🔍 Stage 2: Parsing main hospital page for details...
+   Main Hospital URL: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "London",
+  "address": "Roding Lane South, Ilford, IG4 5PZ",
+  "postcode": "IG4 5PZ",
+  "cqc_rating": "Good",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital",
+  "phone_number": "020 8551 1100",
+  "rating_count": 18,
+  "rating_stars": 3,
+  "hospital_name": "Spire London East Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": null,
+    "accommodation": null,
+    "dignity_respect": null,
+    "staff_cooperation": null,
+    "involvement_decisions": null
+  },
+  "recommendation_percentage": null
+}
+✅ Stage 2 Success:
+   Hospital Name: Spire London East Hospital
+   Website URL: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital
+   Phone: 020 8551 1100
+   Address: Roding Lane South, Ilford, IG4 5PZ
+   Rating: 3/5.0 (18 reviews)
+   CQC Rating: Good
+   Hospital Group: Spire Healthcare
+
+✅ Merged Data (Final Result):
+{
+  "clinic_id": "spire_london_east_hospital_london_cataract",
+  "name": "Spire London East Hospital",
+  "city": "London",
+  "procedure_id": "cataract",
+  "price": 2796,
+  "url": "https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital",
+  "phone": "020 8551 1100",
+  "address": "Roding Lane South, Ilford, IG4 5PZ",
+  "rating_stars": 3,
+  "rating_count": 18,
+  "cqc_rating": "Good",
+  "hospital_group": "Spire Healthcare",
+  "last_updated": "2025-11-08",
+  "details_last_updated": "2025-11-08"
+}
+
+📋 Testing: Joint Care Hospital (hip in Manchester)
+   URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-replacement
+--------------------------------------------------------------------------------
+
+🔍 Stage 1: Parsing procedure page for price...
+  Attempt 1/2 (JSON Mode)...
+  📋 TreatmentConnect returned: {
+  "city": "Manchester",
+  "address": "170 Barlow Moor Road, Manchester, M20 2AF",
+  "postcode": "M20 2AF",
+  "price_gbp": 14055,
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-replacement",
+  "avg_uk_price": 14485,
+  "phone_number": "0161 447 6677",
+  "rating_count": 6,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "price_max_gbp": 14055,
+  "price_min_gbp": 14055,
+  "procedure_name": "Hip Replacement",
+  "price_range_uk_max": 17960,
+  "price_range_uk_min": 10422
+}
+✅ Stage 1 Success:
+   Hospital Name: Spire Manchester Hospital
+   Price: £14055
+   URL (from procedure page): https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/hip-replacement
+   Phone (from procedure page): 0161 447 6677
+   Address (from procedure page): 170 Barlow Moor Road, Manchester, M20 2AF
+
+🔍 Stage 2: Parsing main hospital page for details...
+   Main Hospital URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital/
+  Attempt 1/2 (JSON Mode)...
+  📋 Hospital details returned: {
+  "city": "Manchester",
+  "address": "170 Barlow Moor Road, Manchester, M20 2AF",
+  "postcode": "M20 2AF",
+  "cqc_rating": "Outstanding",
+  "website_url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital",
+  "phone_number": "+44 161 447 6677",
+  "rating_count": 10,
+  "rating_stars": 5,
+  "hospital_name": "Spire Manchester Hospital",
+  "hospital_group": "Spire Healthcare",
+  "rating_categories": {
+    "cleanliness": 5,
+    "accommodation": 5,
+    "dignity_respect": 5,
+    "staff_cooperation": 5,
+    "involvement_decisions": 5
+  },
+  "recommendation_percentage": 100
+}
+✅ Stage 2 Success:
+   Hospital Name: Spire Manchester Hospital
+   Website URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital
+   Phone: +44 161 447 6677
+   Address: 170 Barlow Moor Road, Manchester, M20 2AF
+   Rating: 5/5.0 (10 reviews)
+   CQC Rating: Outstanding
+   Hospital Group: Spire Healthcare
+
+✅ Merged Data (Final Result):
+{
+  "clinic_id": "spire_manchester_hospital_manchester_hip",
+  "name": "Spire Manchester Hospital",
+  "city": "Manchester",
+  "procedure_id": "hip",
+  "price": 14055,
+  "url": "https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital",
+  "phone": "+44 161 447 6677",
+  "address": "170 Barlow Moor Road, Manchester, M20 2AF",
+  "rating_stars": 5,
+  "rating_count": 10,
+  "cqc_rating": "Outstanding",
+  "hospital_group": "Spire Healthcare",
+  "last_updated": "2025-11-08",
+  "details_last_updated": "2025-11-08"
+}
+
+================================================================================
+📊 SUMMARY
+================================================================================
+
+1. Premier Eye Clinic:
+   ✅ Success
+   - Price: £2796
+   - URL: https://www.treatmentconnect.co.uk/hospitals/spire-london-east-hospital
+   - Phone: 020 8551 1100
+   - Address: Roding Lane South, Ilford, IG4 5PZ
+   - Rating: 3/5.0
+   - CQC: Good
+   - Group: Spire Healthcare
+
+2. Joint Care Hospital:
+   ✅ Success
+   - Price: £14055
+   - URL: https://www.treatmentconnect.co.uk/hospitals/spire-manchester-hospital
+   - Phone: +44 161 447 6677
+   - Address: 170 Barlow Moor Road, Manchester, M20 2AF
+   - Rating: 5/5.0
+   - CQC: Outstanding
+   - Group: Spire Healthcare
+
+✅ Successfully processed: 2/2 clinics

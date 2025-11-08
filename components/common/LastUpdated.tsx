@@ -21,7 +21,7 @@ export const LastUpdated: React.FC<LastUpdatedProps> = ({ date, source }) => {
     <div className="mb-6">
       <p className="text-elderly-sm text-elderly-gray-dark">
         Last updated: {formatDate(date)}
-        {source && ` • Data refreshed ${source}`}
+        {source && ` • Data refreshed ${source === 'weekly' ? 'biweekly' : source}`}
       </p>
     </div>
   );

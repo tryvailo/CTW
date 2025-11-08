@@ -187,17 +187,36 @@ export function loadClinics(): Clinic[] {
     'price',
     'url',
     'phone',
+    'address',
+    'rating_stars',
+    'rating_count',
+    'cqc_rating',
+    'hospital_group',
     'last_updated',
+    'details_last_updated',
   ];
   
   const content = loadCSVFile('clinics.csv');
-  const data = parseCSVContent<Omit<Clinic, 'price'> & { price: string }>(content, headers);
+  const data = parseCSVContent<Omit<Clinic, 'price' | 'rating_stars' | 'rating_count'> & { 
+    price: string;
+    rating_stars: string;
+    rating_count: string;
+  }>(content, headers);
   
   return data.map(item => ({
     ...item,
     city: item.city as City,
     procedure_id: item.procedure_id as ProcedureId,
     price: parseInt(item.price, 10) || 0,
+    // Convert empty strings to undefined for optional fields
+    url: item.url && item.url.trim() !== '' ? item.url : undefined,
+    phone: item.phone && item.phone.trim() !== '' ? item.phone : undefined,
+    address: item.address && item.address.trim() !== '' ? item.address : undefined,
+    rating_stars: item.rating_stars && item.rating_stars.trim() !== '' ? parseFloat(item.rating_stars) : undefined,
+    rating_count: item.rating_count && item.rating_count.trim() !== '' ? parseInt(item.rating_count, 10) : undefined,
+    cqc_rating: item.cqc_rating && item.cqc_rating.trim() !== '' ? item.cqc_rating : undefined,
+    hospital_group: item.hospital_group && item.hospital_group.trim() !== '' ? item.hospital_group : undefined,
+    details_last_updated: item.details_last_updated && item.details_last_updated.trim() !== '' ? item.details_last_updated : undefined,
   }));
 }
 

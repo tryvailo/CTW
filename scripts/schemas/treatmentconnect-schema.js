@@ -58,9 +58,21 @@ export const treatmentConnectSchema = {
     price_range_uk_max: {
       type: "number",
       description: "UK-wide maximum price shown, or null"
+    },
+    website_url: {
+      type: "string",
+      description: "Hospital's official website URL if shown on the page (e.g., 'Visit our website: https://www.hospital.co.uk'). If not shown, use the TreatmentConnect page URL as fallback"
+    },
+    phone_number: {
+      type: "string",
+      description: "Hospital's contact phone number if shown on the page (e.g., '+44 20 1234 5678' or '020 1234 5678'), or null if not available"
+    },
+    address: {
+      type: "string",
+      description: "Full hospital address if shown on the page, or null if not available"
     }
   },
-  required: ["hospital_name", "procedure_name", "price_gbp", "city"]
+  required: ["hospital_name", "procedure_name", "price_gbp", "city", "website_url"]
 };
 
 /**
@@ -80,11 +92,15 @@ export function getTreatmentConnectPrompt(procedure, city) {
  *   "price_min_gbp": 2000,
  *   "price_max_gbp": 2000,
  *   "city": "London",
+ *   "postcode": "E1 1BB",
  *   "rating_stars": 4.5,
  *   "rating_count": 23,
  *   "avg_uk_price": 2843,
  *   "price_range_uk_min": 1995,
- *   "price_range_uk_max": 3765
+ *   "price_range_uk_max": 3765,
+ *   "website_url": "https://www.spirehealthcare.com/hospitals/spire-london-east-hospital/",
+ *   "phone_number": "+44 20 7791 1800",
+ *   "address": "Spire London East Hospital, Roding Lane South, Ilford, Essex IG4 5PZ"
  * }
  */
 

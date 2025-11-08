@@ -7,7 +7,8 @@ interface ComparisonTableProps {
 }
 
 export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
-  const { procedure, nhsWait, privateCost } = data;
+  const { procedure, nhsWait, privateCost, clinics } = data;
+  const clinicCount = clinics.length;
 
   return (
     <section className="mb-12">
@@ -77,7 +78,7 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                   £{privateCost?.cost_min.toLocaleString() || 'N/A'} - £{privateCost?.cost_max.toLocaleString() || 'N/A'}
                 </p>
                 <p className="text-elderly-sm">
-                  {privateCost?.clinic_count || 'N/A'} clinics offering this procedure
+                  {clinicCount} {clinicCount === 1 ? 'clinic' : 'clinics'} offering this procedure
                 </p>
               </div>
             </TableCell>
@@ -100,7 +101,7 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
               <div>
                 <strong className="block mb-2">WHERE</strong>
                 <p className="text-elderly-sm">
-                  {privateCost?.clinic_count || 'Multiple'} private clinics in {data.city}
+                  {clinicCount > 0 ? `${clinicCount} ${clinicCount === 1 ? 'private clinic' : 'private clinics'}` : 'Multiple private clinics'} in {data.city}
                 </p>
                 <p className="text-elderly-sm mt-2">
                   Most are in central areas. Easy parking or public transport access.

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Breadcrumbs } from '@/components/common/Breadcrumbs'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import { RegionalVariationComparison } from '@/components/RegionalVariationComparison'
 import { JsonLd } from '@/components/common/JsonLd'
 import { generateProcedureMetadata } from '@/lib/metadata'
 import {
@@ -11,6 +12,8 @@ import {
   getNHSWait,
   getPrivateCost,
 } from '@/lib/data'
+import { loadWaitingTimesData } from '@/lib/utils/waitingTimesLoader'
+import { getRegionalComparisonDataFromSource } from '@/lib/utils/regionComparison'
 import type { ProcedureId, City } from '@/lib/types'
 import type { Metadata } from 'next'
 
@@ -45,6 +48,11 @@ export default async function ProcedurePage({ params }: PageProps) {
   }
 
   const cities = loadCities()
+  
+  // Load regional comparison data
+  const waitingTimesData = loadWaitingTimesData()
+  const regionalComparisonData = getRegionalComparisonDataFromSource(waitingTimesData, procedureId)
+  
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://comparethewait.co.uk'
   const url = `${baseUrl}/procedures/${procedureId}`
 
@@ -113,6 +121,14 @@ export default async function ProcedurePage({ params }: PageProps) {
               Compare {cities.length} UK cities. See how long you'll wait on NHS vs going private.
             </p>
           </header>
+
+          {/* Regional Variation Comparison */}
+          <RegionalVariationComparison 
+            data={regionalComparisonData}
+            procedure={procedureId}
+            format="both"
+            interactive={true}
+          />
 
           {/* City Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
