@@ -209,23 +209,6 @@ export default async function ComparisonPage({ params }: PageProps) {
             return null;
           })()}
 
-          {/* Share Your Experience Section */}
-          <section className="mb-12">
-            <div className="bg-elderly-primary-light border-elderly border-elderly-gray-medium p-6 rounded-lg mb-6">
-              <h2 className="text-elderly-xl font-bold text-elderly-primary mb-3">
-                Just like this? Tell us how it went
-              </h2>
-              <p className="text-elderly-base text-elderly-text mb-4">
-                Help others make informed decisions by sharing your real experience. Takes 5 minutes.
-              </p>
-            </div>
-            <SubmitExperienceForm 
-              variant="full"
-              defaultProcedure={procedureId}
-              defaultLocation={regionId || undefined}
-            />
-          </section>
-
           {/* Related Comparisons */}
           <section className="mb-12 bg-elderly-primary-light p-6 rounded-lg border-elderly border-elderly-gray-medium">
             <h2 className="text-elderly-xl font-bold text-elderly-primary mb-4">
