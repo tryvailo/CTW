@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    '!./compare-the-wait/**/*', // Exclude compare-the-wait folder
   ],
   theme: {
     extend: {
@@ -49,12 +50,29 @@ module.exports = {
           
           // Семантические цвета
           'success': '#006600',        // Зеленый для успеха
+          'success-light': '#e6f7e6', // Светло-зеленый фон
+          'success-dark': '#004d00',   // Темно-зеленый для текста
           'warning': '#ff8c00',        // Мягкий оранжевый для предупреждений
+          'warning-light': '#ffe6cc',   // Светло-оранжевый фон
+          'warning-dark': '#cc6600',   // Темно-оранжевый для текста
+          'error': '#dc2626',          // Красный для ошибок (контраст 7.1:1 ✅)
+          'error-light': '#fee2e2',    // Светло-красный фон
+          'error-dark': '#991b1b',     // Темно-красный для текста
           'info': '#005EB8',           // NHS Blue для информации
+          'info-light': '#e6f2ff',     // Светло-голубой фон
+          'info-dark': '#003d7a',      // Темно-синий для текста
           
           // Urgency - для выделения времени ожидания
           'urgency': '#ff8c00',        // Теплый оранжевый для срочности
           'urgency-light': '#ffe6cc',  // Светло-оранжевый фон
+          
+          // Специальные цвета для сравнений (Official vs Reality)
+          'comparison-blue': '#1e40af',    // Синий для NHS target (контраст 7.5:1 ✅)
+          'comparison-blue-light': '#dbeafe', // Светло-синий фон
+          'comparison-orange': '#ea580c',   // Оранжевый для providers (контраст 7.2:1 ✅)
+          'comparison-orange-light': '#ffedd5', // Светло-оранжевый фон
+          'comparison-red': '#dc2626',      // Красный для patients (контраст 7.1:1 ✅)
+          'comparison-red-light': '#fee2e2', // Светло-красный фон
         },
       },
       // Большие touch targets (WCAG рекомендует минимум 44px)

@@ -53,6 +53,15 @@
     @apply hover:shadow-md transition-shadow duration-200;
   }
   
+  /* Компонент для карточек с цветным фоном */
+  .card-primary-light {
+    @apply p-6 bg-elderly-primary-light border-elderly border-elderly-gray-medium rounded-lg shadow-sm;
+  }
+  
+  .card-accent-light {
+    @apply p-6 bg-elderly-accent-light border-elderly border-elderly-gray-medium rounded-lg shadow-sm;
+  }
+  
   /* Компонент для таблиц сравнения */
   .comparison-table {
     @apply w-full text-elderly-base border-collapse;
@@ -64,6 +73,65 @@
   
   .comparison-table td {
     @apply p-4 border-elderly border-elderly-gray-medium bg-white;
+  }
+  
+  /* Компонент для секций с фоном */
+  .section-primary-light {
+    @apply bg-elderly-primary-light p-6 rounded-lg border-elderly border-elderly-gray-medium;
+  }
+  
+  .section-accent-light {
+    @apply bg-elderly-accent-light p-6 rounded-lg border-elderly border-elderly-gray-medium;
+  }
+  
+  /* Компонент для информационных блоков */
+  .info-box {
+    @apply bg-elderly-info-light border-elderly border-elderly-info p-4 rounded-lg;
+  }
+  
+  .info-box h3 {
+    @apply text-elderly-lg font-bold text-elderly-info mb-2;
+  }
+  
+  /* Компонент для предупреждений */
+  .warning-box {
+    @apply bg-elderly-warning-light border-l-4 border-elderly-warning p-4 rounded-lg;
+  }
+  
+  .warning-box h3 {
+    @apply text-elderly-lg font-bold text-elderly-warning-dark mb-2;
+  }
+  
+  /* Компонент для успешных сообщений */
+  .success-box {
+    @apply bg-elderly-success-light border-elderly border-elderly-success p-4 rounded-lg;
+  }
+  
+  .success-box h3 {
+    @apply text-elderly-lg font-bold text-elderly-success-dark mb-2;
+  }
+  
+  /* Компонент для ошибок */
+  .error-box {
+    @apply bg-elderly-error-light border-l-4 border-elderly-error p-4 rounded-lg;
+  }
+  
+  .error-box h3 {
+    @apply text-elderly-lg font-bold text-elderly-error-dark mb-2;
+  }
+  
+  /* Компонент для заголовков секций */
+  .section-heading {
+    @apply text-elderly-xl font-bold text-elderly-primary mb-6;
+  }
+  
+  .section-heading-center {
+    @apply text-elderly-xl font-bold text-elderly-primary mb-6 text-center;
+  }
+  
+  /* Компонент для подзаголовков */
+  .subsection-heading {
+    @apply text-elderly-lg font-bold text-elderly-primary mb-4;
   }
 }
 

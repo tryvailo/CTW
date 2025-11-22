@@ -1,129 +1,74 @@
 import React from 'react';
 
-// SVG иконка для шага 1
-const StepOneIcon: React.FC<{ className?: string }> = ({ className = "w-16 h-16" }) => (
-  <svg
-    className={className}
-    viewBox="0 0 80 80"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    <circle cx="40" cy="40" r="38" fill="#005EB8" stroke="#003d7a" strokeWidth="2" />
-    <text
-      x="40"
-      y="55"
-      fontSize="48"
-      fontWeight="700"
-      fill="white"
-      textAnchor="middle"
-      fontFamily="system-ui, -apple-system, sans-serif"
-    >
-      1
-    </text>
+// SVG Icons
+const ActivityIcon = () => (
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
   </svg>
 );
 
-// SVG иконка для шага 2
-const StepTwoIcon: React.FC<{ className?: string }> = ({ className = "w-16 h-16" }) => (
-  <svg
-    className={className}
-    viewBox="0 0 80 80"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    <circle cx="40" cy="40" r="38" fill="#005EB8" stroke="#003d7a" strokeWidth="2" />
-    <text
-      x="40"
-      y="55"
-      fontSize="48"
-      fontWeight="700"
-      fill="white"
-      textAnchor="middle"
-      fontFamily="system-ui, -apple-system, sans-serif"
-    >
-      2
-    </text>
+const MapPinIcon = () => (
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+    <circle cx="12" cy="10" r="3" />
   </svg>
 );
 
-// SVG иконка для шага 3
-const StepThreeIcon: React.FC<{ className?: string }> = ({ className = "w-16 h-16" }) => (
-  <svg
-    className={className}
-    viewBox="0 0 80 80"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    <circle cx="40" cy="40" r="38" fill="#005EB8" stroke="#003d7a" strokeWidth="2" />
-    <text
-      x="40"
-      y="55"
-      fontSize="48"
-      fontWeight="700"
-      fill="white"
-      textAnchor="middle"
-      fontFamily="system-ui, -apple-system, sans-serif"
-    >
-      3
-    </text>
+const BarChartIcon = () => (
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="12" x2="12" y1="20" y2="10" />
+    <line x1="18" x2="18" y1="20" y2="4" />
+    <line x1="6" x2="6" y1="20" y2="16" />
   </svg>
+);
+
+const Step: React.FC<{ number: number; icon: React.ReactNode; title: string; desc: string; delay: string }> = ({ number, icon, title, desc, delay }) => (
+  <div className={`group bg-white p-8 rounded-xl border-2 border-gray-100 shadow-sm flex flex-col items-center text-center relative transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:border-blue-300 ${delay}`}>
+    <div className="absolute -top-5 bg-elderly-primary text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold shadow-md group-hover:scale-110 transition-transform duration-300">
+      {number}
+    </div>
+    <div className="text-blue-500 mb-4 mt-2 transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+      {icon}
+    </div>
+    <h3 className="text-elderly-xl font-bold mb-3 text-gray-900">{title}</h3>
+    <p className="text-elderly-base text-gray-600">{desc}</p>
+  </div>
 );
 
 export const HowItWorks: React.FC = () => {
   return (
-    <section className="mb-12 bg-elderly-primary-light p-8 rounded-lg border-elderly border-elderly-gray-medium">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-elderly-xl font-bold mb-8 text-center text-elderly-primary">
-          How It Works - Just 3 Simple Steps
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {/* Step 1 */}
-          <div className="text-center bg-white p-6 rounded-lg border-elderly border-elderly-gray-medium">
-            <div className="flex justify-center mb-4">
-              <StepOneIcon />
-            </div>
-            <h3 className="text-elderly-lg font-semibold mb-2 text-elderly-primary">
-              Choose Your Procedure
-            </h3>
-            <p className="text-elderly-base text-elderly-text">
-              Select from cataract, hip replacement, or knee replacement surgery
-            </p>
-          </div>
-          
-          {/* Step 2 */}
-          <div className="text-center bg-white p-6 rounded-lg border-elderly border-elderly-gray-medium">
-            <div className="flex justify-center mb-4">
-              <StepTwoIcon />
-            </div>
-            <h3 className="text-elderly-lg font-semibold mb-2 text-elderly-primary">
-              Select Your Location
-            </h3>
-            <p className="text-elderly-base text-elderly-text">
-              Pick your city to find surgeons in your area
-            </p>
-          </div>
-          
-          {/* Step 3 */}
-          <div className="text-center bg-white p-6 rounded-lg border-elderly border-elderly-gray-medium">
-            <div className="flex justify-center mb-4">
-              <StepThreeIcon />
-            </div>
-            <h3 className="text-elderly-lg font-semibold mb-2 text-elderly-primary">
-              Compare Options
-            </h3>
-            <p className="text-elderly-base text-elderly-text">
-              See NHS wait times vs private costs instantly
-            </p>
-          </div>
+    <section className="py-16 bg-white mb-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-elderly-2xl md:text-elderly-hero font-bold mb-4">How It Works - Just 3 Simple Steps</h2>
+          <p className="text-elderly-lg text-gray-600 bg-blue-50 inline-block px-4 py-2 rounded-lg">
+            💡 Takes just 2 minutes, no medical jargon, no contact info needed
+          </p>
         </div>
-        
-        <p className="text-center text-elderly-base text-elderly-gray-dark">
-          💡 Takes just 2 minutes, no medical jargon, no contact info needed
-        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+          <Step 
+            number={1} 
+            icon={<ActivityIcon />}
+            title="Choose Your Procedure" 
+            desc="Select from cataract, hip replacement, or knee replacement surgery."
+            delay=""
+          />
+          <Step 
+            number={2} 
+            icon={<MapPinIcon />}
+            title="Select Your Location" 
+            desc="Pick your city to find surgeons in your area." 
+            delay=""
+          />
+          <Step 
+            number={3} 
+            icon={<BarChartIcon />}
+            title="Compare Options" 
+            desc="See NHS wait times vs private costs instantly." 
+            delay=""
+          />
+        </div>
       </div>
     </section>
   );

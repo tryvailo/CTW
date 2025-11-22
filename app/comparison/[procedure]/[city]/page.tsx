@@ -76,6 +76,15 @@ export default async function ComparisonPage({ params }: PageProps) {
   const cancellationRiskData = getCancellationRiskData(procedureId)
   const privateComparisonData = getPrivateComparisonData(procedureId, regionId || undefined)
 
+  // Transform waiting times data into chart format
+  // Only show chart if we have valid patient average data (not 0)
+  const chartData = waitingTimesData && privateComparisonData && waitingTimesData.patientAverage > 0 ? [{
+    name: procedureData.name,
+    Official: waitingTimesData.officialTarget,
+    Real: waitingTimesData.patientAverage,
+    Private: privateComparisonData.average_wait_weeks,
+  }] : []
+
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://comparethewait.co.uk'
   const url = `${baseUrl}/comparison/${procedure}/${city}`
 
@@ -169,7 +178,9 @@ export default async function ComparisonPage({ params }: PageProps) {
           </div>
 
           {/* Official vs Reality Comparison */}
-          <OfficialVsRealityComparison data={waitingTimesData} variant="full" />
+          {chartData.length > 0 && (
+            <OfficialVsRealityComparison data={chartData} />
+          )}
 
           {/* Cancellation Warning Banner */}
           <CancellationWarning 
@@ -180,8 +191,39 @@ export default async function ComparisonPage({ params }: PageProps) {
             procedureName={procedureData.name}
           />
 
+          {/* Time Savings Card - Big Impact Card */}
+          {waitingTimesData && privateComparisonData && (
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-100 mb-12">
+              <div className="bg-elderly-primary text-white p-6 text-center">
+                <h2 className="text-elderly-xl font-bold">Your Potential Time Savings</h2>
+              </div>
+              <div className="p-8 text-center">
+                {(() => {
+                  const weeksSaved = Math.round(waitingTimesData.patientAverage - privateComparisonData.average_wait_weeks);
+                  return weeksSaved > 0 ? (
+                    <>
+                      <div className="inline-flex items-center justify-center bg-green-100 text-green-800 rounded-full px-8 py-3 mb-6">
+                        <svg className="mr-3 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span className="text-2xl font-bold">You could save {weeksSaved} week{weeksSaved !== 1 ? 's' : ''}</span>
+                      </div>
+                      <p className="text-elderly-base text-gray-600">
+                        By choosing private surgery instead of the NHS waiting list in {cityName}.
+                      </p>
+                    </>
+                  ) : null;
+                })()}
+              </div>
+            </div>
+          )}
+
           {/* Main Comparison Table */}
-          <ComparisonTable data={comparisonData} />
+          <ComparisonTable 
+            data={comparisonData} 
+            privateWaitWeeks={privateComparisonData?.average_wait_weeks}
+            officialTarget={waitingTimesData?.officialTarget}
+          />
 
           {/* Savings Calculator */}
           <SavingsCalculator data={comparisonData} privateComparison={privateComparisonData} />

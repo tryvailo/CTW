@@ -120,12 +120,19 @@ export function getRegionalData(
   const keyFacts = ukWideData?.key_facts || [];
   const ukWideProviderAverage = ukWideData?.waiting_times.healthcare_provider_average_weeks || procedureData.official_target_weeks;
 
+  // Use UK-wide patient average if regional data is missing or null
+  const ukWidePatientAverage = ukWideData?.waiting_times.patient_reported_average_weeks || 0;
+  const regionalPatientAverage = procedureData.patient_reported_average_weeks;
+  const patientAverage = (regionalPatientAverage && regionalPatientAverage > 0) 
+    ? regionalPatientAverage 
+    : ukWidePatientAverage;
+
   return {
     officialTarget: procedureData.official_target_weeks,
     providerAverage: ukWideProviderAverage, // Use UK-wide provider average as regional data doesn't have separate provider data
     providerNotes: ukWideData?.waiting_times.healthcare_provider_notes,
-    patientAverage: procedureData.patient_reported_average_weeks || 0,
-    patientMedian: procedureData.patient_reported_median_weeks || 0,
+    patientAverage: patientAverage,
+    patientMedian: procedureData.patient_reported_median_weeks || ukWideData?.waiting_times.patient_reported_median_weeks || 0,
     patientMin: 0,
     patientMax: 0,
     sampleSize: procedureData.sample_size,
@@ -145,7 +152,8 @@ export function getWaitingTimesData(
 ): OfficialVsRealityData | null {
   if (regionId) {
     const regionalData = getRegionalData(procedureId, regionId);
-    if (regionalData && regionalData.sampleSize > 0) {
+    // Only use regional data if it has valid patient average (not 0 or null)
+    if (regionalData && regionalData.sampleSize > 0 && regionalData.patientAverage > 0) {
       return regionalData;
     }
   }
