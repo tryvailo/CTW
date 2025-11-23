@@ -298,11 +298,7 @@ export default async function ComparisonPage({ params }: PageProps) {
             <p className="text-elderly-base text-elderly-text mb-4">
               Help others make informed decisions by sharing your real experience. Takes 5 minutes.
             </p>
-            <SubmitExperienceForm 
-              variant="full"
-              defaultProcedure={procedureId}
-              defaultLocation={regionId || undefined}
-            />
+            <SubmitExperienceForm />
           </section>
 
           {/* Medical Disclaimer */}

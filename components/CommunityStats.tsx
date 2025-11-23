@@ -130,7 +130,7 @@ export const CommunityStats: React.FC<CommunityStatsComponentProps> = ({ showFor
           Help us complete the picture
         </p>
         {showForm ? (
-          <SubmitExperienceForm variant="full" />
+          <SubmitExperienceForm />
         ) : (
           <div className="text-center">
             <Link
