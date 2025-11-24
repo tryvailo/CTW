@@ -26,6 +26,8 @@ export interface NHSWait {
   city: City;
   nhs_trust: string;
   avg_wait_weeks: number;
+  patient_reported_wait_weeks?: number; // Real patient data (may be undefined for estimated values)
+  is_estimated?: boolean; // Flag to mark estimated values
   date: string; // YYYY-MM-DD format
   source: string;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from '../ui/Card';
+import { EstimatedWaitTime } from '../common/EstimatedWaitTime';
 import type { ComparisonData } from '@/lib/types';
 import type { PrivateComparison } from '@/lib/types/waitingTimes';
 
@@ -20,7 +21,7 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ data, priv
   const avgCost = privateComparison?.average_cost_pounds || (privateCost.cost_min + privateCost.cost_max) / 2;
   
   // Use patient-reported average if available, otherwise use avg_wait_weeks
-  const nhsWaitWeeks = nhsWait.avg_wait_weeks;
+  const nhsWaitWeeks = nhsWait.patient_reported_wait_weeks || nhsWait.avg_wait_weeks;
   
   const timeSaved = nhsWaitWeeks - privateWaitWeeks;
   const monthsSaved = Math.round((timeSaved / 4) * 10) / 10;

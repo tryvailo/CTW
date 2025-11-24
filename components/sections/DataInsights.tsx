@@ -13,7 +13,13 @@ const StatCard: React.FC<{ title: string; highlight: string; desc: string }> = (
 
 export const DataInsights: React.FC = () => {
   // Calculate average time saved across all procedures
-  const allProcedures = loadProcedures();
+  let allProcedures: ReturnType<typeof loadProcedures> = [];
+  try {
+    allProcedures = loadProcedures();
+  } catch (error) {
+    console.error('Error loading procedures:', error);
+  }
+  
   const procedureIds: ProcedureId[] = ['cataract', 'hip', 'knee'];
   const procedures = allProcedures.filter(p => procedureIds.includes(p.procedure_id));
 
@@ -23,27 +29,36 @@ export const DataInsights: React.FC = () => {
   let maxCost = 0;
 
   procedures.forEach(procedure => {
-    const waitData = getUKWideData(procedure.procedure_id);
-    const privateData = getPrivateComparisonData(procedure.procedure_id);
-    
-    if (waitData && privateData) {
-      const timeSaved = waitData.patientAverage - privateData.average_wait_weeks;
-      if (timeSaved > 0) {
-        totalTimeSaved += timeSaved;
-        procedureCount++;
-      }
+    try {
+      const waitData = getUKWideData(procedure.procedure_id);
+      const privateData = getPrivateComparisonData(procedure.procedure_id);
       
-      if (privateData.cost_range_min_pounds < minCost) {
-        minCost = privateData.cost_range_min_pounds;
+      if (waitData && privateData) {
+        const timeSaved = (waitData.patientAverage || 0) - (privateData.average_wait_weeks || 0);
+        if (timeSaved > 0 && Number.isFinite(timeSaved)) {
+          totalTimeSaved += timeSaved;
+          procedureCount++;
+        }
+        
+        const minCostValue = privateData.cost_range_min_pounds;
+        const maxCostValue = privateData.cost_range_max_pounds;
+        
+        if (Number.isFinite(minCostValue) && minCostValue < minCost) {
+          minCost = minCostValue;
+        }
+        if (Number.isFinite(maxCostValue) && maxCostValue > maxCost) {
+          maxCost = maxCostValue;
+        }
       }
-      if (privateData.cost_range_max_pounds > maxCost) {
-        maxCost = privateData.cost_range_max_pounds;
-      }
+    } catch (error) {
+      console.error(`Error processing procedure ${procedure.procedure_id}:`, error);
     }
   });
 
-  const avgTimeSaved = procedureCount > 0 ? Math.round(totalTimeSaved / procedureCount) : 0;
-  const costRange = minCost < Infinity && maxCost > 0 
+  const avgTimeSaved = procedureCount > 0 && Number.isFinite(totalTimeSaved / procedureCount)
+    ? Math.round(totalTimeSaved / procedureCount)
+    : 0;
+  const costRange = minCost < Infinity && maxCost > 0 && Number.isFinite(minCost) && Number.isFinite(maxCost)
     ? `£${Math.round(minCost).toLocaleString()}–£${Math.round(maxCost).toLocaleString()}`
     : 'Varies by procedure';
 

@@ -4,6 +4,7 @@ import { Breadcrumbs } from '@/components/common/Breadcrumbs'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { JsonLd } from '@/components/common/JsonLd'
+import { EstimatedWaitTime } from '@/components/common/EstimatedWaitTime'
 import { generateProcedureMetadata } from '@/lib/metadata'
 import {
   getProcedure,
@@ -258,12 +259,17 @@ export default async function ProcedurePage({ params }: PageProps) {
               const clinics = getClinics(procedureId, cityData.city)
               
               // Determine official and real wait times
-              const officialWait = regionalData?.officialTarget || ukWideData?.officialTarget || 18
-              const realWaitDisplay = regionalData?.recommendedDisplay || 
-                                     (regionalData?.patientAverage ? `${Math.round(regionalData.patientAverage)} weeks` : null) ||
-                                     (nhsWait ? `${nhsWait.avg_wait_weeks} weeks` : null)
+              // Use avg_wait_weeks from CSV as official target (more accurate per city)
+              const officialWait = nhsWait?.avg_wait_weeks || regionalData?.officialTarget || ukWideData?.officialTarget || 18
+              // Prefer patient_reported_wait_weeks from CSV if available, otherwise use regional data
+              const patientReportedWeeks = nhsWait?.patient_reported_wait_weeks
+              const realWaitDisplay = patientReportedWeeks 
+                ? null // Will use EstimatedWaitTime component instead
+                : (regionalData?.recommendedDisplay || 
+                   (regionalData?.patientAverage ? `${Math.round(regionalData.patientAverage)} weeks` : null) ||
+                   (nhsWait ? `${nhsWait.avg_wait_weeks} weeks` : null))
               
-              if (!realWaitDisplay && !nhsWait) {
+              if (!realWaitDisplay && !nhsWait && !patientReportedWeeks) {
                 return null
               }
 
@@ -293,9 +299,19 @@ export default async function ProcedurePage({ params }: PageProps) {
                         <p className="text-elderly-sm text-elderly-gray-dark mb-1">
                           NHS Real Wait (Patient Reported):
                         </p>
-                        <p className="text-elderly-base font-bold text-elderly-warning">
-                          {realWaitDisplay || 'N/A'}
-                        </p>
+                        {patientReportedWeeks ? (
+                          <p className="text-elderly-base font-bold text-elderly-warning">
+                            <EstimatedWaitTime 
+                              weeks={patientReportedWeeks} 
+                              isEstimated={nhsWait?.is_estimated}
+                              showLabel={nhsWait?.is_estimated}
+                            />
+                          </p>
+                        ) : (
+                          <p className="text-elderly-base font-bold text-elderly-warning">
+                            {realWaitDisplay || 'N/A'}
+                          </p>
+                        )}
                       </div>
 
                       <div>

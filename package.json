@@ -9,6 +9,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "test:pages": "node scripts/test-pages.js",
     "test:mobile": "node scripts/test-mobile.js",
     "test:accessibility": "node scripts/test-accessibility.js",
@@ -30,10 +33,15 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
     "autoprefixer": "^10.4.17",
+    "jest": "^30.2.0",
     "lighthouse": "^12.8.2",
     "postcss": "^8.4.35",
     "puppeteer": "^24.29.0",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "ts-jest": "^29.4.5"
   }
 }

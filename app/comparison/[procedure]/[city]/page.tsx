@@ -203,7 +203,7 @@ export default async function ComparisonPage({ params }: PageProps) {
                   return weeksSaved > 0 ? (
                     <>
                       <div className="inline-flex items-center justify-center bg-green-100 text-green-800 rounded-full px-8 py-3 mb-6">
-                        <svg className="mr-3 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="mr-3 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <span className="text-2xl font-bold">You could save {weeksSaved} week{weeksSaved !== 1 ? 's' : ''}</span>
@@ -222,7 +222,7 @@ export default async function ComparisonPage({ params }: PageProps) {
           <ComparisonTable 
             data={comparisonData} 
             privateWaitWeeks={privateComparisonData?.average_wait_weeks}
-            officialTarget={waitingTimesData?.officialTarget}
+            officialTarget={nhsWait.avg_wait_weeks || waitingTimesData?.officialTarget}
           />
 
           {/* Savings Calculator */}

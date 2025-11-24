@@ -72,11 +72,21 @@ function parseCSVContent<T>(content: string, headers: (keyof T)[]): T[] {
 
 /**
  * Load CSV file (server-side only)
+ * Returns empty string if file cannot be read (fallback for missing files)
  */
 function loadCSVFile(filePath: string): string {
   try {
     const fullPath = path.join(DATA_DIR, filePath);
-    return fs.readFileSync(fullPath, 'utf-8');
+    if (!fs.existsSync(fullPath)) {
+      console.warn(`CSV file not found: ${filePath}`);
+      return '';
+    }
+    const content = fs.readFileSync(fullPath, 'utf-8');
+    if (!content || content.trim().length === 0) {
+      console.warn(`CSV file is empty: ${filePath}`);
+      return '';
+    }
+    return content;
   } catch (error) {
     console.error(`Error reading CSV file ${filePath}:`, error);
     return '';
@@ -123,25 +133,64 @@ export function loadCities(): CityData[] {
 /**
  * Load NHS wait times from CSV
  */
+/**
+ * Load NHS wait times from CSV with fallback
+ */
 export function loadNHSWaits(): NHSWait[] {
   const headers: (keyof NHSWait)[] = [
     'procedure_id',
     'city',
     'nhs_trust',
     'avg_wait_weeks',
+    'patient_reported_wait_weeks',
     'date',
     'source',
   ];
   
   const content = loadCSVFile('nhs_waits.csv');
-  const data = parseCSVContent<Omit<NHSWait, 'avg_wait_weeks'> & { avg_wait_weeks: string }>(content, headers);
+  if (!content) {
+    console.warn('NHS waits CSV file is empty or missing, returning empty array');
+    return [];
+  }
   
-  return data.map(item => ({
-    ...item,
-    procedure_id: item.procedure_id as ProcedureId,
-    city: item.city as City,
-    avg_wait_weeks: parseInt(item.avg_wait_weeks, 10) || 0,
-  }));
+  const data = parseCSVContent<Omit<NHSWait, 'avg_wait_weeks' | 'patient_reported_wait_weeks'> & { 
+    avg_wait_weeks: string;
+    patient_reported_wait_weeks: string;
+  }>(content, headers);
+  
+  // Define estimated value combinations
+  const estimatedCombinations = [
+    { city: 'Leeds' as City, procedure: 'hip' as ProcedureId },
+    { city: 'Leeds' as City, procedure: 'knee' as ProcedureId },
+    { city: 'Birmingham' as City, procedure: 'knee' as ProcedureId },
+    { city: 'Bristol' as City, procedure: 'knee' as ProcedureId },
+  ];
+  
+  return data
+    .filter(item => item.procedure_id && item.city) // Filter out invalid rows
+    .map(item => {
+      const city = item.city as City;
+      const procedureId = item.procedure_id as ProcedureId;
+      const isEstimated = estimatedCombinations.some(
+        combo => combo.city === city && combo.procedure === procedureId
+      );
+      
+      const avgWeeks = parseInt(item.avg_wait_weeks, 10);
+      const patientWeeks = item.patient_reported_wait_weeks && item.patient_reported_wait_weeks.trim() !== ''
+        ? parseInt(item.patient_reported_wait_weeks, 10)
+        : undefined;
+      
+      return {
+        ...item,
+        procedure_id: procedureId,
+        city: city,
+        avg_wait_weeks: Number.isFinite(avgWeeks) && avgWeeks >= 0 ? avgWeeks : 0,
+        patient_reported_wait_weeks: Number.isFinite(patientWeeks) && patientWeeks && patientWeeks >= 0
+          ? patientWeeks
+          : undefined,
+        is_estimated: isEstimated,
+      };
+    });
 }
 
 /**

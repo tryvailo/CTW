@@ -1,0 +1,348 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║            PRODUCTION DEPLOYMENT GUIDE - VERSION 3                           ║
+║              CompareTheWait NHS Waiting Times Data                           ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🎯 VERSION SELECTED: v3 (100% Data Coverage with Estimated Values)
+📅 Deployment Date: TBD
+👥 Target Team: Engineering, Product, QA, Frontend
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 1: DATA FILES TO DEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 Source Archive: comparethewait_validated_data_v3_FINAL.zip
+
+FILES TO LOAD INTO DATABASE:
+  1. nhs_waits_v3_with_estimates.csv          (15 rows - 100% filled)
+  2. clinics_v2_validated.csv                 (58 clinics)
+  3. private_costs_v2_validated.csv           (15 rows)
+  4. cities_v2_cleaned.csv                    (5 cities)
+  5. procedures_v2_extended.csv               (5 procedures)
+
+⚠️  CRITICAL: Use nhs_waits_v3_with_estimates.csv (not v2!)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 2: DATABASE SCHEMA REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TABLE: nhs_waits
+┌──────────────────────────────┬──────────┬──────────────────────────────────┐
+│ Column Name                  │ Type     │ Notes                            │
+├──────────────────────────────┼──────────┼──────────────────────────────────┤
+│ procedure_id                 │ VARCHAR  │ FK to procedures.procedure_id    │
+│ city                         │ VARCHAR  │ FK to cities.city                │
+│ nhs_trust                    │ TEXT     │ Full legal NHS Trust name        │
+│ avg_wait_weeks              │ INTEGER  │ Official NHS target (18-27)      │
+│ patient_reported_wait_weeks │ INTEGER  │ ⭐ NEW! Real patient data       │
+│ date                         │ DATE     │ Data collection date             │
+│ source                       │ VARCHAR  │ e.g., "My Planned Care"          │
+└──────────────────────────────┴──────────┴──────────────────────────────────┘
+
+⚠️  NEW COLUMN: patient_reported_wait_weeks must be added before import!
+
+ALL OTHER TABLES: No schema changes required.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 3: DATA INTEGRITY MARKERS (CRITICAL!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ESTIMATED VALUES THAT REQUIRE UI INDICATORS:
+
+┌────────────────┬────────────┬────────────────────┬──────────────────────────┐
+│ City           │ Procedure  │ Wait Time (weeks)  │ Data Type                │
+├────────────────┼────────────┼────────────────────┼──────────────────────────┤
+│ Leeds          │ hip        │ 50                 │ ESTIMATED ⚠️             │
+│ Leeds          │ knee       │ 78                 │ ESTIMATED ⚠️             │
+│ Birmingham     │ knee       │ 65                 │ ESTIMATED ⚠️             │
+│ Bristol        │ knee       │ 44                 │ ESTIMATED ⚠️             │
+└────────────────┴────────────┴────────────────────┴──────────────────────────┘
+
+IMPLEMENTATION OPTIONS:
+
+Option A: Add metadata column to database
+  • Add column: is_estimated (BOOLEAN)
+  • Set TRUE for 4 rows above
+  • Frontend checks this flag
+
+Option B: Hardcode in frontend
+  • Frontend array: ESTIMATED_VALUES = [
+      {city: 'Leeds', procedure: 'hip'},
+      {city: 'Leeds', procedure: 'knee'},
+      {city: 'Birmingham', procedure: 'knee'},
+      {city: 'Bristol', procedure: 'knee'}
+    ]
+  
+⭐ RECOMMENDED: Option A (database flag) for maintainability
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 4: FRONTEND UI REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 MANDATORY UI CHANGES:
+
+1. VISUAL INDICATOR (Asterisk)
+   ┌─────────────────────────────────────────────┐
+   │ Patient-reported wait time: 50 weeks *      │
+   └─────────────────────────────────────────────┘
+   
+   Rule: Add asterisk (*) after wait time for estimated values
+
+2. TOOLTIP (On hover/tap)
+   ┌─────────────────────────────────────────────┐
+   │  ℹ️ Estimated from regional NHS data       │
+   │                                             │
+   │  Based on national averages and regional    │
+   │  patterns. Limited patient data available   │
+   │  for this combination.                      │
+   └─────────────────────────────────────────────┘
+   
+   Text: "Estimated from regional NHS data. Based on national averages 
+          and regional patterns. Limited patient data available for 
+          this combination."
+
+3. PAGE DISCLAIMER (Bottom of results)
+   ┌─────────────────────────────────────────────┐
+   │ ⚠️  Note on Estimated Wait Times            │
+   │                                             │
+   │ Some waiting times marked with * are        │
+   │ estimates based on national averages and    │
+   │ regional patterns due to limited patient    │
+   │ submissions in these areas.                 │
+   │                                             │
+   │ We're actively collecting more data to      │
+   │ improve accuracy. [Submit your experience]  │
+   └─────────────────────────────────────────────┘
+
+4. COLOUR CODING (Optional but recommended)
+   • Real data: Standard text colour
+   • Estimated data: Slightly muted/grey colour
+   • Or: Use subtle background highlight (light yellow)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 5: EXAMPLE UI IMPLEMENTATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+REACT COMPONENT EXAMPLE:
+
+```jsx
+function WaitTimeDisplay({ city, procedure, weeks, isEstimated }) {
+  return (
+    <div className="wait-time">
+      <span className={isEstimated ? "wait-time-estimated" : ""}>
+        {weeks} weeks
+        {isEstimated && <span className="asterisk">*</span>}
+      </span>
+      
+      {isEstimated && (
+        <Tooltip content="Estimated from regional NHS data. Based on 
+                         national averages and regional patterns.">
+          <InfoIcon />
+        </Tooltip>
+      )}
+    </div>
+  );
+}
+```
+
+CSS EXAMPLE:
+
+```css
+.wait-time-estimated {
+  color: #6c757d; /* Muted grey */
+}
+
+.asterisk {
+  color: #ffc107; /* Warning yellow */
+  font-weight: bold;
+  margin-left: 4px;
+}
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 6: QA TESTING CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BEFORE PRODUCTION DEPLOYMENT:
+
+Database Tests:
+  ☐ All 5 CSV files imported successfully
+  ☐ nhs_waits table has 15 rows
+  ☐ patient_reported_wait_weeks column exists and populated
+  ☐ No NULL values in patient_reported_wait_weeks
+  ☐ All Foreign Key constraints working (procedures, cities)
+  ☐ clinics table has 58 rows
+  ☐ Phone numbers in +44-XXX-XXX-XXXX format
+
+Frontend Tests (Estimated Values):
+  ☐ Leeds Hip shows asterisk (*)
+  ☐ Leeds Knee shows asterisk (*)
+  ☐ Birmingham Knee shows asterisk (*)
+  ☐ Bristol Knee shows asterisk (*)
+  ☐ Tooltip displays on hover/tap
+  ☐ Page disclaimer visible at bottom
+  ☐ All other wait times DO NOT show asterisk
+
+Visual Regression Tests:
+  ☐ Mobile responsive design works
+  ☐ Asterisk doesn't break layout
+  ☐ Tooltip readable on mobile
+  ☐ Colour contrast meets accessibility standards (WCAG AA)
+
+Data Accuracy Tests:
+  ☐ London Cataract: 42 weeks (no asterisk) ✓
+  ☐ Manchester Cataract: 5 weeks (no asterisk) ✓
+  ☐ Leeds Hip: 50 weeks WITH asterisk ✓
+  ☐ Leeds Knee: 78 weeks WITH asterisk ✓
+  ☐ Birmingham Knee: 65 weeks WITH asterisk ✓
+  ☐ Bristol Knee: 44 weeks WITH asterisk ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 7: ROLLBACK PLAN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IF ISSUES ARISE POST-DEPLOYMENT:
+
+Issue: Users confused by estimated values
+Solution: 
+  1. Make disclaimer more prominent
+  2. Add FAQ page explaining methodology
+  3. Email active users about data sources
+
+Issue: Technical problems with new column
+Solution:
+  1. Keep v2 zip as backup
+  2. Can revert to nhs_waits_v2_validated.csv
+  3. Use JSON recommended_display for missing values
+  
+Issue: Estimation accuracy questioned
+Solution:
+  1. Point to ESTIMATION_METHODOLOGY.txt
+  2. Emphasize conservative approach
+  3. Fast-track real data collection
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 8: POST-LAUNCH MONITORING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+METRICS TO TRACK (First 30 days):
+
+User Engagement:
+  • Tooltip interaction rate on estimated values
+  • Bounce rate on pages with estimated values vs real data
+  • Time spent on pages with disclaimers
+  • Click-through rate on "Submit your experience" link
+
+Data Quality:
+  • New patient submissions received (target: 50+ for Leeds/Birmingham/Bristol)
+  • Quality of submissions (verified vs spam)
+  • Geographic distribution of submissions
+
+User Feedback:
+  • Support tickets mentioning "estimated" or "accuracy"
+  • Trust signals in user reviews/testimonials
+  • Social media sentiment about data transparency
+
+Technical:
+  • Database query performance (patient_reported_wait_weeks index?)
+  • Frontend rendering time for wait time components
+  • Error rates in data retrieval
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 9: DATA UPDATE SCHEDULE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUARTERLY REVIEW (Every 3 months):
+
+Tasks:
+  1. Review patient submissions for Leeds, Birmingham, Bristol
+  2. Replace estimated values with real data when available
+  3. Update UK-wide averages if NHS publishes new data
+  4. Re-validate estimation methodology
+  5. Update ESTIMATION_METHODOLOGY.txt with new data sources
+
+Criteria for Replacing Estimates:
+  • Minimum 12 patient submissions for procedure/city combination
+  • Data from last 6 months
+  • Confidence level: Medium or higher
+  • No outliers skewing results
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 10: TEAM CONTACTS & RESPONSIBILITIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DATABASE TEAM:
+  • Import CSV files
+  • Add patient_reported_wait_weeks column
+  • Set up is_estimated flag (if using Option A)
+  • Monitor query performance
+
+FRONTEND TEAM:
+  • Implement asterisk indicator
+  • Build tooltip component
+  • Add page disclaimer
+  • Implement responsive design
+  • QA visual regression tests
+
+PRODUCT TEAM:
+  • Approve final UI design
+  • Review disclaimer copy
+  • Set data collection priorities
+  • Monitor user feedback
+
+QA TEAM:
+  • Execute testing checklist
+  • Verify all 4 estimated values have indicators
+  • Test across devices/browsers
+  • Sign off for production
+
+DATA TEAM:
+  • Maintain ESTIMATION_METHODOLOGY.txt
+  • Coordinate quarterly data updates
+  • Collect patient submissions
+  • Replace estimates with real data
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+APPENDIX A: QUICK REFERENCE - ESTIMATED VALUES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IF (city == 'Leeds' AND procedure == 'hip') → ESTIMATED
+IF (city == 'Leeds' AND procedure == 'knee') → ESTIMATED  
+IF (city == 'Birmingham' AND procedure == 'knee') → ESTIMATED
+IF (city == 'Bristol' AND procedure == 'knee') → ESTIMATED
+
+ELSE → REAL DATA (no indicator needed)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SIGN-OFF CHECKLIST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+☐ Database Team Lead: _________________ Date: _______
+☐ Frontend Team Lead: _________________ Date: _______
+☐ Product Manager: ____________________ Date: _______
+☐ QA Lead: ___________________________ Date: _______
+☐ Engineering Manager: ________________ Date: _______
+
+PRODUCTION DEPLOYMENT APPROVED: ☐ YES  ☐ NO
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Document Version: 1.0
+Last Updated: 23 November 2025
+Next Review: After deployment + 2 weeks
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

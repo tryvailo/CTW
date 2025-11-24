@@ -1,0 +1,82 @@
+================================================================================
+ОТЧЁТ О ВАЛИДАЦИИ ДАННЫХ - DATA REMEDIATION
+================================================================================
+
+Дата: 2025-11-23
+Источник правды: comparethewait-data-source.json (версия 08.11.2025)
+
+================================================================================
+
+1️⃣  NHS_WAITS_V2_VALIDATED.CSV
+--------------------------------------------------------------------------------
+
+✓ Исправлено название NHS Trust:
+   • Bristol: → 'University Hospitals Bristol and Weston NHS Foundation Trust'
+   • Birmingham: → 'University Hospitals Birmingham NHS Foundation Trust'
+
+✓ Добавлена колонка 'patient_reported_wait_weeks' с реальными данными:
+   • London       cataract   :  42 weeks (vs official 18 weeks)
+   • Manchester   cataract   :   5 weeks (vs official 20 weeks)
+   • Birmingham   cataract   :  40 weeks (vs official 19 weeks)
+   • Leeds        cataract   :   3 weeks (vs official 21 weeks)
+   • Bristol      cataract   :  13 weeks (vs official 18 weeks)
+   • London       hip        :  45 weeks (vs official 24 weeks)
+   • Manchester   hip        : 104 weeks (vs official 26 weeks)
+   • Birmingham   hip        :  38 weeks (vs official 25 weeks)
+   • Bristol      hip        :  29 weeks (vs official 24 weeks)
+   • London       knee       :  52 weeks (vs official 22 weeks)
+   • Manchester   knee       :  36 weeks (vs official 24 weeks)
+
+
+2️⃣  PRIVATE_COSTS_V2_VALIDATED.CSV
+--------------------------------------------------------------------------------
+
+✓ Синхронизированы минимальные цены с реальными данными из clinics.csv:
+
+   Hip/Knee Replacement - исправлены ЗАНИЖЕННЫЕ минимумы:
+   • London:     £13,000 → £14,500  (+£1,500)
+   • Manchester: £12,500 → £13,800  (+£1,300)
+   • Birmingham: £12,800 → £13,900  (+£1,100)
+   • Leeds:      £12,500 → £13,800  (+£1,300)
+   • Bristol:    £13,000 → £14,000  (+£1,000)
+
+
+3️⃣  CLINICS_V2_VALIDATED.CSV
+--------------------------------------------------------------------------------
+
+✓ Телефоны приведены к единому формату +44-XXX-XXX-XXXX:
+   • Примеры: 020-7253-3411 → +44-207-253-3411
+   •          0161-276-1234 → +44-161-276-1234
+   • Всего отформатировано: 58 записей
+
+
+4️⃣  CITIES_V2_CLEANED.CSV
+--------------------------------------------------------------------------------
+
+✓ Поле 'elderly_population' приведено к INTEGER формату:
+   • London       : ~1.5M    →  1,500,000
+   • Manchester   : ~200k    →    200,000
+   • Birmingham   : ~250k    →    250,000
+   • Leeds        : ~180k    →    180,000
+   • Bristol      : ~150k    →    150,000
+
+
+5️⃣  PROCEDURES_V2_EXTENDED.CSV
+--------------------------------------------------------------------------------
+
+✓ Добавлены технические записи для поддержки FAQ (предотвращение Foreign Key Violation):
+   • general  : General Query (Administration)
+   • extended : Extended Info (Administration)
+
+   Всего процедур: 5 (было 3)
+
+
+================================================================================
+ИТОГОВАЯ СТАТИСТИКА
+================================================================================
+
+✓ Исправлено файлов:    5
+✓ Критических ошибок:   0
+✓ Статус:               READY FOR PRODUCTION
+
+================================================================================

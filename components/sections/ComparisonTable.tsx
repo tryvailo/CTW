@@ -2,29 +2,30 @@
 
 import React from 'react';
 import { Button } from '../ui/Button';
+import { EstimatedWaitTime } from '../common/EstimatedWaitTime';
 import type { ComparisonData } from '@/lib/types';
 
-// Icons
-const CalendarIcon: React.FC<{ className?: string }> = ({ className = "h-8 w-8" }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+// Icons - explicitly constrained to prevent stretching
+const CalendarIcon: React.FC<{ className?: string }> = ({ className = "h-5 w-5" }) => (
+  <svg className={`${className} flex-shrink-0 flex-grow-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ maxWidth: '1.25rem', maxHeight: '1.25rem' }}>
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
   </svg>
 );
 
-const PoundIcon: React.FC<{ className?: string }> = ({ className = "h-8 w-8" }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+const PoundIcon: React.FC<{ className?: string }> = ({ className = "h-5 w-5" }) => (
+  <svg className={`${className} flex-shrink-0 flex-grow-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ maxWidth: '1.25rem', maxHeight: '1.25rem' }}>
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
 );
 
 const AlertCircleIcon: React.FC<{ className?: string }> = ({ className = "h-5 w-5" }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className={`${className} flex-shrink-0 flex-grow-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ maxWidth: '1.25rem', maxHeight: '1.25rem' }}>
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
   </svg>
 );
 
 const CheckCircleIcon: React.FC<{ className?: string }> = ({ className = "h-5 w-5" }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className={`${className} flex-shrink-0 flex-grow-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ maxWidth: '1.25rem', maxHeight: '1.25rem' }}>
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
 );
@@ -37,7 +38,21 @@ interface ComparisonTableProps {
 
 export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data, privateWaitWeeks, officialTarget }) => {
   const { procedure, nhsWait, privateCost, clinics, city } = data;
-  const clinicCount = clinics.length;
+  
+  // Fallback for missing data
+  if (!procedure || !city) {
+    return (
+      <section className="mb-12">
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+          <p className="text-sm text-yellow-800">
+            Unable to load comparison data. Please try again later.
+          </p>
+        </div>
+      </section>
+    );
+  }
+  
+  const clinicCount = clinics?.length || 0;
   
   // Format private wait time display
   const privateWaitDisplay = privateWaitWeeks 
@@ -75,26 +90,55 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data, privateW
             Public Option
           </div>
           <h3 className="text-elderly-xl font-bold text-gray-800 mb-6 flex items-center">
-            <span className="text-3xl mr-2">🏥</span> NHS Route
+            <span className="text-xl mr-2">🏥</span> NHS Route
           </h3>
           
           <div className="space-y-6">
             <div className="flex items-start">
-              <CalendarIcon className="text-red-500 mr-4 mt-1 flex-shrink-0" />
-              <div>
+              <div className="flex-shrink-0 flex-grow-0 mr-3 mt-1">
+                <CalendarIcon className="text-red-500" />
+              </div>
+              <div className="flex-1 min-w-0">
                 <p className="text-sm text-gray-500 font-bold uppercase">Estimated Wait</p>
-                <p className="text-4xl font-bold text-red-600">{nhsWait?.avg_wait_weeks || 'N/A'} {nhsWait?.avg_wait_weeks ? 'Weeks' : ''}</p>
+                {nhsWait?.patient_reported_wait_weeks ? (
+                  <p className="text-4xl font-bold text-red-600">
+                    <EstimatedWaitTime 
+                      weeks={nhsWait.patient_reported_wait_weeks} 
+                      isEstimated={nhsWait.is_estimated}
+                      showLabel={nhsWait.is_estimated}
+                    />
+                  </p>
+                ) : (
+                  <p className="text-4xl font-bold text-red-600">
+                    {nhsWait?.avg_wait_weeks || 'N/A'} {nhsWait?.avg_wait_weeks ? 'Weeks' : ''}
+                  </p>
+                )}
                 <p className="text-sm text-gray-500 mt-1">
-                  {officialTarget 
-                    ? `Often longer than the ${officialTarget}-week target`
-                    : 'Often longer than the official target'}
+                  {(() => {
+                    const realWait = nhsWait?.patient_reported_wait_weeks || nhsWait?.avg_wait_weeks;
+                    const target = officialTarget || nhsWait?.avg_wait_weeks;
+                    
+                    if (!realWait || !target) {
+                      return 'Based on NHS data';
+                    }
+                    
+                    if (realWait < target) {
+                      return `Faster than the ${target}-week target`;
+                    } else if (realWait > target) {
+                      return `Often longer than the ${target}-week target`;
+                    } else {
+                      return `Matches the ${target}-week target`;
+                    }
+                  })()}
                 </p>
               </div>
             </div>
 
             <div className="flex items-start">
-              <PoundIcon className="text-green-600 mr-4 mt-1 flex-shrink-0" />
-              <div>
+              <div className="flex-shrink-0 flex-grow-0 mr-3 mt-1">
+                <PoundIcon className="text-green-600" />
+              </div>
+              <div className="flex-1 min-w-0">
                 <p className="text-sm text-gray-500 font-bold uppercase">Cost to you</p>
                 <p className="text-3xl font-bold text-gray-900">£0</p>
                 <p className="text-sm text-gray-500 mt-1">Funded by taxpayers</p>
@@ -103,7 +147,10 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data, privateW
             
             <div className="bg-gray-50 p-4 rounded-lg mt-4">
               <h4 className="font-bold text-gray-700 mb-2 flex items-center">
-                <AlertCircleIcon className="mr-2" /> Things to consider:
+                <span className="flex-shrink-0 flex-grow-0 mr-2">
+                  <AlertCircleIcon />
+                </span>
+                <span>Things to consider:</span>
               </h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• Wait times can increase unexpectedly</li>
@@ -120,13 +167,15 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data, privateW
             Fastest Option
           </div>
           <h3 className="text-elderly-xl font-bold text-elderly-primary mb-6 flex items-center">
-            <span className="text-3xl mr-2">⚡</span> Private Route
+            <span className="text-xl mr-2">⚡</span> Private Route
           </h3>
           
           <div className="space-y-6">
             <div className="flex items-start">
-              <CalendarIcon className="text-green-600 mr-4 mt-1 flex-shrink-0" />
-              <div>
+              <div className="flex-shrink-0 flex-grow-0 mr-3 mt-1">
+                <CalendarIcon className="text-green-600" />
+              </div>
+              <div className="flex-1 min-w-0">
                 <p className="text-sm text-gray-500 font-bold uppercase">Estimated Wait</p>
                 <p className="text-4xl font-bold text-green-600">{privateWaitDisplay}</p>
                 <p className="text-sm text-gray-500 mt-1">Consultation usually within days</p>
@@ -134,17 +183,26 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data, privateW
             </div>
 
             <div className="flex items-start">
-              <PoundIcon className="text-gray-600 mr-4 mt-1 flex-shrink-0" />
-              <div>
+              <div className="flex-shrink-0 flex-grow-0 mr-3 mt-1">
+                <PoundIcon className="text-gray-600" />
+              </div>
+              <div className="flex-1 min-w-0">
                 <p className="text-sm text-gray-500 font-bold uppercase">Typical Cost Range</p>
-                <p className="text-3xl font-bold text-gray-900">£{privateCost?.cost_min.toLocaleString() || 'N/A'} - £{privateCost?.cost_max.toLocaleString() || 'N/A'}</p>
+                <p className="text-3xl font-bold text-gray-900">
+                  {privateCost?.cost_min && privateCost?.cost_max
+                    ? `£${privateCost.cost_min.toLocaleString()} - £${privateCost.cost_max.toLocaleString()}`
+                    : 'N/A'}
+                </p>
                 <p className="text-sm text-gray-500 mt-1">Includes surgery & aftercare</p>
               </div>
             </div>
 
             <div className="bg-blue-50 p-4 rounded-lg mt-4">
               <h4 className="font-bold text-blue-800 mb-2 flex items-center">
-                <CheckCircleIcon className="mr-2" /> Benefits:
+                <span className="flex-shrink-0 flex-grow-0 mr-2">
+                  <CheckCircleIcon />
+                </span>
+                <span>Benefits:</span>
               </h4>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>• Choose your own consultant</li>
@@ -171,9 +229,9 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data, privateW
 
       {/* Additional Context */}
       <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-        <h3 className="text-elderly-xl font-bold mb-4">About {procedure.name}</h3>
+        <h3 className="text-elderly-xl font-bold mb-4">About {procedure?.name || 'this procedure'}</h3>
         <p className="text-elderly-base text-gray-700 leading-relaxed mb-4">
-          {procedure.description}
+          {procedure?.description || 'Information about this procedure is being updated.'}
         </p>
         <p className="text-elderly-base text-gray-700 leading-relaxed">
           In {city}, the demand for this procedure has led to significant variations in waiting times. 
@@ -181,6 +239,31 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ data, privateW
           Private options in the {city} area can bypass this queue completely.
         </p>
       </div>
+
+      {/* Estimated Values Disclaimer */}
+      {nhsWait?.is_estimated && (
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded mb-4">
+          <div className="flex items-start">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <h3 className="text-sm font-medium text-yellow-800">Note on Estimated Wait Times</h3>
+              <div className="mt-2 text-sm text-yellow-700">
+                <p>
+                  Some waiting times marked with * are estimates based on national averages and regional patterns 
+                  due to limited patient submissions in these areas.
+                </p>
+                <p className="mt-1">
+                  We're actively collecting more data to improve accuracy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <p className="text-elderly-xs text-elderly-gray-dark italic mt-4">
         Data sources: NHS My Planned Care, PHIN consultant registry, clinic websites. Updated every 2 weeks. 
