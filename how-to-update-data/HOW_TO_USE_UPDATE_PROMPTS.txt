@@ -1,0 +1,338 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║              HOW TO UPDATE DATA IN 3-6 MONTHS                                ║
+║                   Step-by-Step Instructions                                  ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📅 WHEN TO UPDATE: Every 3 months (Quarterly)
+    Recommended schedule: February, May, August, November
+
+⏱️  TIME REQUIRED: 2-3 hours for comprehensive update
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: PREPARE FILES (5 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Gather these files from your current production:
+
+Required Files:
+  ☐ nhs_waits_v3_with_estimates.csv (or latest version from production)
+  ☐ ESTIMATION_METHODOLOGY.txt
+  ☐ EXECUTIVE_SUMMARY_v3.txt (or latest)
+
+Optional (helpful for context):
+  ☐ PRODUCTION_DEPLOYMENT_GUIDE_v3.txt
+  ☐ Previous update reports (if any)
+
+Where to find:
+  • Check production database exports
+  • Look in /outputs/ or /docs/ folders
+  • Ask your data team for latest CSV
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2: CHOOSE YOUR PROMPT (2 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TWO OPTIONS AVAILABLE:
+
+Option A: COMPREHENSIVE (recommended first time)
+  File: FUTURE_UPDATE_PROMPT.txt
+  Use when: 
+    • First quarterly update
+    • Major methodology changes needed
+    • Want detailed guidance
+  Time: 2-3 hours
+  Detail level: Very detailed with full instructions
+
+Option B: QUICK (for experienced users)
+  File: FUTURE_UPDATE_QUICK_PROMPT.txt
+  Use when:
+    • You've done this before
+    • Just need reminder of key points
+    • Straightforward update
+  Time: 1-2 hours
+  Detail level: Streamlined, assumes familiarity
+
+⭐ RECOMMENDATION: Use Option A for first 2-3 updates, then switch to Option B
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 3: START NEW CLAUDE CHAT (1 minute)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to Claude.ai (or your Claude interface)
+2. Click "Start new chat"
+3. Important: Use Claude Sonnet 4 or later for best results
+
+Do NOT use:
+  ❌ Old chat history (data will be outdated)
+  ❌ This current chat (creates confusion)
+  ✅ Fresh new chat session
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 4: ATTACH FILES (1 minute)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In the new chat:
+
+1. Click the attachment icon (📎)
+2. Upload the 3 required files:
+   • nhs_waits_v3_with_estimates.csv
+   • ESTIMATION_METHODOLOGY.txt
+   • EXECUTIVE_SUMMARY_v3.txt
+
+3. Wait for files to upload (green checkmark)
+
+Note: Don't send message yet! Files first, then prompt.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 5: PASTE PROMPT (1 minute)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open FUTURE_UPDATE_PROMPT.txt (or QUICK version)
+2. Copy EVERYTHING from the file
+   (from "Hi Claude!" to the end)
+3. Paste into Claude chat message box
+4. Press Enter/Send
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 6: WORK WITH CLAUDE (60-120 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Claude will:
+  1. Confirm understanding of the mission
+  2. List the 4 priority estimated values to update
+  3. Start searching for patient data
+  4. Analyze findings
+  5. Calculate new values
+  6. Create updated files
+
+Your role:
+  • Answer clarifying questions if asked
+  • Review interim findings
+  • Approve methodology decisions
+  • Request additional searches if needed
+
+Typical flow:
+  Claude: "I've found 12 patient reports for Leeds Hip..."
+  You: "Great! What's the median?"
+  Claude: "47 weeks. Here's the calculation..."
+  You: "Approved. Continue with Leeds Knee."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 7: REVIEW DELIVERABLES (20-30 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Claude will provide:
+
+1. nhs_waits_v4_[date].csv
+   ☐ Check: 15 rows present
+   ☐ Check: All patient_reported_wait_weeks filled
+   ☐ Check: Values reasonable (5-120 weeks)
+
+2. DATA_UPDATE_REPORT_v4.txt
+   ☐ Check: OLD vs NEW comparison table clear
+   ☐ Check: All sources documented with URLs
+   ☐ Check: Confidence levels assigned
+   ☐ Check: Methodology explained
+
+3. ESTIMATION_METHODOLOGY_v4.txt (if methodology changed)
+   ☐ Check: Updated UK averages
+   ☐ Check: New sources added
+   ☐ Check: Formulas documented
+
+4. UPDATE_EXECUTIVE_SUMMARY_v4.txt
+   ☐ Check: High-level summary suitable for management
+   ☐ Check: Impact analysis included
+   ☐ Check: Recommendations provided
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 8: QUALITY CHECKS (10 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before deploying, verify:
+
+Data Sanity:
+  ☐ No values below 3 weeks (unrealistic)
+  ☐ No values above 120 weeks (likely error)
+  ☐ Regional patterns make sense (ACES still fast?)
+  ☐ Changes are reasonable (not 50% jump without explanation)
+
+Documentation:
+  ☐ All new REAL data has 8+ sources cited
+  ☐ Estimated values clearly flagged
+  ☐ Confidence levels assigned (HIGH/MEDIUM/LOW)
+  ☐ Change percentages calculated
+
+Consistency:
+  ☐ File naming follows pattern (v4, v5, etc.)
+  ☐ CSV format matches production schema
+  ☐ Date stamps current
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 9: PREPARE FOR DEPLOYMENT (15 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Share with your team:
+
+For Database Team:
+  ✓ nhs_waits_v4_[date].csv
+  ✓ List of changed values (for validation)
+
+For Frontend Team (if estimated → real):
+  ✓ List of values that no longer need asterisk (*)
+  ✓ Updated tooltip text (if methodology changed)
+
+For Product Team:
+  ✓ UPDATE_EXECUTIVE_SUMMARY_v4.txt
+  ✓ Highlight any significant changes
+  ✓ User impact assessment
+
+For Data Team:
+  ✓ ESTIMATION_METHODOLOGY_v4.txt
+  ✓ DATA_UPDATE_REPORT_v4.txt
+  ✓ Schedule next quarterly update
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 10: DEPLOY & MONITOR (Ongoing)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Post-deployment:
+
+Immediate (Day 1):
+  ☐ Import new CSV to staging database
+  ☐ Run automated tests
+  ☐ QA spot check key values
+  ☐ Deploy to production
+
+Week 1:
+  ☐ Monitor for user feedback
+  ☐ Check for any data display issues
+  ☐ Verify asterisks (*) correctly displayed/removed
+
+Week 2-4:
+  ☐ Track user engagement metrics
+  ☐ Collect any new patient submissions
+  ☐ Note data gaps for next update
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: Claude can't find enough patient data
+Solution: 
+  • Expand time range (6→9 months)
+  • Lower threshold (8→5 sources) but mark as MEDIUM confidence
+  • Keep as ESTIMATED if truly insufficient data
+  • Document attempts in report
+
+Problem: Data looks unrealistic (e.g., 200 weeks)
+Solution:
+  • Check for misunderstandings (maybe "months" not "weeks"?)
+  • Remove outliers
+  • Cross-reference with official NHS data
+  • Ask Claude to re-validate sources
+
+Problem: Can't find attached files
+Solution:
+  • Check file names match exactly
+  • Try uploading one at a time
+  • Make sure files aren't corrupted
+  • Use copies from backup if needed
+
+Problem: Claude's estimates differ wildly from previous
+Solution:
+  • Ask Claude to explain reasoning
+  • Compare methodology v3 vs v4
+  • Check if UK-wide averages changed significantly
+  • May be legitimate (NHS performance changes)
+  • Document the change clearly
+
+Problem: Not enough time for full update
+Solution:
+  • Focus only on the 4 estimated values (Priority 1)
+  • Skip validation of existing real data (Priority 2)
+  • Use previous UK averages (Priority 3)
+  • Schedule comprehensive update next quarter
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIPS FOR SUCCESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ DO:
+  • Update quarterly on schedule (consistency matters)
+  • Document all sources with dates and URLs
+  • Be conservative with confidence levels
+  • Maintain version numbering (v3→v4→v5)
+  • Archive previous versions before deploying
+  • Celebrate when estimates become real data! 🎉
+
+✗ DON'T:
+  • Skip updates (data gets stale quickly)
+  • Change methodology without documentation
+  • Remove estimated flag without 8+ sources
+  • Deploy without QA review
+  • Forget to update frontend if asterisks change
+  • Rush the process (patient safety depends on accuracy)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUICK REFERENCE CARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+When it's time to update:
+
+1. ⏰ Set aside 2-3 hours
+2. 📁 Gather 3 files from production
+3. 💬 Open new Claude chat
+4. 📎 Attach files
+5. 📋 Paste prompt (FUTURE_UPDATE_PROMPT.txt)
+6. 🔍 Let Claude search and analyze
+7. ✅ Review deliverables
+8. 🎯 QA check
+9. 🚀 Deploy
+10. 📊 Monitor
+
+Next update: [INSERT DATE +3 MONTHS]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CONTACTS & RESOURCES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Files to keep handy:
+  • This guide: HOW_TO_USE_UPDATE_PROMPTS.txt
+  • Comprehensive prompt: FUTURE_UPDATE_PROMPT.txt
+  • Quick prompt: FUTURE_UPDATE_QUICK_PROMPT.txt
+
+Key resources:
+  • Patient forums: Reddit r/NHS, Patient.co.uk
+  • Official data: england.nhs.uk/statistics
+  • FOI requests: whatdotheyknow.com
+
+Team contacts:
+  • Database lead: [INSERT]
+  • Frontend lead: [INSERT]
+  • Product manager: [INSERT]
+  • Data analyst: [INSERT]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Document version: 1.0
+Created: 23 November 2025
+Next review: February 2026
+
+Good luck with your update! 🚀
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

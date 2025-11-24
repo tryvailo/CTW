@@ -1,0 +1,299 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║             FUTURE DATA UPDATE PACKAGE - INDEX                               ║
+║                        CompareTheWait                                        ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📦 WHAT'S IN THIS PACKAGE
+
+This package contains everything you need to update CompareTheWait NHS 
+waiting times data in the future (recommended: every 3 months).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 FILE OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. HOW_TO_USE_UPDATE_PROMPTS.txt (16 KB) ⭐ START HERE
+   
+   Complete step-by-step guide for humans
+   
+   Contains:
+   - When to update (quarterly schedule)
+   - What files to gather
+   - How to start new Claude chat
+   - What to attach
+   - Complete workflow (10 steps)
+   - Troubleshooting guide
+   - QA checklist
+   - Tips for success
+   
+   Who needs it: Product manager, data analyst, anyone running the update
+   Time to read: 10 minutes
+   Use when: Every quarterly update
+
+
+2. FUTURE_UPDATE_PROMPT.txt (12 KB) ⭐ COMPREHENSIVE PROMPT
+   
+   Detailed prompt to paste into Claude for data update
+   
+   Contains:
+   - Full project context
+   - 6-phase methodology
+   - Data collection strategy
+   - Search instructions
+   - Quality criteria
+   - Documentation requirements
+   - Success criteria
+   
+   Who needs it: Copy-paste to Claude
+   Time to read: 5 minutes (for you), Claude reads automatically
+   Use when: First 2-3 quarterly updates (detailed guidance)
+
+
+3. FUTURE_UPDATE_QUICK_PROMPT.txt (3.3 KB) ⭐ STREAMLINED PROMPT
+   
+   Shorter version for experienced users
+   
+   Contains:
+   - Current situation summary
+   - Task list
+   - Search locations
+   - Quality requirements
+   - Deliverables list
+   
+   Who needs it: Copy-paste to Claude
+   Time to read: 2 minutes
+   Use when: After you've done 2-3 updates (assumes familiarity)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 QUICK START (TL;DR)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+When it's time to update (every 3 months):
+
+1. Read: HOW_TO_USE_UPDATE_PROMPTS.txt (10 min)
+2. Gather: 3 production files (nhs_waits CSV, methodology, summary)
+3. Open: New Claude chat at claude.ai
+4. Attach: The 3 production files
+5. Copy-paste: FUTURE_UPDATE_PROMPT.txt (or QUICK version)
+6. Work with Claude: 2-3 hours
+7. Review: Deliverables (updated CSV, reports)
+8. Deploy: To production with QA check
+
+That's it! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📅 RECOMMENDED UPDATE SCHEDULE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Quarterly updates recommended:
+
+  Q1: February 2026      (3 months after Nov 2025 deployment)
+  Q2: May 2026           (6 months after deployment)
+  Q3: August 2026        (9 months after deployment)
+  Q4: November 2026      (12 months after deployment)
+
+Why quarterly?
+  • NHS wait times change significantly every 3 months
+  • Patient data accumulates (can replace estimates with real data)
+  • UK-wide statistics published quarterly by NHS England
+  • Keeps data fresh and builds user trust
+
+⏰ Time required per update: 2-3 hours
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 WHAT GETS UPDATED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Priority 1: Replace Estimated Values with Real Data
+  Current estimated values (as of Nov 2025):
+  • Leeds Hip: 50 weeks (estimated)
+  • Leeds Knee: 78 weeks (estimated)
+  • Birmingham Knee: 65 weeks (estimated)
+  • Bristol Knee: 44 weeks (estimated)
+
+  Goal: Find 8-12 real patient reports for each → replace estimates
+
+Priority 2: Validate Existing Real Data
+  11 existing patient-reported values
+  Check if still accurate or need updating
+
+Priority 3: Update UK-Wide Averages
+  National statistics used in estimation formulas
+  Update from latest NHS England reports
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 TOOLS & RESOURCES NEEDED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Access Required:
+  ✓ Claude.ai account (Sonnet 4 or later)
+  ✓ Production database export access
+  ✓ Web browser for verification
+  ✓ 2-3 hours of focused time
+
+Files Needed from Production:
+  ✓ nhs_waits_v3_with_estimates.csv (current data)
+  ✓ ESTIMATION_METHODOLOGY.txt (how estimates calculated)
+  ✓ EXECUTIVE_SUMMARY_v3.txt (project overview)
+
+Claude Will Search:
+  • Patient forums (Reddit, Patient.co.uk, BoneSmart)
+  • NHS Trust websites
+  • News sources (BBC, local papers)
+  • Official NHS statistics
+  • FOI request results
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📤 EXPECTED OUTPUTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After update, Claude will provide:
+
+1. nhs_waits_v4_[date].csv
+   Updated data ready for production
+
+2. DATA_UPDATE_REPORT_v4.txt
+   Detailed report:
+   - OLD vs NEW comparison table
+   - Sources with URLs
+   - Confidence levels
+   - Change percentages
+
+3. ESTIMATION_METHODOLOGY_v4.txt (if methodology changed)
+   Updated documentation
+
+4. UPDATE_EXECUTIVE_SUMMARY_v4.txt
+   High-level summary for management
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ SUCCESS CRITERIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your update is successful if:
+
+  ✓ At least 1-2 estimated values replaced with real data
+  ✓ All existing real data validated or updated
+  ✓ UK-wide averages refreshed
+  ✓ Confidence levels improved or maintained
+  ✓ All changes documented with sources
+  ✓ Ready-to-deploy CSV created
+  ✓ QA checklist passed
+
+Even if you can't replace ALL estimates, any progress is valuable!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  IMPORTANT NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Data Quality Matters:
+  • Patients use this data for major health decisions
+  • Conservative estimates better than over-optimistic
+  • Minimum 8 sources required to mark as "REAL"
+  • Document everything with URLs and dates
+
+Version Control:
+  • Increment version number (v3 → v4 → v5)
+  • Archive previous versions before deploying
+  • Maintain consistent file naming
+
+Frontend Impact:
+  • If estimated → real, remove asterisk (*) in UI
+  • Update tooltips if methodology changes
+  • Test thoroughly before production
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Common Issues & Solutions:
+
+Q: Claude can't find enough patient data for a location
+A: Expand time range (6→9 months), lower threshold (8→5 sources) 
+   with MEDIUM confidence, or keep as ESTIMATED
+
+Q: New estimates differ significantly from previous
+A: NHS performance does change! Ask Claude to explain reasoning
+   and cross-reference with official data
+
+Q: Don't have 2-3 hours available
+A: Focus only on Priority 1 (the 4 estimated values)
+   Skip priorities 2-3, do comprehensive update next quarter
+
+Q: Files missing or can't find production data
+A: Contact database team for latest export
+   Check /outputs/, /docs/, or backup folders
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🗂️  FILE LOCATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+All files in this package located at:
+  /mnt/user-data/outputs/
+
+Files:
+  HOW_TO_USE_UPDATE_PROMPTS.txt         (Step-by-step guide)
+  FUTURE_UPDATE_PROMPT.txt              (Comprehensive prompt for Claude)
+  FUTURE_UPDATE_QUICK_PROMPT.txt        (Streamlined prompt)
+  FUTURE_UPDATE_INDEX.txt               (This file)
+
+Keep these files safe! You'll need them every quarter.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📈 TRACKING PROGRESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Goal: Replace all 4 estimated values with real patient data
+
+Current Status (Nov 2025):
+  REAL data: 11/15 (73%)
+  ESTIMATED: 4/15 (27%)
+
+Target by End 2026:
+  REAL data: 14-15/15 (93-100%)
+  ESTIMATED: 0-1/15 (0-7%)
+
+Track your progress:
+  Q1 2026: ___ estimated → real
+  Q2 2026: ___ estimated → real
+  Q3 2026: ___ estimated → real
+  Q4 2026: ___ estimated → real
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 FINAL THOUGHTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This update process:
+  • Ensures patients have current, accurate data
+  • Builds trust in your platform
+  • Gradually replaces estimates with real data
+  • Shows commitment to transparency
+
+The prompts guide Claude through the entire process, so you don't need
+to remember all the details - just follow HOW_TO_USE_UPDATE_PROMPTS.txt!
+
+Every quarter you update, you're helping thousands of patients make
+better-informed healthcare decisions. 💙
+
+Good luck! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Package created: 23 November 2025
+First recommended update: February 2026
+Next review: After Q1 2026 update
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

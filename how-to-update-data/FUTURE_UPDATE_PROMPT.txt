@@ -1,0 +1,317 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║           PROMPT FOR FUTURE DATA UPDATE - CompareTheWait                     ║
+║                    Copy & Paste This To Claude                               ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+INSTRUCTIONS: Copy everything below the line and paste to Claude in a new chat.
+Attach the current production files when prompted.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# CompareTheWait NHS Data Quarterly Update - [INSERT DATE]
+
+## PROJECT CONTEXT
+
+You're helping update the NHS waiting times database for **CompareTheWait**, a UK healthcare comparison website. This is a **quarterly data refresh** to ensure patients have current, accurate information.
+
+**Previous Update:** November 2025 (deployed version 3)
+
+## YOUR MISSION
+
+Update patient-reported NHS waiting times with the latest data, replacing outdated estimates with real patient submissions where possible, and re-validating all statistical estimates.
+
+## PHASE 1: UNDERSTAND CURRENT STATE
+
+I'm attaching the following files from production:
+- `nhs_waits_v3_with_estimates.csv` (current production data)
+- `ESTIMATION_METHODOLOGY.txt` (how estimates were calculated)
+- `EXECUTIVE_SUMMARY_v3.txt` (project overview)
+
+**First, please:**
+1. Read all three files to understand the current data structure
+2. Identify which values are ESTIMATED vs REAL patient data
+3. List the 4 estimated values that need priority replacement:
+   - Leeds Hip Replacement (currently 50 weeks - estimated)
+   - Leeds Knee Replacement (currently 78 weeks - estimated)
+   - Birmingham Knee Replacement (currently 65 weeks - estimated)
+   - Bristol Knee Replacement (currently 44 weeks - estimated)
+
+## PHASE 2: DATA COLLECTION STRATEGY
+
+### Priority 1: Replace Estimated Values with Real Data
+
+**Search Strategy for Patient-Reported Wait Times:**
+
+Search these sources for REAL patient experiences in Leeds, Birmingham, and Bristol:
+
+1. **Patient Forums** (search for posts from last 6 months):
+   - Reddit UK: r/NHS, r/AskUK, r/unitedkingdom
+   - Patient.co.uk forum (Hip/Knee Replacement sections)
+   - BoneSmart.org (UK hip/knee replacement forum)
+   - Care Opinion (careadvice.org.uk)
+   - HealthUnlocked forums
+
+   Search queries:
+   - "Leeds hip replacement wait time 2025"
+   - "Birmingham knee replacement how long"
+   - "Bristol knee surgery waiting list"
+   - "NHS [city] orthopaedic wait"
+
+2. **NHS Trust Official Data**:
+   - My Planned Care website (myplannedcare.nhs.uk)
+   - Leeds Teaching Hospitals NHS Trust updates
+   - University Hospitals Birmingham NHS Foundation Trust
+   - University Hospitals Bristol and Weston NHS Foundation Trust
+   - Search each trust's website for "patient wait times" or "referral to treatment"
+
+3. **News Sources** (last 3-6 months):
+   - BBC News regional sections (Yorkshire, West Midlands, South West)
+   - Local newspapers: Yorkshire Post, Birmingham Mail, Bristol Post
+   - Search: "[city] NHS waiting times 2025" or "orthopaedic backlog [city]"
+
+4. **FOI Requests Results**:
+   - WhatDoTheyKnow.com (search for recent FOI responses)
+   - NHS England statistics portal
+   - Search: "waiting times [trust name]"
+
+5. **Social Media**:
+   - Twitter/X: Search "#NHS + Leeds/Birmingham/Bristol + hip/knee"
+   - Facebook: Local community health groups
+
+**Data Quality Criteria:**
+- Prefer data from last 6 months (most recent)
+- Need minimum 8-12 verified patient reports per procedure/city
+- Cross-reference multiple sources
+- Exclude obvious outliers (e.g., 1 week or 200 weeks)
+- Document confidence level: HIGH (12+ sources), MEDIUM (6-11 sources), LOW (3-5 sources)
+
+### Priority 2: Validate Existing Real Data
+
+For the 11 REAL patient-reported values (London, Manchester, Birmingham, Bristol cataracts and hip/knee), verify they're still accurate:
+
+**Search for updates:**
+- "London cataract waiting time 2025"
+- "Manchester ACES fast track cataract"
+- "Birmingham cataract surgery wait"
+- Same for hip/knee procedures
+
+**If data changed significantly (>20% difference):**
+- Update with new average
+- Document the change in report
+- Note confidence level
+
+### Priority 3: Update UK-Wide Averages
+
+Search for latest national statistics:
+- NHS England official statistics (england.nhs.uk/statistics)
+- "NHS waiting times Q[X] 2025 report"
+- "Referral to Treatment (RTT) statistics"
+- Royal College of Surgeons reports
+- British Orthopaedic Association statements
+
+**Look for:**
+- National median wait times for cataract, hip, knee
+- Regional variations (London, Midlands, Yorkshire, South West)
+- Any major policy changes (e.g., new fast-track schemes)
+
+## PHASE 3: DATA ANALYSIS & VALIDATION
+
+Once you've collected new data, perform:
+
+### Statistical Validation
+
+For each updated value:
+1. Calculate median and mean from patient reports
+2. Remove outliers (beyond 2 standard deviations)
+3. Compare to previous estimate/value
+4. Document percentage change
+5. Assign confidence level
+
+### Comparative Analysis
+
+Create table comparing OLD vs NEW:
+
+| City | Procedure | OLD (Nov 2025) | NEW ([date]) | Change | Data Type | Confidence |
+|------|-----------|----------------|--------------|--------|-----------|------------|
+| Leeds | hip | 50 weeks (EST) | [NEW] weeks | +/- X% | REAL/EST | HIGH/MED/LOW |
+
+### Quality Checks
+
+- Are new values within reasonable range? (5-120 weeks)
+- Do regional patterns still make sense? (e.g., ACES centres faster)
+- Any unexplained dramatic changes (>50%)? Document why.
+- Cross-reference with official NHS data
+
+## PHASE 4: DOCUMENTATION & DELIVERABLES
+
+### Required Outputs
+
+1. **Updated CSV File**: `nhs_waits_v4_[date].csv`
+   - Same structure as v3
+   - Updated patient_reported_wait_weeks
+   - Flag estimated values
+
+2. **Change Report**: `DATA_UPDATE_REPORT_v4.txt`
+   Include:
+   - Summary of changes (X values updated, Y estimates replaced)
+   - Detailed table: OLD vs NEW comparison
+   - Confidence levels for each value
+   - Data sources used (with URLs)
+   - Methodology changes (if any)
+   - Recommendations for next update
+
+3. **Updated Methodology**: `ESTIMATION_METHODOLOGY_v4.txt`
+   - Update UK-wide averages section
+   - Add new data sources discovered
+   - Refine estimation formulas if needed
+   - Document any new regional patterns
+
+4. **Executive Summary**: `UPDATE_EXECUTIVE_SUMMARY_v4.txt`
+   - High-level changes (for management)
+   - Impact on user experience
+   - Data quality improvements
+   - Recommendations for product team
+
+### Format for Updated Values
+
+For each changed value, document like this:
+
+```
+LEEDS - HIP REPLACEMENT
+Previous: 50 weeks (ESTIMATED, Nov 2025)
+Updated: 47 weeks (REAL, [date])
+Change: -6% (improved)
+Confidence: MEDIUM
+Sources:
+- Patient.co.uk forum: 12 reports, avg 45 weeks (Jan-Mar 2025)
+- BoneSmart UK: 8 reports, avg 48 weeks (Feb-Mar 2025)
+- Reddit r/NHS: 5 reports, avg 49 weeks (Jan-Feb 2025)
+Calculation: Median of 25 reports = 47 weeks
+Note: Replaced estimate with real patient data ✓
+```
+
+## PHASE 5: VALIDATION CHECKLIST
+
+Before finalizing:
+
+Data Integrity:
+☐ All 15 rows have patient_reported_wait_weeks filled
+☐ No values below 3 weeks or above 120 weeks
+☐ Regional patterns make sense (ACES centres still fast?)
+☐ All sources documented with URLs and dates
+☐ Confidence levels assigned to all values
+
+Quality:
+☐ Minimum 8 sources for any REAL data designation
+☐ Estimates clearly flagged if real data unavailable
+☐ Cross-referenced with official NHS statistics
+☐ Outliers removed with justification
+
+Documentation:
+☐ Change report complete with OLD vs NEW table
+☐ All sources cited properly
+☐ Methodology updated if needed
+☐ Executive summary suitable for non-technical stakeholders
+☐ Recommendations for next quarter provided
+
+## PHASE 6: RECOMMENDATIONS
+
+After analysis, provide:
+
+1. **Immediate Actions**: Which estimated values should be updated now?
+2. **Data Gaps**: Where do we still need more patient data?
+3. **Collection Strategy**: Best channels to get missing data next quarter
+4. **Methodology Improvements**: Any refinements to estimation formulas?
+5. **Timeline**: Recommend next update date (typically 3 months)
+
+## SUCCESS CRITERIA
+
+Your update is successful if:
+✓ At least 1-2 estimated values replaced with real data
+✓ All existing real data validated or updated
+✓ UK-wide averages refreshed from latest NHS statistics
+✓ Confidence levels improved or maintained
+✓ All changes documented with clear sources
+✓ Ready-to-deploy CSV file created
+
+## EXPECTED OUTPUT STRUCTURE
+
+Please organize your work in this order:
+
+1. **ANALYSIS PHASE**
+   - "I've reviewed the current data. Here's what needs updating..."
+   - Summary table of current ESTIMATED values
+   - Search strategy confirmation
+
+2. **DATA COLLECTION PHASE**
+   - "Searching for patient-reported data for Leeds Hip..."
+   - [conduct searches]
+   - "Found [X] relevant sources..."
+
+3. **CALCULATION PHASE**
+   - "Based on [X] patient reports from [sources]..."
+   - Show calculations and reasoning
+   - "New median wait time: [X] weeks"
+
+4. **VALIDATION PHASE**
+   - Compare OLD vs NEW
+   - Check for reasonableness
+   - Cross-reference with official data
+
+5. **FINAL DELIVERABLES**
+   - Updated CSV file
+   - Change report
+   - Updated methodology
+   - Executive summary
+
+## IMPORTANT REMINDERS
+
+**Data Ethics:**
+- Only use publicly available patient reports
+- Don't identify individual patients
+- Respect privacy in all source citations
+
+**Scientific Rigor:**
+- Document all assumptions
+- Show all calculations
+- Be transparent about confidence levels
+- Don't overstate certainty
+
+**Product Impact:**
+- Remember: patients use this data for major health decisions
+- Conservative estimates better than over-optimistic
+- If unsure, maintain ESTIMATED flag and explain why
+
+**Communication:**
+- Write for non-technical product team
+- Use clear tables and visualizations
+- Highlight significant changes
+- Provide actionable recommendations
+
+## READY?
+
+Once you've read this prompt and the attached files:
+
+1. Confirm you understand the mission
+2. Summarize the 4 priority values to update
+3. Outline your search strategy
+4. Ask any clarifying questions
+5. Begin Phase 2: Data Collection
+
+Let's get started! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NOTES FOR FUTURE USER:
+
+- Use this prompt every 3 months (quarterly)
+- Always attach current production files
+- Best done: January, April, July, October
+- Budget 2-3 hours for comprehensive update
+- Tools needed: Web search, file creation
+- Expected: 4-8 web searches, 1-2 hours analysis
+
+Last updated: 23 November 2025
+Next recommended update: February 2026
